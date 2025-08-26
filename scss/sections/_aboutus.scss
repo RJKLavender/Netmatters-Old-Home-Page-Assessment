@@ -1,0 +1,141 @@
+.about-us {
+
+background-image: linear-gradient(97deg,#350e5c -1.17%,#80308d 129.98%);
+  color: $white;
+  font-weight: $font-light;
+  text-align: center;
+
+    @media (min-with: $medium)
+    {
+        text-align: left;
+    }
+    
+    @media (min-width: $large)
+    {
+    background-image: url(../images/branded.png), linear-gradient(97deg,#350e5c -1.17%,#80308d 129.98%);
+    text-align: left;
+    }
+
+    
+
+
+	.about-row {
+        display: flex;
+        flex-wrap: wrap;
+        margin-left: -15px;
+        margin-right: -15px;
+        max-width: 100%;
+
+			.about-info {
+                padding: 0 15px;
+                display: flex;
+                height: 100%;
+                flex-direction: column;
+       
+
+
+                @media (min-width: $medium) {
+                    width: 50%
+
+                }
+                h2 {
+                    margin-bottom: 40px;
+                    margin-top: -6px;
+                    color: $white;
+                    font-weight: $font-black;
+                    font-size: rem(36px);
+                    line-height: 1.2;
+                }
+
+                p{
+                    font-size: rem(16px);
+                    line-height: rem(30px);
+                    margin-bottom: 25px;
+                    margin-top: 0;
+                    color: $white;
+
+                    strong{
+                        font-weight: $font-semibold;
+                    }
+                }
+
+                p a {
+                        cursor: pointer;
+                        text-decoration: none;
+                        }
+
+                p a:hover {
+                    text-decoration: underline;
+                }
+                    
+                
+
+				.about-buttons {
+                    display:flex;
+                    gap: 10px;
+                    flex-direction: row;
+                    height:57px;
+
+                    }
+				
+                .star-rating {
+                    justify-content: center;
+                    display: flex;
+                    font-size: rem(34px);
+                    gap: 14px;
+                    margin-bottom: 35px;
+                    flex-direction: row;
+
+                    @media (min-width: $medium  ) {
+                    justify-content: flex-start;
+                    }
+                
+                }
+
+				.quote {
+                    font-size: rem(21px);
+                    font-style: $font-italic;
+                    font-weight: $font-reg;
+                }
+                .quote-author {
+
+                    font-size: rem(12px);
+                    font-weight: $font-reg;
+
+                }
+								
+				.review-buttons {
+                     display:flex;
+                    gap: 10px;
+                    flex-direction: row;
+                    height:57px;
+                    margin-top: 75      px;
+
+                }
+            }
+        }
+    }
+
+    // about us button styling
+    .button-about {
+                        Display:inline-flex;
+                        border-radius: 10px;
+                        border: 2px solid $white;
+                        cursor: pointer;
+                        color: $white;
+                        text-transform: uppercase;
+                        text-decoration: none;
+                        font-size: rem(16px);
+                        font-weight: $font-semibold;
+                        line-height: rem(25px);
+                        justify-content: center;
+                        align-items: center;
+                        padding: 11px 18px;
+                        height:57px;
+
+
+                        em{
+                            padding-left: 15px;
+
+                        }
+                    }

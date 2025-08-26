@@ -1,0 +1,70 @@
+.banner { 
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+
+    .banner-image {
+     height: 100%;
+     width: 100%;
+     background-image: linear-gradient(95deg,rgba(128,48,141,.2) .76%,rgba(1,72,123,.2) 99.24%),
+     linear-gradient(90deg,transparent,rgba(0,0,0,.2)),
+     linear-gradient(0deg,rgba(34,36,49,.72),rgba(34,36,49,.72)),
+     linear-gradient(0deg,rgba(0,0,0,.4),rgba(0,0,0,.4)), url("../images/home-YLei.png");
+     //plausible varibles
+   
+.content {
+    color:$white;
+    padding: 200px 0 95px;
+    text-align: center;
+
+    @media (min-width: $medium) {
+        padding-top: 95px;
+    }
+
+           h1{
+           font-size: rem(44px);
+            font-weight: $font-black;
+            line-height: rem(54px);
+            padding-bottom: 20px;
+            margin:0;
+
+             @media (min-width: $medium) {
+            font-size: rem(80px);
+            line-height: rem(90px); }
+
+        }
+
+        p {
+            font-size: rem(20px);
+            font-weight: $font-semibold;
+            line-height: rem(28px);
+            padding-bottom: 6px;
+
+             @media (min-width: $medium) {
+            font-size: rem(26px);
+            line-height: rem(44px); }
+
+        }
+
+        .button-banner {
+            margin-bottom: 18px;
+            margin-top: 31px;
+            padding: 14px 32px;
+            font-size: rem(20px);
+            line-height: rem(50px);
+            color: $white;
+            background: hsla(0,0%,100%,.1);
+            font-weight: $font-semibold;
+            text-transform: uppercase;
+            border: 2px solid $white;
+            border-radius: 10px;
+            cursor: pointer;
+            text-decoration: none;
+
+        }
+
+
+
+    }
+}
+}

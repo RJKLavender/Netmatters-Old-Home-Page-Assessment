@@ -1,0 +1,67 @@
+
+
+//temporary code for button borders
+.button-CD {
+    background: $white;
+    border: 4px solid transparent;
+    background: linear-gradient($white, $white) padding-box,
+    linear-gradient(90deg, $pink, $purple) border-box;
+    border-radius: 10px;
+    opacity: 1;
+}
+
+.button-IT {
+    background: $white;
+    border: 4px solid transparent;
+    background: linear-gradient($white, $white) padding-box,
+    linear-gradient(90deg, $sky,$blue) border-box;
+    border-radius: 10px;
+    opacity: 1;
+}
+
+.button-DM {
+    background: $white;
+    border: 4px solid transparent;
+    background: linear-gradient($white, $white) padding-box,
+    linear-gradient(90deg,$lightteal, $teal) border-box;
+    border-radius: 10px;
+    opacity: 1;
+}
+
+.button-TS {
+    background: $white;
+    border: 4px solid transparent;
+    background: linear-gradient($white, $white) padding-box,
+    linear-gradient(90deg, $rose, $darkpurple) border-box;
+    border-radius: 10px;
+    opacity: 1;
+}
+
+.button-WD {
+    background: $white;
+    border: 4px solid transparent;
+    background: linear-gradient($white, $white) padding-box,
+    linear-gradient(90deg, $pink, $purple) border-box;
+    border-radius: 10px;
+    opacity: 1;
+}
+
+.button-CS {
+    background: $white;
+    border: 4px solid transparent;
+    background: linear-gradient($white, $white) padding-box,
+    linear-gradient(90deg, $ocean, $violet) border-box;
+    border-radius: 10px;
+    opacity: 1;
+}
+
+.button-DT {
+    background: $white;
+    border: 4px solid transparent;
+    background: linear-gradient($white, $white) padding-box,
+    linear-gradient(90deg, $pink, $purple) border-box;
+    border-radius: 10px;
+    opacity: 1;
+}
+
+

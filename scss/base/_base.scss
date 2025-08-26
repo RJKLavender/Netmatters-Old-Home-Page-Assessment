@@ -1,0 +1,75 @@
+
+// Main Base Styles
+
+body {
+margin: 0;
+font-family: $Poppins,sans-serif;
+letter-spacing: 0.4px;
+font-size: $base-font-size;
+line-height: ($base-line-height/$base-font-size);
+font-weight: $font-reg;
+
+}
+
+* {
+box-sizing: border-box;
+
+}
+
+
+//Universal Containers
+.container {
+    margin-right: auto;
+    margin-left: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+
+    @media (min-width: $small) {
+        width: 750px;
+    }
+     @media (min-width: $medium) {
+        width: 970px;
+
+    }
+     @media (min-width: $large) {
+        width: 1200px;
+    }
+
+
+}
+
+.container-bottom {
+    margin-right: auto;
+    margin-left: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+    display:flex;
+
+        @media (max-width: $small) {
+      margin:0; 
+      flex-direction: column;
+      
+    }
+        @media (min-width: $small) {
+        width: 750px;
+         justify-content: space-between;
+         align-items: center;
+    }
+     @media (min-width: $medium) {
+        width: 970px;
+
+    }
+     @media (min-width: $large) {
+        width: 1200px;
+    }
+}
+
+
+// Elements
+a {
+    cursor: pointer;
+    color: $white;
+}
+
+
+ 

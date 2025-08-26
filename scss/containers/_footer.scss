@@ -1,0 +1,182 @@
+footer { 
+background-color: $dark;
+color: $white;
+padding: 30px 0 0;
+position: relative;
+font-weight: $font-reg;
+
+.footer-row { 
+display:flex;
+flex-wrap:wrap;
+justify-content: space-between;
+
+    .footer-company-info
+    {
+
+      font-size: rem(13px);
+      width: 400px;
+      flex: 100%;
+
+       @media (min-width: $small) {
+            flex: 50%;
+            }
+
+     @media (min-width: $medium) {
+            flex: 25%;
+            }
+      
+      .logo {
+        margin-bottom:30px;
+              width: 320px;
+
+        img {
+          margin-right: auto;
+          display:inline-block;
+          width: 320px;
+          height: 65px;
+          vertical-align: middle;
+        }
+      }
+      .footer-hours {
+        strong{
+          font-weight: $font-semibold;
+        }
+
+      }
+        }
+
+
+    .footer-menu {
+        flex: 100%;
+        margin-bottom: 30px;
+        
+        
+
+        @media (min-width: $small) {
+          flex: 50%;
+            
+            }
+
+         @media (min-width: $medium) {
+           flex: 25%;
+            
+            }
+
+          @media (min-width: $large) {
+            flex: 10%;
+           
+            margin-bottom: 40px;
+          
+            }
+
+          h4 {
+            text-transform: uppercase;
+            font-size: rem(16px);
+            margin-bottom: 26px;
+            font-weight: $font-semibold;
+          }
+
+          ul {
+            list-style: none;
+            display:block;
+              padding: 0;
+              list-style-type: none;
+
+          li {
+            font-size: rem(13px);
+            line-height: rem(22px);
+          }
+
+          li a {
+            text-decoration: none;
+            color: $white;
+          }
+
+          li a:hover {
+              text-decoration:underline;
+            }
+          }
+        }
+    }
+  }
+        
+
+
+ .bottom {
+  background-color: $darker;
+  padding: 7.5px 0;
+  width: 100%;
+  font-size: rem(14px);
+  display:flex;
+  justify-content: space-between;
+
+  .license {
+     width: 100%;
+     padding-bottom: 10px;
+     padding-top: 5px;
+     color: $white;
+     
+
+
+     @media (min-width: $small) {
+      display:flex;
+    flex-direction: row;
+    padding-bottom: 5px;
+   }
+
+  ul{
+  list-style:none;
+  text-decoration: none;
+   display:block;
+   padding: 0;
+   margin: 0;
+
+   
+    @media (min-width: $small) {
+   order: 2;
+     }
+
+ li {
+     font-size: rem(13px);
+     }
+     li::before {
+  content: "-";
+  display:inline-block;
+  margin-left:5px;
+  margin-right:5px;
+
+@media (max-width:$small) {
+    display:none;
+}
+     }
+     
+
+    li a {
+       text-decoration: none;
+       color: $white;
+     }
+      li a:hover {
+        text-decoration:underline;
+       }
+      }
+    }
+  
+    .social {
+      display: flex;
+      gap: 35px;
+      color: $white;
+      font-size: rem(19px);
+
+      a {
+        text-decoration: none;
+
+      }
+    }
+
+  
+  }
+
+
+
+  
+

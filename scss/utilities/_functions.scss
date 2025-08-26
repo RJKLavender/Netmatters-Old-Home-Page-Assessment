@@ -1,0 +1,6 @@
+//pixel to rem converter
+@function rem($target-value, $base-value: 16px) 
+{
+	@return ($target-value/$base-value) * 1rem;
+}
+

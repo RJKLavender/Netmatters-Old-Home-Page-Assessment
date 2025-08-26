@@ -1,0 +1,21 @@
+// Normal Fonts
+@mixin font-face($family, $file, $weight)
+{
+    @font-face {
+        font-family: $family;
+        src: url('#{$font-path}/#{$file}.ttf') format('truetype');
+        font-weight: $weight;
+        
+    }
+}
+// Itatlic fonts
+@mixin font-face-italic($family, $file, $weight, $style)
+{
+    @font-face {
+        font-family: $family;
+        src: url('#{$font-path}/#{$file}.ttf') format('truetype');
+        font-weight: $weight;
+        font-style: $style;
+        
+    }
+}

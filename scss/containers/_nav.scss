@@ -1,0 +1,95 @@
+nav {
+    background-color: $darkgrey;
+    display:block;
+
+    @media (max-width: $medium) {
+            display:none
+          }
+        } 
+ 
+
+    .main-nav {
+        display: flex;
+        flex-direction: row;
+        list-style: none;
+        margin:0;
+        padding:0;
+        
+        li {
+            text-decoration: none;
+            text-align: center;
+            flex: 1;
+
+            a {
+                color: $white;
+                display:block;
+                font-size: rem(16px);
+                font-weight: $font-light;
+                line-height: 1;
+                padding-top:30px;
+                padding-bottom: 30px;
+                position:relative;
+                text-decoration:none;
+                text-transform:uppercase;
+                cursor: pointer;
+
+                 @media (min-width: $large) {
+                    font-size: rem(18px);
+
+                    small {
+                        font-size: rem(14px);
+                        font-weight: $font-semibold;
+                    }
+                }
+
+
+
+            }
+        }
+        
+    }
+
+    .AIS {
+
+        small {
+                color: $white;
+        }
+    }
+    .CD {
+
+        small {
+                color: $lightpurple;
+        }
+    }
+    
+    .ITS {
+
+        small {
+                color: $lightbluet;
+        }
+    }
+    .DM {
+
+        small {
+                color: $green;
+        }
+    }
+    
+    .TS {
+
+        small {
+                color: $ruby;
+        }
+    }
+    .WD {
+
+        small {
+                color: $lightpurple;
+        }
+    }
+    .DC {
+
+        small {
+                color: $lightpurple;
+        }
+    }

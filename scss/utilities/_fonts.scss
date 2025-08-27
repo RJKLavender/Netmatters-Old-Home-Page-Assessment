@@ -42,34 +42,54 @@
   line-height: 1;
 }
 //icon fonts
-.icon-search::before {
+.icon-x:before {
+  content: "\e900";
+}
+.icon-code:before {
+  content: "\e901";
+}
+.icon-bar-graph:before {
+  content: "\e902";
+}
+.icon-paperplane:before {
+  content: "\e903";
+}
+.icon-school:before {
+  content: "\e904";
+}
+.icon-security:before {
+  content: "\e905";
+}
+.icon-mouse:before {
+  content: "\e906";
+}
+.icon-phone_in_talk:before {
+  content: "\e907";
+}
+.icon-display:before {
+  content: "\e956";
+}
+.icon-laptop:before {
+  content: "\e957";
+}
+.icon-search:before {
   content: "\e986";
- 
 }
-.icon-facebook::before {
-  content: "\ea90";
-  
+.icon-menu:before {
+  content: "\e9bd";
 }
-.icon-instagram::before {
-  content: "\ea92";
-  
-}
-.icon-twitter::before {
-  content: "\ea96";
-  
-}
-.icon-linkedin::before {
-  content: "\eaca";
-
-}
-.icon-star-full::before {
+.icon-star-full:before {
   content: "\e9d9";
 }
-.icon-arrow-right2::before {
+.icon-arrow-right2:before {
   content: "\ea3c";
 }
-
-.icon-checkmark::before {
-  content: "\ea10";
+.icon-facebook:before {
+  content: "\ea90";
 }
-
+.icon-instagram:before {
+  content: "\ea92";
+}
+.icon-linkedin2:before {
+  content: "\eaca";
+}

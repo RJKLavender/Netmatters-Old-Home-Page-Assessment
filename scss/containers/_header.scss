@@ -1,29 +1,58 @@
 header { 
-background-color: $darker;
-color: $grey;
+background-color: $white;
+color: $white;
 
-position: relative;
-font-size: rem(16px);
-font-weight: $font-reg;
 
 .header-row { 
 display:flex;
+flex-wrap:wrap;
+margin:0 -15px;
 justify-content: space-between;
 padding-top: 20px;
 padding-bottom: 20px;
 
-      .logo {
-          width: 370px;
-          height: 85px;
+@media (max-width: $small) {
+  //display: table;
+  width: 100%;
+  margin:0;
+}
 
-        img {
+      .logo {
+          //width: 370px;
+          //height: 85px;
+          max-width: 100%;
+          padding: 0 15px;
+          width:50%;
+
+          @media (max-width: $small) {
+            //display: table;
+            width: 100%;
+            margin:0;
+            padding:0;
+            float:none;
+            vertical-align:middle;
+          }
+
+          @media (min-width: $medium) {
+            Width: 41.67%;
+          }
+
+          @media (min-width: $small) {
+            Width: 50%;
+          }
+
+          a {
+
+          }
+
+          a img {
           margin-right: auto;
           display:inline-block;
           width:370px;
           height: 85px;
           vertical-align: middle;
+          }
         }
-      }
       
     
           .contact{

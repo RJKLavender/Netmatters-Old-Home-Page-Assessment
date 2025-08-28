@@ -2,168 +2,218 @@ header {
 background-color: $white;
 color: $white;
 
+.header-inner{
+padding: 20px 0;
 
 .header-row { 
 display:flex;
-flex-wrap:wrap;
-margin:0 -15px;
-justify-content: space-between;
-padding-top: 20px;
-padding-bottom: 20px;
+margin: 0 -15px;
+align-items: center;
+
 
 @media (max-width: $small) {
-  //display: table;
   width: 100%;
   margin:0;
 }
 
       .logo {
-          //width: 370px;
-          //height: 85px;
           max-width: 100%;
           padding: 0 15px;
-          width:50%;
+          
 
           @media (max-width: $small) {
-            //display: table;
-            width: 100%;
             margin:0;
             padding:0;
-            float:none;
-            vertical-align:middle;
-          }
-
-          @media (min-width: $medium) {
-            Width: 41.67%;
           }
 
           @media (min-width: $small) {
             Width: 50%;
           }
 
+          @media (min-width: $medium) {
+            width: calc(100%/2.4);
+          }
+
+           @media (min-width: $large) {
+            width: clac(100%/3);
+          }
+
           a {
+            text-decoration: none;
 
           }
 
           a img {
-          margin-right: auto;
-          display:inline-block;
-          width:370px;
-          height: 85px;
-          vertical-align: middle;
+            max-width: 100%;
           }
+        }
+
+        .hidden-mobile{
+
+          @media (min-width: $small) {
+          display:none;
+          }
+
+          @media (max-width: $small) {
+          padding:0;
+          max-width:100%;
+          font-size: rem(32px);
+          margin-left: 15px;
+          color: $darkgrey;
+          }
+
+          a{
+            text-decoration: none;
+          }
+
+
         }
       
     
           .contact{
             display:flex;
-            padding:7px 0;
+            padding:0 15px;
             flex-direction: row;
-            justify-content: space-between;
+            justify-content: right;
+            max-width: 100%;
+            align-items: center;
+            flex-direction: row;
+
+            @media (min-width: $medium) {
+              width: 58%;
+            }
+
+             @media (min-width: $large) {
+              width: 67%;            
+            }
               
+            .button-support {
+              color: $white;
+              font-size: rem(16px);
+              font-weight: $font-reg;
+              line-height: rem(46px);
+              height: 56px;
+              padding: 5px 15px;
+              margin-left:20px;
+              text-decoration: none;
+              text-transform: uppercase;
+
+              background-color: $blue; 
+              border-radius: 3px;        
+
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              text-align: center;
+              cursor: pointer;
+
+              @media (max-width: $small){
+                display: none;
+              }
+                          
+              span{
+                margin-right: 5px;
+              }
+            }
+            
+              .button-contact {
+              color: $white;
+              font-size: rem(16px);
+              font-weight: $font-reg;
+              line-height: rem(46px);
+              height: 56px;
+              padding: 5px 15px;
+              margin-left:20px;
+              text-decoration: none;
+              text-transform: uppercase;
+
+              background-color: $lightgrey;
+              border-radius: 3px;     
+
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              text-align: center;
+              cursor: pointer;
+
+              @media (max-width: $small){
+                display: none;
+              }
+
+              span{
+                margin-right: 5px;
+              }
+            }
 
             .search {
               display:flex;
-              width:300px;
-              height: 41px;
-              border: 1.6px solid $white;
-              border-radius:10px;
-              
+              width: 300px;
+              height: 56px;
+              margin-left:20px;
 
               label {
                 display: none;
               }
 
               .form-search {
-                background-color: rgba(52,73,94,.25);
-                color: $white;
+                display: inline-flex;
+                color: $medgrey;
                 font-size: rem(14px);
-                padding: 5px 41px 5px 13px;
-                width:300px;
+                line-height: 1.5;
+                padding: 5px 15px;
+                width:240px;
                 cursor: text;
-                border: none;
+                border-color: $offwhite;
+                background-color: $white;
+                border: 1px solid $light;
+                border-radius: 0;
+              }
+
+              .form-search::placeholder {
+                color: $grey;
               }
 
               .search-submit {
-                border:none;
-                align-items:center;
-                background: none;
+                padding: 7px 20px 3px;
+                height: 56px;
+                border-radius: 0 3px 3px 0;
+                border: none;
+                background-color: $lightgrey;
+                color: $white;
                 justify-content: center;
-                width: 41px;
+                align-items:center;
                 cursor: pointer;
-                background-color: rgba(52,73,94,.25);
+                
 
                   span {
-                    font-size: rem(22px);
-                    color: $white;
+                    font-size: rem(23px);
                     
                   }
                 }
             }
 
-              .button-support {
-              color: $white;
-              font-size: rem(16px);
-              font-weight: $font-semibold;
-              height: 41px;
-              width: 140px;
-              padding: 0 32px;
-              margin-left:30px;
-              text-decoration: none;
-              text-transform: uppercase;
-
-              border: 4px solid transparent;
-              background: linear-gradient($darker, $darker) padding-box,
-              linear-gradient(90deg, $sky,$blue) border-box;
-              border-radius:10px;          
-
-              display: flex;
-              align-items: center;
-              justify-content: center;
-              cursor: pointer;
-              
-              }
-              
-              .button-contact {
-              color: $white;
-              font-size: rem(16px);
-              font-weight: $font-semibold;
-              height: 41px;
-              width: 140px;
-              padding: 0 32px;
-              margin-left:30px;
-              text-decoration: none;
-              text-transform: uppercase;
-
-              background:linear-gradient(90deg $pink, $purple);
-              background-image:linear-gradient(45deg, $pink, $purple);
-              border-radius:10px;
-
-              display: flex;
-              align-items: center;
-              justify-content: center;
-              cursor: pointer;
-              }
-
               .button-hamburger {
               color: $white;
-              font-size: rem(16px);
-              font-weight: $font-semibold;
-              height: 41px;
-              width: 140px;
-              padding: 0 32px;
-              margin-left:30px;
+              font-size: rem(40px);
+              line-height: rem(46px);
+              font-weight: $font-bold;
+              height: 56px;
+              width: 63px;
+              padding: 5px 15x;
+              margin-left:20px;
               text-decoration: none;
               text-transform: uppercase;
 
-              background:linear-gradient(90deg $pink, $purple);
-              background-image:linear-gradient(45deg, $pink, $purple);
-              border-radius:10px;
+              background-color: $darkgrey;
+              border-radius: 3px; 
 
               display: flex;
               align-items: center;
               justify-content: center;
+              text-align:center;
               cursor: pointer;
+
+
               }
 
           }
@@ -171,18 +221,18 @@ padding-bottom: 20px;
         }
 
         .mobile-contact{
-            display:flex;
-            padding:7px 0;
-            flex-direction: row;
-            justify-content: space-between;
+            margin-top: 11px;
               
 
             .mobile-search {
               display:flex;
-              width:300px;
-              height: 41px;
-              border: 1.6px solid $white;
-              border-radius:10px;
+              //width:300px;
+              height: 47px;
+              background-color: rgba(0,0,0,.1);
+              border: 2px solid rgba(0,0,0,.1);
+              border-radius: 2px;
+
+
               
 
               .hidden-label {
@@ -190,34 +240,42 @@ padding-bottom: 20px;
               }
 
               .mobile-form-search {
-                background-color: rgba(52,73,94,.25);
-                color: $white;
+                display:inline-block;
                 font-size: rem(14px);
-                padding: 5px 41px 5px 13px;
-                width:300px;
+                line-height: 1.5;
+                color: $medgrey;
+                height:47px;
+                padding: 5px 40px 5px 15px;
                 cursor: text;
-                border: none;
+                width: 100%;
+               border:none;
+               background:none;
+            
+                
+              }
+
+              .mobile-form-search::placeholder {
+                color: $grey;
               }
 
               .mobile-submit {
-                border:none;
-                align-items:center;
+                display:flex;
                 background: none;
+                border: none;
+                align-items:center;
                 justify-content: center;
-                width: 41px;
+                padding: 0 10px;
+                height: 47px;
                 cursor: pointer;
-                background-color: rgba(52,73,94,.25);
+                color: $darkgrey;
+                font-size: rem(20px);
+                line-height: rem(47px);
 
-                  span {
-                    font-size: rem(22px);
-                    color: $white;
-                    
-                  }
                 }
-              }
-            }
-            
-  
+    
+              } 
+            }  
+  } 
 }
             
         

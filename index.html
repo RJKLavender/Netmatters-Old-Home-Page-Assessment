@@ -12,13 +12,18 @@
 	<!-- header-->
 <header>
 	<div class="container">
+		<div class="header-inner">
 		<div class="header-row">
 
 		<div class="logo">
 			<a href="#"><img src="images/f-logo.png" alt="Netmatters Logo"></a>
 		</div>
-		<div class="header-menu">
-				<div class="contact">
+		<div class="hidden-mobile">
+			<a class="mobile" href="#"> <span class="icon-phone_in_talk"></span></a>
+		</div>
+			<div class="contact">
+				<a class="button-support" href="#"><span class="icon-mouse"></span>Support</a>
+				<a class="button-contact" herf="#"><span class="icon-paperplane"></span>Contact</a>
 				<form class="search" method="GET" action="#" accept-charset="UTF-8">
 					<label class="s1" for="search-input" >Search:</label>
 					<input id="search-input" class="form-search" placeholder="Search..." name="keyword" type="text">
@@ -26,27 +31,23 @@
 						<span class="icon-search" aria-hidden="true"></span>
 					</button>
 				</form>
-				
-				<a class="button-support" href="#">Support</a>
-				<a class="button-contact" herf="#">Contact</a>
 				<button id="hamburger" class="button-hamburger" type="button">
-					<span></span>
+					<span class="icon-menu"></span>
 					</button>
 				</button>	
 
 			</div>
 		</div>
-		</div>
 		<div class="mobile-contact">
 			<form class="mobile-search" method="GET" action="#" accept-charset="UTF-8">
 					<label class="hidden-label" for="mobile-input" >Search:</label>
-					<input id="mobile-input" class="-mobile-form-search" placeholder="Search..." name="keyword" type="text">
+					<input id="mobile-input" class="mobile-form-search" placeholder="Search..." name="keyword" type="text">
 					<button id="mobile-submit" class="mobile-submit" type="submit">
 						<span class="icon-search" aria-hidden="true"></span>
 					</button>
 				</form>
 		</div>
-
+		</div>
 	</div>
 </header>
 <!--navigation-->

@@ -16,7 +16,7 @@ align-items: center;
   margin:0;
 }
 
-      .logo {
+      .header-logo {
           max-width: 100%;
           padding: 0 15px;
           
@@ -24,6 +24,7 @@ align-items: center;
           @media (max-width: $small) {
             margin:0;
             padding:0;
+            width:100%;
           }
 
           @media (min-width: $small) {
@@ -31,11 +32,11 @@ align-items: center;
           }
 
           @media (min-width: $medium) {
-            width: calc(100%/2.4);
+            width: 41.67%;
           }
 
            @media (min-width: $large) {
-            width: clac(100%/3);
+            width: 33.33%;
           }
 
           a {
@@ -59,32 +60,35 @@ align-items: center;
           max-width:100%;
           font-size: rem(32px);
           margin-left: 15px;
-          color: $darkgrey;
+          
           }
 
-          a{
+          a, a:hover, a:visited, a:active {
+            color: $darkgrey;
             text-decoration: none;
           }
 
-
         }
-      
     
           .contact{
             display:flex;
             padding:0 15px;
             flex-direction: row;
-            justify-content: right;
             max-width: 100%;
             align-items: center;
-            flex-direction: row;
-
+            justify-content: flex-end;
+            
             @media (min-width: $medium) {
               width: 58%;
             }
 
              @media (min-width: $large) {
               width: 67%;            
+            }
+            @media (max-width: $small) {
+              justify-content: flex-start;
+              margin:0;
+              padding:0;
             }
               
             .button-support {
@@ -94,20 +98,17 @@ align-items: center;
               line-height: rem(46px);
               height: 56px;
               padding: 5px 15px;
-              margin-left:20px;
+              margin-left: 20px;
               text-decoration: none;
               text-transform: uppercase;
 
               background-color: $blue; 
               border-radius: 3px;        
 
-              display: flex;
-              align-items: center;
-              justify-content: center;
               text-align: center;
               cursor: pointer;
 
-              @media (max-width: $small){
+              @media (max-width: $medium){
                 display: none;
               }
                           
@@ -130,13 +131,10 @@ align-items: center;
               background-color: $lightgrey;
               border-radius: 3px;     
 
-              display: flex;
-              align-items: center;
-              justify-content: center;
               text-align: center;
               cursor: pointer;
 
-              @media (max-width: $small){
+              @media (max-width: $medium){
                 display: none;
               }
 
@@ -147,9 +145,13 @@ align-items: center;
 
             .search {
               display:flex;
-              width: 300px;
               height: 56px;
               margin-left:20px;
+
+              @media (max-width: $small) {
+                  display:none
+                }
+
 
               label {
                 display: none;
@@ -167,6 +169,17 @@ align-items: center;
                 background-color: $white;
                 border: 1px solid $light;
                 border-radius: 0;
+
+                @media (max-width: $medium) {
+                  display: inline-flex;
+                  width: 174px;
+                }
+
+                @media (min-width: $medium) and (max-width: $large)
+                {
+                  display: none;
+                }
+
               }
 
               .form-search::placeholder {
@@ -196,10 +209,10 @@ align-items: center;
               color: $white;
               font-size: rem(40px);
               line-height: rem(46px);
-              font-weight: $font-bold;
+              font-weight: $font-light;
               height: 56px;
               width: 63px;
-              padding: 5px 15x;
+              padding: 5px;
               margin-left:20px;
               text-decoration: none;
               text-transform: uppercase;
@@ -207,9 +220,6 @@ align-items: center;
               background-color: $darkgrey;
               border-radius: 3px; 
 
-              display: flex;
-              align-items: center;
-              justify-content: center;
               text-align:center;
               cursor: pointer;
 
@@ -222,18 +232,22 @@ align-items: center;
 
         .mobile-contact{
             margin-top: 11px;
-              
 
+            @media (min-width: $small) and (max-width: $large) {
+            display: none;
+          }
+            @media (min-width: $large) {
+            display: none;
+          }
+
+             
             .mobile-search {
               display:flex;
-              //width:300px;
               height: 47px;
               background-color: rgba(0,0,0,.1);
               border: 2px solid rgba(0,0,0,.1);
               border-radius: 2px;
 
-
-              
 
               .hidden-label {
                 display: none;

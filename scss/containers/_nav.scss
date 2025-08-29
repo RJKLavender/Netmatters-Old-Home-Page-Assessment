@@ -3,7 +3,7 @@ nav {
     display:block;
 
     @media (max-width: $medium) {
-            display:none
+            display:none;
           }
         } 
  
@@ -23,73 +23,77 @@ nav {
             a {
                 color: $white;
                 display:block;
-                font-size: rem(16px);
+                font-size: rem(18px);
                 font-weight: $font-light;
                 line-height: 1;
-                padding-top:30px;
-                padding-bottom: 30px;
+                padding: 19px 0 18px;
                 position:relative;
                 text-decoration:none;
                 text-transform:uppercase;
                 cursor: pointer;
+                 
+                span {
+                    display:block;
+                    font-size: rem(23px);
+                    padding-bottom: 10px;
+                 }
 
-                 @media (min-width: $large) {
-                    font-size: rem(18px);
-
-                    small {
-                        font-size: rem(14px);
-                        font-weight: $font-semibold;
+                  small {
+                    display:block;
+                        font-size: rem(10px);
                     }
                 }
 
 
 
-            }
         }
+    }
         
-    }
 
-    .AIS {
-
-        small {
-                color: $white;
-        }
-    }
     .CD {
 
-        small {
-                color: $lightpurple;
+        span {
+                color: $sky;
+               
+            }
         }
-    }
+    
     
     .ITS {
 
-        small {
-                color: $lightblue;
+        span {
+                color: $blue;
+                
         }
     }
     .DM {
 
-        small {
-                color: $green;
+        span {
+                color: $lime;
         }
     }
     
     .TS {
 
-        small {
-                color: $ruby;
+        span {
+                color: $brightred;
         }
     }
     .WD {
 
-        small {
-                color: $lightpurple;
+        span {
+                color: $violet;
+        }
+    }
+      .CS {
+
+        span {
+                color: $rose;
         }
     }
     .DC {
 
-        small {
-                color: $lightpurple;
+        span {
+                color: $orange;
         }
     }

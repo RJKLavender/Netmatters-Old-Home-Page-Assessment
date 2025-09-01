@@ -60,12 +60,16 @@ align-items: center;
           max-width:100%;
           font-size: rem(32px);
           margin-left: 15px;
+          }
+
+          a {
+            text-decoration: none;
+            color: $darkgrey;
           
           }
 
-          a, a:hover, a:visited, a:active {
-            color: $darkgrey;
-            text-decoration: none;
+          a:hover, a:focus {
+            color: $link;
           }
 
         }
@@ -93,7 +97,7 @@ align-items: center;
               
             .button-support {
               color: $white;
-              font-size: rem(16px);
+              font-size: rem(18px);
               font-weight: $font-reg;
               line-height: rem(46px);
               height: 56px;
@@ -106,7 +110,6 @@ align-items: center;
               border-radius: 3px;        
 
               text-align: center;
-              cursor: pointer;
 
               @media (max-width: $medium){
                 display: none;
@@ -116,10 +119,14 @@ align-items: center;
                 margin-right: 5px;
               }
             }
+            .button-support:hover {
+              background-color: $hover-support1;
+              border-color: $hover-support2;
+            }
             
               .button-contact {
               color: $white;
-              font-size: rem(16px);
+              font-size: rem(18px);
               font-weight: $font-reg;
               line-height: rem(46px);
               height: 56px;
@@ -132,7 +139,6 @@ align-items: center;
               border-radius: 3px;     
 
               text-align: center;
-              cursor: pointer;
 
               @media (max-width: $medium){
                 display: none;
@@ -142,6 +148,11 @@ align-items: center;
                 margin-right: 5px;
               }
             }
+
+             .button-contact:hover {
+              background-color: $hover-contact1;
+              border-color: $hover-contact2;
+             }
 
             .search {
               display:flex;
@@ -165,10 +176,8 @@ align-items: center;
                 padding: 5px 15px;
                 width:240px;
                 cursor: text;
-                border-color: $offwhite;
                 background-color: $white;
-                border: 1px solid $light;
-                border-radius: 0;
+                border: 1px solid $offwhite;
 
                 @media (max-width: $medium) {
                   display: inline-flex;
@@ -182,6 +191,12 @@ align-items: center;
 
               }
 
+              .form-search:focus {
+                border-color: $focus-search;
+                outline: 0;
+                box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 8px rgba(91,192,222,.6);
+              }
+
               .form-search::placeholder {
                 color: $grey;
               }
@@ -193,15 +208,17 @@ align-items: center;
                 border: none;
                 background-color: $lightgrey;
                 color: $white;
-                justify-content: center;
-                align-items:center;
-                cursor: pointer;
+                text-align: center;
                 
-
+                
                   span {
                     font-size: rem(23px);
                     
                   }
+                }
+
+                .search-submit:hover {
+                  background-color: $hover-search;
                 }
             }
 
@@ -221,10 +238,12 @@ align-items: center;
               border-radius: 3px; 
 
               text-align:center;
-              cursor: pointer;
-
-
               }
+
+             .button-hamburger:hover {
+              background-color: $hover-hamburger1;
+              border-color: $hover-hamburger2;
+             }
 
           }
 
@@ -280,7 +299,6 @@ align-items: center;
                 justify-content: center;
                 padding: 0 10px;
                 height: 47px;
-                cursor: pointer;
                 color: $darkgrey;
                 font-size: rem(20px);
                 line-height: rem(47px);

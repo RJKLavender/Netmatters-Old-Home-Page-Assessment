@@ -46,14 +46,14 @@ box-sizing: border-box;
     display:flex;
 
         @media (max-width: $small) {
-      margin:0; 
+      margin-left:0;
+      margin-right:0; 
       flex-direction: column;
       
     }
         @media (min-width: $small) {
         width: 750px;
-         justify-content: space-between;
-         align-items: center;
+       
     }
      @media (min-width: $medium) {
         width: 970px;
@@ -70,5 +70,8 @@ a {
     cursor: pointer;
 }
 
+button {
+    cursor: pointer;
+}
 
- 
+

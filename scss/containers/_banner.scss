@@ -2,35 +2,32 @@
     display:flex;
     flex-direction: column;
     justify-content: center;
+    width: 100%;
+    min-height: 550px;
+    background-image: linear-gradient(270deg,transparent 25%,#000), url("../images/home-YLei.png");
 
-    .banner-image {
-     height: 100%;
-     width: 100%;
-     background-image: linear-gradient(95deg,rgba(128,48,141,.2) .76%,rgba(1,72,123,.2) 99.24%),
-     linear-gradient(90deg,transparent,rgba(0,0,0,.2)),
-     linear-gradient(0deg,rgba(34,36,49,.72),rgba(34,36,49,.72)),
-     linear-gradient(0deg,rgba(0,0,0,.4),rgba(0,0,0,.4)), url("../images/home-YLei.png");
-     //plausible varibles
-   
-.content {
-    color:$white;
-    padding: 200px 0 95px;
-    text-align: center;
-
-    @media (min-width: $medium) {
-        padding-top: 95px;
+    @media (max-width: $medium) {
+        background-position: center;
     }
 
+   
+    .content {
+    color:$white;
+    padding: 60px 0;
+
+    @media (max-width: $medium) {
+        text-align: center;
+    }
+  
            h1{
-           font-size: rem(44px);
-            font-weight: $font-black;
-            line-height: rem(54px);
-            padding-bottom: 20px;
-            margin:0;
+            font-size: rem(40px);
+            line-height: rem(48px);
+            font-weight: $font-semibold;
+            margin:0 0 20px;
 
              @media (min-width: $medium) {
-            font-size: rem(80px);
-            line-height: rem(90px); }
+            font-size: rem(64px);
+            line-height: rem(80px); }
 
         }
 
@@ -38,28 +35,36 @@
             font-size: rem(20px);
             font-weight: $font-semibold;
             line-height: rem(28px);
-            padding-bottom: 6px;
+            margin-bottom: 6px;
 
              @media (min-width: $medium) {
             font-size: rem(26px);
-            line-height: rem(44px); }
+            line-height: rem(40px); }
 
         }
 
         .button-banner {
-            margin-bottom: 18px;
-            margin-top: 31px;
-            padding: 14px 32px;
+            display: inline-block;
+            margin: 31px 0 18px;
+            padding: 5px 20px;
             font-size: rem(20px);
             line-height: rem(50px);
             color: $white;
-            background: hsla(0,0%,100%,.1);
-            font-weight: $font-semibold;
+            background-color: $violet;
+            border-radius: 3px;
+            border-color: $violet;
             text-transform: uppercase;
-            border: 2px solid $white;
-            border-radius: 10px;
-            cursor: pointer;
             text-decoration: none;
+
+            span {
+                margin-left: 12px;
+            }
+
+        }
+
+        .button-banner:hover {
+            background-color: $hover-banner1;
+            border-color: $hover-banner2;
 
         }
 
@@ -67,4 +72,4 @@
 
     }
 }
-}
+

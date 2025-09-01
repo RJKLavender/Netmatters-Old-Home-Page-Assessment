@@ -30,7 +30,6 @@ nav {
                 position:relative;
                 text-decoration:none;
                 text-transform:uppercase;
-                cursor: pointer;
                  
                 span {
                     display:block;
@@ -45,10 +44,17 @@ nav {
                 }
 
 
-
         }
-    }
+
+        li:hover {
+            span {
+                color: $white;
+            }
+        }
+
         
+    }
+       
 
     .CD {
 
@@ -96,4 +102,39 @@ nav {
         span {
                 color: $orange;
         }
+    }
+
+    .consultancy:hover {
+        background-color: $sky;
+
+    }
+
+    .itsupport:hover {
+        background-color: $blue;
+        
+    }
+
+    .digital:hover {
+        background-color: $lime;
+        
+    }
+
+    .telecoms:hover {
+        background-color: $brightred;
+
+    }
+
+    .webdesign:hover {
+        background-color: $violet;
+        
+    }
+
+    .cyber:hover {
+        background-color: $rose;
+        
+    }
+
+    .developer:hover{
+        background-color: $orange;        
+
     }

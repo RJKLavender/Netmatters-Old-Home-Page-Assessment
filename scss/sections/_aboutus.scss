@@ -1,20 +1,10 @@
 .about-us {
 
-background-image: linear-gradient(97deg,#350e5c -1.17%,#80308d 129.98%);
-  color: $white;
-  font-weight: $font-light;
-  text-align: center;
+background-color: $darkgrey;
+color: $white;
+font-weight: $font-light;
+text-align: left;
 
-    @media (min-with: $medium)
-    {
-        text-align: left;
-    }
-    
-    @media (min-width: $large)
-    {
-    background-image: url(../images/branded.png), linear-gradient(97deg,#350e5c -1.17%,#80308d 129.98%);
-    text-align: left;
-    }
 
 
 	.about-row {
@@ -28,26 +18,27 @@ background-image: linear-gradient(97deg,#350e5c -1.17%,#80308d 129.98%);
                 padding: 0 15px;
                 display: flex;
                 height: 100%;
+                width: 100%;
                 flex-direction: column;
        
-
-
                 @media (min-width: $medium) {
                     width: 50%
 
                 }
+
                 h2 {
                     margin-bottom: 40px;
                     margin-top: -6px;
                     color: $white;
-                    font-weight: $font-black;
+                    font-weight: $font-reg;
                     font-size: rem(36px);
-                    line-height: 1.2;
+                    line-height: 1.1;
                 }
 
                 p{
                     font-size: rem(16px);
                     line-height: rem(30px);
+                    font-weight: $font-reg;
                     margin-bottom: 25px;
                     margin-top: 0;
                     color: $white;
@@ -58,33 +49,33 @@ background-image: linear-gradient(97deg,#350e5c -1.17%,#80308d 129.98%);
                 }
 
                 p a {
-                        cursor: pointer;
-                        text-decoration: none;
-                        }
+                    text-decoration: none;
+                }
 
                 p a:hover {
                     text-decoration: underline;
                 }
-                    
-                
 
+                p a:visited {
+                    color: $white;
+                }
+                    
 				.about-buttons {
                     display:flex;
                     gap: 10px;
                     flex-direction: row;
-                    height:57px;
 
                     }
 				
                 .star-rating {
                     justify-content: center;
                     display: flex;
-                    font-size: rem(34px);
-                    gap: 14px;
-                    margin-bottom: 35px;
-                    flex-direction: row;
+                    font-size: rem(50px);
+                    gap: 5px;
+                    margin-bottom: 25px;
+                    color: $gold;
 
-                    @media (min-width: $medium  ) {
+                    @media (min-width: $medium) {
                     justify-content: flex-start;
                     }
                 
@@ -93,21 +84,21 @@ background-image: linear-gradient(97deg,#350e5c -1.17%,#80308d 129.98%);
 				.quote {
                     font-size: rem(21px);
                     font-style: $font-italic;
-                    font-weight: $font-reg;
+                    font-weight: $font-semibold;
                 }
                 .quote-author {
 
-                    font-size: rem(12px);
-                    font-weight: $font-reg;
+                    font-size: rem(17px);
+                    font-weight: $font-semibold;
+                    color:  $verylightgrey;
 
                 }
 								
 				.review-buttons {
-                     display:flex;
-                    gap: 10px;
+                    display:flex;
+                    gap: 5px;
                     flex-direction: row;
-                    height:57px;
-                    margin-top: 75      px;
+                   
 
                 }
             }
@@ -117,23 +108,73 @@ background-image: linear-gradient(97deg,#350e5c -1.17%,#80308d 129.98%);
     // about us button styling
     .button-about {
                         Display:inline-flex;
-                        border-radius: 10px;
-                        border: 2px solid $white;
-                        cursor: pointer;
+                        background-color: $obsidian;
+                        border-radius: 6px;
                         color: $white;
                         text-transform: uppercase;
                         text-decoration: none;
-                        font-size: rem(16px);
-                        font-weight: $font-semibold;
-                        line-height: rem(25px);
+                        font-size: rem(20px);
+                        font-weight: $font-reg;
+                        line-height: rem(35px);
                         justify-content: center;
                         align-items: center;
-                        padding: 11px 18px;
-                        height:57px;
+                        padding: 10px 30px;
+                        //height:57px;
 
 
                         em{
-                            padding-left: 15px;
-
+                            padding-left: 12px;
                         }
                     }
+    .button-about:hover { 
+        background-color: $hover-about;
+    }
+    .button-about-google {
+                        Display:inline-flex;
+                        background-color: $cobalt;
+                        border-radius: 6px;
+                        color: $white;
+                        text-transform: uppercase;
+                        text-decoration: none;
+                        font-size: rem(20px);
+                        font-weight: $font-reg;
+                        line-height: rem(35px);
+                        justify-content: center;
+                        align-items: center;
+                        padding: 10px 30px;
+                        //height:57px;
+                        margin-right: 8px;
+                        margin-top: 25px;
+
+
+
+                        em{
+                            padding-left: 12px;
+                        }
+                    }
+    .button-about-google:hover {
+        background-color: #166af4;
+    }
+    .button-about-trustpilot {
+                        Display:inline-flex;
+                        background-color: $emerald;
+                        border-radius: 6px;
+                        color: $white;
+                        text-transform: uppercase;
+                        text-decoration: none;
+                        font-size: rem(20px);
+                        font-weight: $font-reg;
+                        line-height: rem(35px);
+                        justify-content: center;
+                        align-items: center;
+                        padding: 10px 18px;
+                        margin-top: 25px;
+                        //height:57px;
+
+                        em{
+                            padding-left: 12px;
+                        }
+                    }
+    .button-about-trustpilot:hover {
+        background-color: $hover-trustpilot;
+    }

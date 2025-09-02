@@ -8,7 +8,6 @@ font-weight: $font-reg;
 .footer-row { 
 display:flex;
 flex-wrap:wrap;
-justify-content: space-between;
 
     .footer-company-info
     {
@@ -16,18 +15,17 @@ justify-content: space-between;
       justify-content: space-between;
       font-size: rem(13px);
       width: 300px;
-      flex: 100%;
+      width: 100%;
 
        @media (max-width: $small) {
-            flex:100%;
             flex-wrap:wrap;
             }
      @media (min-width: $small) {
-            flex: 50%;
+            width: 50%;
             }
 
      @media (min-width: $medium) {
-            flex: 25%;
+            width: 25%;
             }
     @media (min-width: $large) {
             width: 400px;
@@ -38,8 +36,7 @@ justify-content: space-between;
 
       .footer-logo {
         //margin-bottom:30px;
-        width: 320px;
-
+         width: 320px;
          @media (max-width: $small) {
           width:250px;
          }     
@@ -92,15 +89,17 @@ justify-content: space-between;
              line-height: rem(26px);
              padding: 12px 22px 16px;
              margin-right: 7px;
+            }
 
-
-          }
-
-           a, a:hover, a:visited, a:active {
+           a, a:visited, a:active {
             color: $white;
             text-decoration: none;
           }
 
+          .social-facebook:hover { background-color: $hover-facebook;}
+          .social-linkedin:hover { background-color: $hover-linkedin;}
+          .social-twitter:hover { background-color:  $hover-twitter;}
+          .social-Instagram:hover { background-color: $hover-instagram;}
 
           a span {
             position: relative;
@@ -118,11 +117,10 @@ justify-content: space-between;
       display: flex;
       flex-wrap: wrap;
       margin: 0 -15px;
-      padding: 0 15px;
-      justify-content: space-between;
 
     .footer-menu {
         flex: 100%;
+         padding: 0 15px;
         margin-bottom: 30px;
         
         @media (min-width: $small) {
@@ -136,16 +134,17 @@ justify-content: space-between;
             }
 
           @media (min-width: $large) {
-            flex: 10%;
+            flex: 25%;
             margin-bottom: 40px;
           
             }
 
           h4 {
             text-transform: uppercase;
-            font-size: rem(16px);
+            font-size: rem(15px);
             margin-bottom: 26px;
             font-weight: $font-reg;
+            margin-top: 0;
           }
 
           ul {
@@ -185,6 +184,7 @@ justify-content: space-between;
       }
    }
 }
+
 
 
   

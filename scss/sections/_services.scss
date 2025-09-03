@@ -23,6 +23,43 @@
 
             }
 				
+            .services-gridbox {
+                display:grid;
+                grid-template-columns: 7.5% 7.5% 7.5% 7.5% 7.5% 7.5% 7.5% 7.5% 7.5% 7.5% 7.5% 7.5% ;
+                grid-template-rows: 340px 340px;
+                column-gap: 2.5% ;
+                row-gap: 30px;
+                grid-template-areas: 
+                "panel1 panel1 panel1 panel1 panel2 panel2 panel2 panel2 panel3 panel3 panel3 panel3"
+                "panel4 panel4 panel4 panel5 panel5 panel5 panel6 panel6 panel6 panel7 panel7 panel7";
+
+                #panel1 {
+                    grid-area: panel1;
+                }
+                #panel2 {
+                    grid-area: panel2;
+
+                }
+                #panel3 {
+                    grid-area: panel3;
+                }
+                #panel4 {
+                    grid-area: panel4;
+
+                }
+                #panel5 {
+                    grid-area: panel5;
+
+                }
+                #panel6 {
+                    grid-area: panel6;
+
+                }
+                #panel7 {
+                    grid-area: panel7;
+
+                }
+                
 			
 			.services-panneltop {
                 cursor: pointer;
@@ -147,6 +184,23 @@
                     }
                 }
             }
+        }
+            .hidden-view-work {
+                h3 {
+                    a {
+                        
+                        em {
+
+                        }
+
+                    }
+                }
+
+                 h3 a:hover {
+
+                 }
+            }
+
         }
     }
     

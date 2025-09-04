@@ -1,72 +1,250 @@
-// Panels for services
-/*
+// Panel sytling and hovers for services section
+
 .panel-CD {
-    background: $white;
-    border: 4px solid transparent;
-    background: linear-gradient($white, $white) padding-box,
-    linear-gradient(180deg, $pink, $purple) border-box;
-    border-radius: 50px;
-    opacity: 1;
+   background-color: $white;
+  
+
+   .icon1 {
+    background-color: $sky;
+    color: $white;
+    }
+
+     .button-CD {
+    background-color: $orange;
+    border-color: $orange;
+    color: $white;
+    }
+
+}
+
+.panel-CD:hover {
+    background-color: $sky;
+
+    .icon1 {
+        background-color: $white;
+        color: $sky;
+    }
+
+    .button-CD {
+    background-color: $white;
+    border-color: $white;
+    color: $sky;
+    }
+
+
 }
 
 .panel-IT {
-    background: $white;
-    border: 4px solid transparent;
-    background: linear-gradient($white, $white) padding-box,
-    linear-gradient(180deg, $sky, $blue) border-box;
-    border-radius: 50px;
-    opacity: 1;
+   background-color: $white;
+
+   .icon1 {
+    background-color: $blue;
+    color: $white;
+    }
+
+     .button-IT {
+    background-color: $blue;
+    border-color: $blue;
+    color: $white;
+    }
+
+}
+
+.panel-IT:hover {
+    background-color: $blue;
+
+    .icon1 {
+        background-color: $white;
+        color: $blue;
+    }
+
+     .button-IT {
+    background-color: $white;
+    border-color: $white;
+    color: $blue;
+    }
+
+
+
 }
 
 .panel-DM {
-    background: $white;
-    border: 4px solid transparent;
-    background: linear-gradient($white, $white) padding-box,
-    linear-gradient(180deg,$lightteal, $teal) border-box;
-    border-radius: 50px;
-    opacity: 1;
+   background-color: $white;
+  
+
+   .icon1 {
+    background-color: $lime;
+    color: $white;
+    }
+     .button-DM {
+    background-color: $lime;
+    border-color: $lime;
+    color: $white;
+    }
+
+
+}
+
+.panel-DM:hover {
+    background-color: $lime;
+
+    .icon1 {
+        background-color: $white;
+        color: $lime;
+        
+    }
+     .button-DM {
+    background-color: $white;
+    border-color: $white;
+    color: $lime;
+    }
+
+
 }
 
 .panel-TS {
-    background: $white;
-    border: 4px solid transparent;
-    background: linear-gradient($white, $white) padding-box,
-    linear-gradient(180deg, $rose, $darkpurple) border-box;
-    border-radius: 50px;
-    opacity: 1;
+   background-color: $white;
+  
+
+   .icon1 {
+    background-color: $brightred;
+    color: $white;
+    }
+     .button-TS {
+    background-color: $brightred;
+    border-color: $brightred;
+    color: $white;
+    }
+
+
+}
+
+.panel-TS:hover {
+    background-color: $brightred;
+
+    .icon1 {
+        background-color: $white;
+        color: $brightred;
+
+        
+    }
+     .button-TS {
+    background-color: $white;
+    border-color: $white;
+    color: $brightred;
+    }
+
+
+
 }
 
 .panel-WD {
-    background: $white;
-    border: 4px solid transparent;
-    background: linear-gradient($white, $white) padding-box,
-    linear-gradient(180deg, $pink, $purple) border-box;
-    border-radius: 50px;
-    opacity: 1;
+   background-color: $white;
+  
+
+   .icon1 {
+    background-color: $violet;
+    color: $white;
+    }
+     .button-WD {
+    background-color: $violet;
+    border-color: $violet;
+    color: $white;
+    }
+
+
+}
+
+.panel-WD:hover {
+    background-color: $violet;
+
+    .icon1 {
+        background-color: $white;
+        color: $violet;
+
+        
+    }
+     .button-WD {
+    background-color: $white;
+    border-color: $white;
+    color: $violet;
+    }
+
+
+
 }
 
 .panel-CS {
-    background: $white;
-    border: 4px solid transparent;
-    background: linear-gradient($white, $white) padding-box,
-    linear-gradient(180deg, $ocean, $violet) border-box;
-    border-radius: 50px;
-    opacity: 1;
+   background-color: $white;
+  
+
+   .icon1 {
+    background-color: $rose;
+    color: $white;
+    }
+     .button-CS {
+    background-color: $rose;
+    border-color: $rose;
+    color: $white;
+    }
+
+
+}
+
+.panel-CS:hover {
+    background-color: $rose;
+
+    .icon1 {
+        background-color: $white;
+        color: $rose;
+
+        
+    }
+     .button-CS {
+    background-color: $white;
+    border-color: $white;
+    color: $rose;
+    }
+
+
+
 }
 
 .panel-DT {
-    background: $white;
-    border: 4px solid transparent;
-    background: linear-gradient($white, $white) padding-box,
-    linear-gradient(180deg, $pink, $purple) border-box;
-    border-radius: 50px;
-    opacity: 1;
+   background-color: $white;
+  
+
+   .icon1 {
+    background-color: $bloodorange;
+    color: $white;
+    }
+     .button-DT {
+    background-color: $bloodorange;
+    border-color: $bloodorange;
+    color: $white;
+    }
+
+
 }
 
-*/
+.panel-DT:hover {
+    background-color: $bloodorange;
+
+    .icon1 {
+        background-color: $white;
+        color: $bloodorange;
+
+        
+    }
+     .button-DT {
+    background-color: $white;
+    border-color: $white;
+    color: $bloodorange;
+    }
 
 
 
+}
 
 
 

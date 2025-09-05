@@ -39,11 +39,6 @@ align-items: center;
             width: 33.33%;
           }
 
-          a {
-            text-decoration: none;
-
-          }
-
           a img {
             max-width: 100%;
           }
@@ -63,7 +58,6 @@ align-items: center;
           }
 
           a {
-            text-decoration: none;
             color: $darkgrey;
           
           }
@@ -103,7 +97,7 @@ align-items: center;
               height: 56px;
               padding: 5px 15px;
               margin-left: 20px;
-              text-decoration: none;
+          
               text-transform: uppercase;
 
               background-color: $blue; 
@@ -132,7 +126,7 @@ align-items: center;
               height: 56px;
               padding: 5px 15px;
               margin-left:20px;
-              text-decoration: none;
+              
               text-transform: uppercase;
 
               background-color: $lightgrey;
@@ -231,7 +225,7 @@ align-items: center;
               width: 63px;
               padding: 5px;
               margin-left:20px;
-              text-decoration: none;
+              
               text-transform: uppercase;
 
               background-color: $darkgrey;

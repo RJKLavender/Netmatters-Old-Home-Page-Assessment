@@ -1,23 +1,23 @@
 //Poppins font
 @include font-face('Poppins',Poppins-Black,900);
-@include font-face('Poppins',Poppins-Blod,700);
-@include font-face('Poppins',Poppins-ExtraBlod, 800);
+@include font-face('Poppins',Poppins-Bold,700);
+@include font-face('Poppins',Poppins-ExtraBold, 800);
 @include font-face('Poppins',Poppins-ExtraLight,200);
 @include font-face('Poppins',Poppins-Light,300);
 @include font-face('Poppins',Poppins-Medium, 500);
 @include font-face('Poppins',Poppins-Regular,400);
-@include font-face('Poppins',Poppins-SemiBlod, 600);
+@include font-face('Poppins',Poppins-SemiBold, 600);
 @include font-face('Poppins',Poppins-Thin,100);
 
 //italic fonts
 @include font-face-italic('Poppins',Poppins-BlackItalic,900, italic);
-@include font-face-italic('Poppins',Poppins-BlodItalic,700, italic );
-@include font-face-italic('Poppins',Poppins-ExtraBlodItalic, 800, italic);
+@include font-face-italic('Poppins',Poppins-BoldItalic,700, italic );
+@include font-face-italic('Poppins',Poppins-ExtraBoldItalic, 800, italic);
 @include font-face-italic('Poppins',Poppins-ExtraLightItalic, 200, italic);
 @include font-face-italic('Poppins',Poppins-LightItalic ,300, italic);
 @include font-face-italic('Poppins',Poppins-MediumItalic , 500, italic);
 @include font-face-italic('Poppins',Poppins-Italic,400, italic);
-@include font-face-italic('Poppins',Poppins-SemiBlodItalic, 600, italic);
+@include font-face-italic('Poppins',Poppins-SemiBoldItalic, 600, italic);
 @include font-face-italic('Poppins',Poppins-ThinItalic,100, italic);
 
 //icomoon font

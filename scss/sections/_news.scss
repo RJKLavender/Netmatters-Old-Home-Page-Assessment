@@ -43,16 +43,25 @@
                display:flex;
                flex-wrap:wrap;
                margin: -30px -15px 0 -15px;
+               padding-top: 15px;
+               padding-bottom: 50px;
 
 				.news-article {
                     max-width:100%;
+                    width:100%;
                     padding: 0 15px;
 
                     @media (min-width: $small)
                     {
                         width: 50%
                     }
-						.article {
+
+                    @media (min-width: $large)
+                    {
+                        width: calc(100% / 3);
+                    }
+
+						a {
                             font-size: rem(13px);
                             margin-top:30px;
                             position: relative;
@@ -78,20 +87,22 @@
                                     z-index: 1;
                                     
                                 }
+
                                 .insights:hover {
                                     text-decoration: underline;
                                 }
-                                a {
+
+                                .A-img {
                                     position: relative;
                                     border-radius: 3px 3px 0 0;
                                     border: 0;
-                                    text-decoration:none; 
+                                    text-decoration:none;
+                                    max-width:100%;
 
 								    img {
                                         display:block;
-                                        max-width:100%;
-                                        width: 100%;
                                         height: auto;
+                                        width:100%;
 
                                     }
                                 }
@@ -100,7 +111,7 @@
                                 
                                 .article-description {
                                     border-top:0;
-                                    border-radius: 3px 3px 0 0;
+                                    border-radius:0 0 3px 3px;
                                     display:block;
                                     padding: 30px;
                                     border: 1px solid $offwhite;
@@ -137,6 +148,7 @@
                                     justify-content: center;
 
                                 }
+
                                 .news-button-t2 {
                                     display:inline-flex;
                                     color: $white;
@@ -163,55 +175,62 @@
                                     font-size: rem(14px);
                                     
 
-									.article-author-img {
+									.article-author-img { 
+                                        border-radius: 50%;                                    
 
 										img {
+                                            display:block;
+                                            max-width:47px;
+                                            height:auto;
 
                                         }
                                     }
 									.article-author-name {
+                                        padding-left: 20px;
+                                        line-height: rem(22px);
 										strong {
+                                            font-weight: $font-semibold;
 
                                         }
-										br {
 
-                                        }
                                     }
                             }
                         }
                     }
 
-                    article:hover {
+                    a:hover {
                     top: -10px;
                     transition: .5s ease;
-
                     }
-                    .article-bespoke {
 
+                    .article-technician {
+                        @media (min-width: $small) and (max-width: $large) {
+                            display:none;
+                        }
                     }
-                    .article-ai {
 
-                    }
-                    .article-technician
-                    {
 
-                    }
                 }
             }
 
             .hidden-view-all {
                  text-align: center;
+                 margin-bottom: 20px;
+                 
 
+                 @media (min-width: $small)
+                 {
+                    display:none;
+                 }
                 h3 {
-                    a {
-                       strong {
-                        em {
+                    font-size: rem(26px);
+                    color: $darkgrey;
+                    font-weight: $font-semibold;
+                    margin-bottom: 15px;
+                    line-height:1.1;
 
-                        }
-                        }
-                    }
                     a:hover {
-
+                        text-decoration: underline;
                     }
                 }
             }

@@ -19,3 +19,19 @@
         
     }
 }
+
+//color mixins for the panels,icons and buttons in the services section
+@mixin panelcolor($panel-bg-color) {
+  background-color: $panel-bg-color;
+}
+
+@mixin buttoncolor($button-bg-color, $button-br-color, $button-text-color) {
+  background-color: $button-bg-color;
+  border-color: $button-br-color;
+  color: $button-text-color;
+}
+
+@mixin iconcolor($icon-bg-color, $icon-text-color) {
+  background-color: $icon-bg-color;
+  color: $icon-text-color;
+}

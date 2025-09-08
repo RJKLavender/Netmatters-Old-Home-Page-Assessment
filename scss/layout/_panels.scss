@@ -1,8 +1,6 @@
 // Panel sytling and hovers for services section
 
 .panel-CD {
-   background-color: $white;
-  
 
    .icon1 {
     background-color: $sky;
@@ -18,7 +16,7 @@
 }
 
 .panel-CD:hover {
-    background-color: $sky;
+   @include panelcolor ($sky)
 
     .icon1 {
         background-color: $white;
@@ -26,16 +24,14 @@
     }
 
     .button-CD {
-    background-color: $white;
-    border-color: $white;
-    color: $sky;
+    @include buttoncolor($white, $white, $sky)
     }
 
 
 }
 
 .panel-IT {
-   background-color: $white;
+   
 
    .icon1 {
     background-color: $blue;
@@ -43,15 +39,13 @@
     }
 
      .button-IT {
-    background-color: $blue;
-    border-color: $blue;
-    color: $white;
+    @include buttoncolor($blue, $blue, $white)
     }
 
 }
 
 .panel-IT:hover {
-    background-color: $blue;
+   @include panelcolor ($blue)
 
     .icon1 {
         background-color: $white;
@@ -59,9 +53,7 @@
     }
 
      .button-IT {
-    background-color: $white;
-    border-color: $white;
-    color: $blue;
+    @include buttoncolor($white, $white, $blue)
     }
 
 
@@ -69,7 +61,7 @@
 }
 
 .panel-DM {
-   background-color: $white;
+   
   
 
    .icon1 {
@@ -77,16 +69,14 @@
     color: $white;
     }
      .button-DM {
-    background-color: $lime;
-    border-color: $lime;
-    color: $white;
+        @include buttoncolor($lime, $lime, $white)
     }
 
 
 }
 
 .panel-DM:hover {
-    background-color: $lime;
+   @include panelcolor ($lime)
 
     .icon1 {
         background-color: $white;
@@ -94,116 +84,88 @@
         
     }
      .button-DM {
-    background-color: $white;
-    border-color: $white;
-    color: $lime;
+    @include buttoncolor($white, $white, $lime)
     }
 
 
 }
 
 .panel-TS {
-   background-color: $white;
-  
-
+    
    .icon1 {
     background-color: $brightred;
     color: $white;
     }
      .button-TS {
-    background-color: $brightred;
-    border-color: $brightred;
-    color: $white;
+    @include buttoncolor($brightred, $brightred, $white)
     }
 
 
 }
 
 .panel-TS:hover {
-    background-color: $brightred;
+    @include panelcolor ($brightred)
 
     .icon1 {
         background-color: $white;
         color: $brightred;
-
-        
     }
      .button-TS {
-    background-color: $white;
-    border-color: $white;
-    color: $brightred;
+   @include buttoncolor($white, $white, $brightred)
     }
-
-
 
 }
 
 .panel-WD {
-   background-color: $white;
-  
+    
 
    .icon1 {
     background-color: $violet;
     color: $white;
     }
      .button-WD {
-    background-color: $violet;
-    border-color: $violet;
-    color: $white;
+    @include buttoncolor($violet, $violet, $white)
     }
-
 
 }
 
 .panel-WD:hover {
-    background-color: $violet;
+    @include panelcolor ($violet)
 
     .icon1 {
         background-color: $white;
         color: $violet;
-
-        
     }
      .button-WD {
-    background-color: $white;
-    border-color: $white;
-    color: $violet;
+    @include buttoncolor($white, $white, $violet)
     }
 
 
 
 }
 
-.panel-CS {
-   background-color: $white;
-  
+.panel-CS {  
 
    .icon1 {
     background-color: $rose;
     color: $white;
     }
      .button-CS {
-    background-color: $rose;
-    border-color: $rose;
-    color: $white;
+    @include buttoncolor($rose, $rose, $white)
     }
 
 
 }
 
 .panel-CS:hover {
-    background-color: $rose;
+   @include panelcolor ($rose)
 
     .icon1 {
         background-color: $white;
         color: $rose;
-
-        
     }
      .button-CS {
-    background-color: $white;
-    border-color: $white;
-    color: $rose;
+    @include buttoncolor($white, $white, $rose)
     }
 
 
@@ -211,7 +173,7 @@
 }
 
 .panel-DT {
-   background-color: $white;
+   
   
 
    .icon1 {
@@ -219,27 +181,21 @@
     color: $white;
     }
      .button-DT {
-    background-color: $bloodorange;
-    border-color: $bloodorange;
-    color: $white;
+        @include buttoncolor($bloodorange, $bloodorange, $white)
     }
 
 
 }
 
 .panel-DT:hover {
-    background-color: $bloodorange;
+    @include panelcolor ($bloodorange)
 
     .icon1 {
         background-color: $white;
-        color: $bloodorange;
-
-        
+        color: $bloodorange;        
     }
      .button-DT {
-    background-color: $white;
-    border-color: $white;
-    color: $bloodorange;
+       @include buttoncolor($white, $white, $bloodorange)
     }
 
 

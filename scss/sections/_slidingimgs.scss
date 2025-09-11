@@ -18,6 +18,52 @@
             padding: 0 20px;
             height:70px;
             max-height:70px;
+
+            .logo-description {
+                display:none;
+
+                h3 {
+
+                }
+                p {
+                    a {
+
+                    }
+                    a:hover {
+
+                    }
+                }
+                a {
+                    em {
+                        
+                    }
+                }
+                .logo-buttonP {
+
+                }
+                .logo-buttonB {
+                    
+                }
+                .logo-buttonO {
+                    
+                }
+                .logo-buttonG {
+                    
+                }
+                .logo-buttonP:hover {
+                    
+                }
+                .logo-buttonB:hover {
+                    
+                }
+                .logo-buttonO:hover {
+                    
+                }
+                .logo-buttonG:hover {
+                    
+                }
+                .arrow {}
+            }
             
 
 			img {
@@ -27,6 +73,11 @@
             }
             img:hover {
                 filter: grayscale(0);
+            }
+        }
+        .sliding-img-box:hover {
+            .logo-description {
+                display:block;
             }
         }
     }

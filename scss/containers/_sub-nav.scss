@@ -1,0 +1,28 @@
+
+.sub-nav {
+    display:none;
+
+	ul {
+	    .sub-nav-title {
+
+        }
+	    .sub-nav-link {
+            a {
+                .link-icon {
+                    span {
+
+                    }
+                }
+                .link-text {
+
+                }
+
+            }
+            a:hover {
+                .link-text {
+                    text-decoration: underline;
+                }
+            }
+        }
+    }
+}

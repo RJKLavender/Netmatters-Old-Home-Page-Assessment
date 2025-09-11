@@ -43,13 +43,17 @@ nav {
                     }
                 }
 
-
+                @import 'sub-nav';
         }
 
         li:hover {
             span {
                 color: $white;
             }
+        }
+
+        li:hover a::before {
+            
         }
 
         
@@ -104,37 +108,111 @@ nav {
         }
     }
 
-    .consultancy:hover {
+    //nav hovers
+      .consultancy:hover {
         background-color: $sky;
+        #sub-nav-CD {
+            background-color: $sky;
+            display:block;
+        }
 
     }
 
     .itsupport:hover {
         background-color: $blue;
+        #sub-nav-ITS {
+            background-color: $blue;
+            display:block;
+        }
+
         
     }
 
     .digital:hover {
         background-color: $lime;
+        #sub-nav-DM {
+            background-color: $lime;
+            display:block;
+        }
+
         
     }
 
     .telecoms:hover {
         background-color: $brightred;
+        #sub-nav-TS {
+            background-color: $brightred;
+            display:block;
+        }
+
 
     }
 
     .webdesign:hover {
         background-color: $violet;
+        #sub-nav-WD {
+            background-color: $violet;
+            display:block;
+        }
+
         
     }
 
     .cyber:hover {
         background-color: $rose;
+        #sub-nav-CS {
+            background-color: $rose;
+            display:block;
+        }
+
         
     }
 
     .developer:hover{
-        background-color: $bloodorange;        
+        background-color: $bloodorange; 
+        #sub-nav-DC {
+            background-color: $bloodorange;
+            display:block;
+        }
+       
+
+    }
+
+     .consultancy:hover a::before {
+        
+
+    }
+
+    .itsupport:hover a::before {
+       
+
+        
+    }
+
+    .digital:hover a::before {
+       
+
+        
+    }
+
+    .telecoms:hover a::before {
+        
+
+    }
+
+    .webdesign:hover a::before {
+       
+        
+    }
+
+    .cyber:hover a::before{
+        
+
+        
+    }
+
+    .developer:hover a::before {
+        
+       
 
     }

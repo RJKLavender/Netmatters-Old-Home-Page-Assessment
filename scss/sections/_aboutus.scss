@@ -91,6 +91,11 @@ text-align: left;
                     font-weight: $font-semibold;
                     color:  $verylightgrey;
 
+                    a:link, a:any-link {
+                         color: $darkgrey;
+                        }
+
+
                 }
 								
 				.review-buttons {

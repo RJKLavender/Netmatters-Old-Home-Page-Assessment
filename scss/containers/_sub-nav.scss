@@ -1,28 +1,60 @@
 
 .sub-nav {
     display:none;
+    margin: 0;
+    position: absolute;
+    left: 0;
+    min-width: 100%;
+    z-index: 10;
+    padding: 50px 0;
 
-	ul {
-	    .sub-nav-title {
 
+	.sub-nav-list {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        margin-top: -15px;
+        list-style: none;
+        text-align: left;
+        padding:0;
+        margin-bottom: 0;
+        color: $white;
+
+          .sub-nav-title {
+            display: block;
+            font-size: (32px);
+            line-height: 1.1;
+            width: 100%;
+            margin-bottom: 10px;
+            margin-top: 15px;
+            font-weight: $font-med;
+            text-align: left;
+           
         }
+
+	    
 	    .sub-nav-link {
+            width: 33%;
+            margin-top: 15px;
+            font-size: rem(17px);
+            line-height: rem(21px);
+        
             a {
-                .link-icon {
-                    span {
+                padding: 10px 15px 10px 0;
+                display: flex;
+                align-items: center;
 
-                    }
-                }
                 .link-text {
-
+                    margin-left: 10px;
                 }
 
             }
-            a:hover {
+            .sub-nav-item:hover {
                 .link-text {
                     text-decoration: underline;
                 }
             }
         }
+        
     }
 }

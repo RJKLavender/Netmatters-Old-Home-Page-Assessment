@@ -227,10 +227,6 @@
                     font-weight: $font-semibold;
                     color: $darkgrey;
 
-                    a:visited {
-                        text-decoration:none;
-                        color: $darkgrey;
-                    }
                     a:hover, a:focus {
                     text-decoration: underline;
                     }

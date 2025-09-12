@@ -15,12 +15,12 @@ nav {
         margin:0;
         padding:0;
         
-        li {
+        .main-nav-item {
             text-decoration: none;
             text-align: center;
             flex: 1;
 
-            a {
+            .nav-item {
                 color: $white;
                 display:block;
                 font-size: rem(18px);
@@ -31,7 +31,7 @@ nav {
                 text-decoration:none;
                 text-transform:uppercase;
                  
-                span {
+                .nav-icon {
                     display:block;
                     font-size: rem(23px);
                     padding-bottom: 10px;
@@ -42,17 +42,19 @@ nav {
                         font-size: rem(10px);
                     }
                 }
-
-                @import 'sub-nav';
         }
 
-        li:hover {
-            span {
-                color: $white;
-            }
-        }
-
-        li:hover a::before {
+        li:hover .nav-item::before {
+            content: "";
+            position: absolute;
+            left: 50%;
+            bottom: -35px;
+            transform: translateX(-50%);
+            z-index: 90;
+            width: 0;
+            height: 0;
+            border-style: solid;
+            border-width: 35px 83.5px 0;
             
         }
 
@@ -64,16 +66,14 @@ nav {
 
         span {
                 color: $sky;
-               
             }
-        }
+    }
     
     
     .ITS {
 
         span {
                 color: $blue;
-                
         }
     }
     .DM {
@@ -95,7 +95,7 @@ nav {
                 color: $violet;
         }
     }
-      .CS {
+    .CS {
 
         span {
                 color: $rose;
@@ -111,18 +111,27 @@ nav {
     //nav hovers
       .consultancy:hover {
         background-color: $sky;
-        #sub-nav-CD {
-            background-color: $sky;
+        .CD {span{color: $white}}
+
+        .sub-nav-CD {
+            background-color: $subnav-sky;
             display:block;
+        }
+        a::before {
+            border-color: $sky transparent transparent;
         }
 
     }
 
     .itsupport:hover {
         background-color: $blue;
-        #sub-nav-ITS {
-            background-color: $blue;
+         .ITS {span{color: $white}}
+        .sub-nav-ITS {
+            background-color: $subnav-blue;
             display:block;
+        }
+        a::before {
+            border-color: $blue transparent transparent;
         }
 
         
@@ -130,9 +139,13 @@ nav {
 
     .digital:hover {
         background-color: $lime;
-        #sub-nav-DM {
-            background-color: $lime;
+         .DM {span{color: $white}}
+        .sub-nav-DM {
+            background-color: $subnav-lime;
             display:block;
+        }
+        a::before {
+            border-color: $lime transparent transparent;
         }
 
         
@@ -140,9 +153,13 @@ nav {
 
     .telecoms:hover {
         background-color: $brightred;
-        #sub-nav-TS {
-            background-color: $brightred;
+         .TS {span{color: $white}}
+        .sub-nav-TS {
+            background-color: $subnav-brightred;
             display:block;
+        }
+        a::before {
+            border-color: $brightred transparent transparent;
         }
 
 
@@ -150,9 +167,13 @@ nav {
 
     .webdesign:hover {
         background-color: $violet;
-        #sub-nav-WD {
-            background-color: $violet;
+         .WD {span{color: $white}}
+        .sub-nav-WD {
+            background-color: $subnav-violet;
             display:block;
+        }
+        a::before {
+            border-color: $violet transparent transparent;
         }
 
         
@@ -160,59 +181,24 @@ nav {
 
     .cyber:hover {
         background-color: $rose;
-        #sub-nav-CS {
-            background-color: $rose;
+         .CS {span{color: $white}}
+        .sub-nav-CS {
+            background-color: $subnav-rose;
             display:block;
         }
-
-        
+        a::before {
+            border-color: $rose transparent transparent;
+        }
     }
 
     .developer:hover{
-        background-color: $bloodorange; 
-        #sub-nav-DC {
-            background-color: $bloodorange;
+        background-color: $bloodorange;
+         .DC {span{color: $white}}
+        .sub-nav-DC {
+            background-color: $subnav-bloodorange;
             display:block;
         }
-       
-
-    }
-
-     .consultancy:hover a::before {
-        
-
-    }
-
-    .itsupport:hover a::before {
-       
-
-        
-    }
-
-    .digital:hover a::before {
-       
-
-        
-    }
-
-    .telecoms:hover a::before {
-        
-
-    }
-
-    .webdesign:hover a::before {
-       
-        
-    }
-
-    .cyber:hover a::before{
-        
-
-        
-    }
-
-    .developer:hover a::before {
-        
-       
-
+        a::before {
+            border-color: $bloodorange transparent transparent;
+        }
     }

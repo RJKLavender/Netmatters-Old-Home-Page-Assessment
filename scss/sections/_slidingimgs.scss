@@ -9,7 +9,7 @@
         position: relative;
         align-items: center;
         justify-content: center;
-        overflow: hidden;
+        overflow-x: clip;
 
 		.sliding-img-box {
             width: auto;
@@ -33,60 +33,89 @@
                 margin:0 auto 50px;
 
                 h3 {
-
+                    font-size: rem(18px);
+                    padding-bottom:17px;
+                    margin:0;
+                    font-weight: $font-reg;
                 }
                 p {
-                    a {
+                    font-size: rem(13px);
+                    line-height:rem(22px);
 
-                    }
                     a:hover {
+                        text-decoration: underline;
 
                     }
                 }
                 a {
+                    margin-top: 11px;
+                    font-size: rem(16px);
+                    line-height: rem(35px);
+                    text-transform: uppercase;
+                    border-radius: 3px;
+                    height: auto;
+                    font-weight: $font-reg;
+
                     em {
+                        margin-left: 12px;
                         
                     }
                 }
                 .logo-buttonP {
+                    background-color: $violet;
+                    border-color: $violet;
 
                 }
                 .logo-buttonB {
+                     background-color: $blue;
+                    border-color: $blue;
                     
                 }
                 .logo-buttonO {
+                    background-color: $orange;
+                    border-color: $orange;
                     
                 }
                 .logo-buttonG {
+                    background-color: $lime;
+                    border-color: $lime;
                     
                 }
                 .logo-buttonP:hover {
+                    background-color: $hover-purple;
+                    border-color: $hover-purple;
                     
                 }
                 .logo-buttonB:hover {
-                    
+                    background-color: $hover-blue;
+                    border-color: $hover-blue;
                 }
                 .logo-buttonO:hover {
+                    border-color: $hover-orange;
+                    border-color: $hover-orange;
                     
                 }
                 .logo-buttonG:hover {
+                    background-color: $hover-green;
+                    border-color: $hover-green;
                     
                 }
                 .arrow {
                     position:absolute;
-                    bottom: 10px;
+                    top: 100%;
                     left: 50%;
-                    margin-left: -36px;
+                    margin-left: -35px;
+                    
+                }
+                .arrow::after {
+                    content: "";
+                    display:inline-block;
+                    border-color: $darkgrey transparent transparent;
+                    border-style:solid;
+                    border-width:35px 36px 0;
 
                 }
-                arrow::after {
-                     content:"";
-                     margin:auto;
-                     display:inline-block;
-                     border-color: $darkgrey transparent transparent;
-                     border-style:solid;
-                     border-width:35px 36px 0
-                }
+                
             }
             
 

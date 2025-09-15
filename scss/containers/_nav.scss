@@ -140,7 +140,7 @@ nav {
         @include navcolor($lime);
          .DM {span{color: $white;}}
         .sub-nav-DM {
-            @include navcolor($lime);
+            @include navcolor($subnav-lime);
             display:block;
         }
         a::before {
@@ -179,7 +179,7 @@ nav {
     }
 
     .cyber:hover {
-        @include navcolor(rose);
+        @include navcolor($rose);
          .CS {span{color: $white;}}
         .sub-nav-CS {
             @include navcolor($subnav-rose);
@@ -191,7 +191,7 @@ nav {
     }
 
     .developer:hover{
-        @include navcolor($rose);
+        @include navcolor($bloodorange);
          .DC {span{color: $white;}}
         .sub-nav-DC {
             @include navcolor($subnav-bloodorange);

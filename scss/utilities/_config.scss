@@ -5,17 +5,10 @@ $white: #fff;
 $grey: #888;
 $black: #000;
 $dark: #323544;
-$darker: #222431;
 $verydarkgrey: #212330;
 $darkgrey: #333645;
-$lightpurple: #c29fef;
-$lightblue: #a2eaff;
-$green:#88d3af;
-$ruby:#d88eb1;
-$red: #d24d57;
 $offwhite: #ccc;
 $lightgrey: #999aa2;
-$light: #e5e5e5;
 $medgrey: #555;
 $offblack: #212330;
 $link: #121419;
@@ -25,7 +18,7 @@ $gold: #ffa500;
 //Colours for buttons
 $blue: #4183d7;
 $sky: #67809f;
-$brightred: #d64541;
+$red: #d64541;
 $violet: #926fb1;
 $bloodorange: #ce4125;
 $lime: #2ecc71;
@@ -36,24 +29,22 @@ $emerald: #00b67b;
 $orange:#f7b322;
 $subnav-sky:#526781;
 $subnav-blue: #286abd;
-$subnav-brightred: #bc2c28;;
+$subnav-red: #bc2c28;;
 $subnav-violet: #79539a;
 $subnav-bloodorange: #a3331d;
 $subnav-lime: #25a25a;
 $subnav-rose: #de093f;
 
-
-
 //Hover & Focus colours
-$hover-support2: #2665b5;
-$hover-contact1:  #84858f;
-$hover-contact2: #797a85;
+$hover-green:#26ab5f;
+$hover-orange:#e8a008;
+$hover-purple:#7e57a0;
+$hover-blue: #2a6ec6;
+$hover-grey:  #84858f;
+
 $hover-hamburger1: #22242e;
-$hover-hamburger2: #191a22;
 $hover-search: #7e808a;
 $focus-search: #5bc0de;
-
-$hover-banner2:#735093;
 $hover-about: #121318;
 $hover-google: #166af4;
 $hover-trustpilot: #009b69;
@@ -61,11 +52,6 @@ $hover-facebook: #3b5998;
 $hover-linkedin: #0077b5;
 $hover-twitter:  #00aced;
 $hover-instagram: #d93175;
-
-$hover-green:#26ab5f;
-$hover-orange:#e8a008;
-$hover-purple:#7e57a0;
-$hover-blue: #2a6ec6;
 
 //Break Points
 $small: 768px;

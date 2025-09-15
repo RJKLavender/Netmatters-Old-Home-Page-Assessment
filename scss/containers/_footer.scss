@@ -3,7 +3,7 @@ background-color: $dark;
 color: $white;
 padding: 27px 0 0;
 position: relative;
-font-weight: $font-reg;
+
 
 .footer-row { 
 display:flex;
@@ -53,9 +53,6 @@ flex-wrap:wrap;
 
         h4 {
           text-transform: uppercase;
-          font-size: rem(16px);
-          line-height: rem(18px);
-          font-weight: $font-reg;
           margin-bottom: 26px;
           margin-top: 24px;
 
@@ -96,10 +93,14 @@ flex-wrap:wrap;
             text-decoration: none;
           }
 
-          .social-facebook:hover { background-color: $hover-facebook;}
-          .social-linkedin:hover { background-color: $hover-linkedin;}
-          .social-twitter:hover { background-color:  $hover-twitter;}
-          .social-Instagram:hover { background-color: $hover-instagram;}
+          .social-facebook:hover {
+             background-color: $hover-facebook;}
+          .social-linkedin:hover { 
+            background-color: $hover-linkedin;}
+          .social-twitter:hover { 
+            background-color:  $hover-twitter;}
+          .social-Instagram:hover { 
+            background-color: $hover-instagram;}
 
           a span {
             position: relative;
@@ -143,14 +144,11 @@ flex-wrap:wrap;
             text-transform: uppercase;
             font-size: rem(15px);
             margin-bottom: 26px;
-            font-weight: $font-reg;
             margin-top: 0;
           }
 
           ul {
-            list-style: none;
             display:block;
-            list-style-type: none;
             padding:0;
             margin:0;
 

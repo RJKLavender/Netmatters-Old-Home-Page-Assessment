@@ -8,10 +8,9 @@
             justify-content: space-between;
 
 			h2 {
-                font-size: rem(36px);
+                
                 margin-bottom: 28px;
                 color: $darkgrey;
-                line-height: 1.1;
                 strong {
                     font-weight: $font-semibold;
 
@@ -23,15 +22,13 @@
                 font-size: rem(26px);
                 margin-bottom: 15px;
                 color: $darkgrey;
-                line-height: 1.1;
+                
 
                 a {
                     font-weight: $font-semibold;
                     
                 }
-                a:hover {
-                    text-decoration: underline;
-                }
+                
 
                 @media (max-width: $small) {
                     display:none;
@@ -126,8 +123,6 @@
                                 }
 
 								p {
-                                     font-size: rem(13px);
-                                    line-height: rem(22px);
                                     margin-bottom: 25px;
                                 }
 
@@ -227,11 +222,6 @@
                     color: $darkgrey;
                     font-weight: $font-semibold;
                     margin-bottom: 15px;
-                    line-height:1.1;
-
-                    a:hover {
-                        text-decoration: underline;
-                    }
                 }
             }
 }

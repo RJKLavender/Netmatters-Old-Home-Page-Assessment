@@ -11,7 +11,6 @@ nav {
     .main-nav {
         display: flex;
         flex-direction: row;
-        list-style: none;
         margin:0;
         padding:0;
         
@@ -60,8 +59,8 @@ nav {
 
         
     }
-       
-
+    
+    //nav icon colors
     .CD {
 
         span {
@@ -86,7 +85,7 @@ nav {
     .TS {
 
         span {
-                color: $brightred;
+                color: $red;
         }
     }
     .WD {
@@ -108,13 +107,13 @@ nav {
         }
     }
 
-    //nav hovers
+    //nav hover over nav buttons which also make sub nav appear
       .consultancy:hover {
-        background-color: $sky;
-        .CD {span{color: $white}}
+        @include navcolor($sky);
+        .CD {span{color: $white;}}
 
         .sub-nav-CD {
-            background-color: $subnav-sky;
+            @include navcolor($subnav-sky);
             display:block;
         }
         a::before {
@@ -124,10 +123,10 @@ nav {
     }
 
     .itsupport:hover {
-        background-color: $blue;
-         .ITS {span{color: $white}}
+        @include navcolor($blue);
+         .ITS {span{color: $white;}}
         .sub-nav-ITS {
-            background-color: $subnav-blue;
+            @include navcolor($subnav-blue);
             display:block;
         }
         a::before {
@@ -138,10 +137,10 @@ nav {
     }
 
     .digital:hover {
-        background-color: $lime;
-         .DM {span{color: $white}}
+        @include navcolor($lime);
+         .DM {span{color: $white;}}
         .sub-nav-DM {
-            background-color: $subnav-lime;
+            @include navcolor($lime);
             display:block;
         }
         a::before {
@@ -152,24 +151,24 @@ nav {
     }
 
     .telecoms:hover {
-        background-color: $brightred;
-         .TS {span{color: $white}}
+        @include navcolor($red);
+         .TS {span{color: $white;}}
         .sub-nav-TS {
-            background-color: $subnav-brightred;
+            @include navcolor($subnav-red);
             display:block;
         }
         a::before {
-            border-color: $brightred transparent transparent;
+            border-color: $red transparent transparent;
         }
 
 
     }
 
     .webdesign:hover {
-        background-color: $violet;
-         .WD {span{color: $white}}
+        @include navcolor($subnav-violet);
+         .WD {span{color: $white;}}
         .sub-nav-WD {
-            background-color: $subnav-violet;
+            @include navcolor($subnav-violet);
             display:block;
         }
         a::before {
@@ -180,10 +179,10 @@ nav {
     }
 
     .cyber:hover {
-        background-color: $rose;
-         .CS {span{color: $white}}
+        @include navcolor(rose);
+         .CS {span{color: $white;}}
         .sub-nav-CS {
-            background-color: $subnav-rose;
+            @include navcolor($subnav-rose);
             display:block;
         }
         a::before {
@@ -192,10 +191,10 @@ nav {
     }
 
     .developer:hover{
-        background-color: $bloodorange;
-         .DC {span{color: $white}}
+        @include navcolor($rose);
+         .DC {span{color: $white;}}
         .sub-nav-DC {
-            background-color: $subnav-bloodorange;
+            @include navcolor($subnav-bloodorange);
             display:block;
         }
         a::before {

@@ -1,3 +1,4 @@
+// Header Styling
 header { 
 background-color: $white;
 color: $white;
@@ -7,28 +8,26 @@ padding: 20px 0;
 
 .header-row { 
 display:flex;
-margin: 0 -15px;
+margin: 0;
 align-items: center;
+width: 100%;
 
+//adjusts margin for bigger screens
+@media (min-width: $small) {
 
-@media (max-width: $small) {
-  width: 100%;
-  margin:0;
+  margin: 0 -15px;
 }
 
       .header-logo {
           max-width: 100%;
-          padding: 0 15px;
+          margin:0;
+          padding:0;
+          width:100%;
           
-
-          @media (max-width: $small) {
-            margin:0;
-            padding:0;
-            width:100%;
-          }
-
+          //adjusts size of logo to different screen sizes
           @media (min-width: $small) {
             Width: 50%;
+            padding: 0 15px;
           }
 
           @media (min-width: $medium) {
@@ -43,18 +42,16 @@ align-items: center;
             max-width: 100%;
           }
         }
-
+        // in mobile there is a phone button which is normalyy hidden
         .hidden-mobile{
-
-          @media (min-width: $small) {
-          display:none;
-          }
-
-          @media (max-width: $small) {
           padding:0;
           max-width:100%;
           font-size: rem(32px);
           margin-left: 15px;
+
+          // not visible on bigger screens, replaced by full size buttons
+          @media (min-width: $small) {
+          display:none;
           }
 
           a {
@@ -70,43 +67,42 @@ align-items: center;
     
           .contact{
             display:flex;
-            padding:0 15px;
+            justify-content: flex-start;
             flex-direction: row;
             max-width: 100%;
             align-items: center;
-            justify-content: flex-end;
-            
+            padding:0;
+            margin:0;
+           
+            //shifts buttons to the right side of screen
             @media (min-width: $medium) {
+              justify-content: flex-end;
+              padding:0 15px;
               width: 58%;
             }
 
              @media (min-width: $large) {
               width: 67%;            
             }
-            @media (max-width: $small) {
-              justify-content: flex-start;
-              margin:0;
-              padding:0;
-            }
-              
-            .button-support {
-              color: $white;
+            .header-btn{
               font-size: rem(18px);
               font-weight: $font-reg;
               line-height: rem(46px);
               height: 56px;
               padding: 5px 15px;
               margin-left: 20px;
+              border-radius: 3px; 
           
               text-transform: uppercase;
-
-              background-color: $blue; 
-              border-radius: 3px;        
-
               text-align: center;
 
-              @media (max-width: $medium){
-                display: none;
+            }
+            .button-support {
+              @include buttoncolor($blue, $white);
+              display: none;       
+
+              @media (min-width: $medium){
+                display:block;
               }
                           
               span{
@@ -114,28 +110,16 @@ align-items: center;
               }
             }
             .button-support:hover {
-              background-color: $hover-blue;
-              border-color: $hover-support2;
+              @include buttoncolor($hover-blue, $white);
             }
             
               .button-contact {
-              color: $white;
-              font-size: rem(18px);
-              font-weight: $font-reg;
-              line-height: rem(46px);
-              height: 56px;
-              padding: 5px 15px;
-              margin-left:20px;
-              
-              text-transform: uppercase;
+              @include buttoncolor($grey, $white);
+              display: none;    
 
-              background-color: $lightgrey;
-              border-radius: 3px;     
 
-              text-align: center;
-
-              @media (max-width: $medium){
-                display: none;
+              @media (min-width: $medium){
+                display: block;
               }
 
               span{
@@ -144,17 +128,16 @@ align-items: center;
             }
 
              .button-contact:hover {
-              background-color: $hover-contact1;
-              border-color: $hover-contact2;
+              @include buttoncolor($hover-grey, $white);
              }
 
             .search {
-              display:flex;
+              display:none;
               height: 56px;
               margin-left:20px;
 
-              @media (max-width: $small) {
-                  display:none
+              @media (min-width: $small) {
+                  display:flex
                 }
 
 
@@ -168,14 +151,13 @@ align-items: center;
                 font-size: rem(14px);
                 line-height: 1.5;
                 padding: 5px 15px;
-                width:240px;
+                width:174px;
                 cursor: text;
                 background-color: $white;
                 border: 1px solid $offwhite;
 
-                @media (max-width: $medium) {
-                  display: inline-flex;
-                  width: 174px;
+                @media (min-width: $medium) {
+                  width: 240px;
                 }
 
                 @media (min-width: $medium) and (max-width: $large)
@@ -201,7 +183,6 @@ align-items: center;
                 border-radius: 0 3px 3px 0;
                 border: none;
                 background-color: $lightgrey;
-                color: $white;
                 text-align: center;
                 
                 
@@ -216,28 +197,22 @@ align-items: center;
                 }
             }
 
-              .button-hamburger {
-              color: $white;
+            .button-hamburger {
               font-size: rem(40px);
               line-height: rem(46px);
               font-weight: $font-light;
-              height: 56px;
+              height:56px;
               width: 63px;
               padding: 5px;
-              margin-left:20px;
-              
-              text-transform: uppercase;
+              border-radius: 3px;
 
-              background-color: $darkgrey;
-              border-radius: 3px; 
-
+              @include buttoncolor($darkgrey, $white);
               text-align:center;
-              }
+            }
 
              .button-hamburger:hover {
               background-color: $hover-hamburger1;
-              border-color: $hover-hamburger2;
-             }
+            }
 
           }
 
@@ -275,8 +250,8 @@ align-items: center;
                 padding: 5px 40px 5px 15px;
                 cursor: text;
                 width: 100%;
-               border:none;
-               background:none;
+                border:none;
+                background:none;
             
                 
               }
@@ -300,6 +275,13 @@ align-items: center;
                 }
     
               } 
+
+              .mobile-form-search:focus {
+              border-color: $focus-search;
+                outline: 0;
+                box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 8px rgba(91,192,222,.6);
+              }
+              
             }  
   } 
 }

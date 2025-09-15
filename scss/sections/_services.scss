@@ -2,9 +2,12 @@
     
 
 		.services-row {
+            max-width: 100%;
+
+            @media (min-width: $small) {
             margin-left: -15px;
             margin-right: -15px;
-            max-width: 100%;
+            }
             
 
 			.services-header {
@@ -19,18 +22,16 @@
 
                 h2 {
                     font-size: rem(43px);
-                    font-weight: $font-reg;
                     margin-top: -13px;
                     margin-bottom: -10px;
-                    line-height: 1.1;
+                    
                 }
 
                 h1 {
-                    font-size: rem(36px);
-                    font-weight: $font-semibold;
                     margin-top:-13px;
                     margin-left: 20px;
                     margin-bottom: 28px;
+                    
 
                  @media (max-width: $small) {
                     display:none;
@@ -39,10 +40,11 @@
                  a {
                     text-decoration: none;
                  }
+
                  a:hover {
                     text-decoration: underline;
                  }
-
+                 
                 }
 
             }
@@ -126,14 +128,16 @@
                 grid-template-areas: 
                 "panel1 panel1 panel1 panel1 panel2 panel2 panel2 panel2 panel3 panel3 panel3 panel3"
                 "panel4 panel4 panel4 panel5 panel5 panel5 panel6 panel6 panel6 panel7 panel7 panel7";
-
-                    
                 }
                 
-			
 			.services-panel {
                 cursor: pointer;
-                padding: 0 15px;
+                padding-left:15px;
+
+                @media (min-width: $small)
+                {
+                    padding-right:15px;
+                }
                 
             
                        	a { 
@@ -168,19 +172,17 @@
 
 					h2 {
                         font-size: rem(20px);
-                        font-weight: $font-reg;
+                        
                         margin-top:0;
                         margin-bottom: 10px;
                         padding-bottom: 10px;
-                        line-height: 1.1;
+                        
                     }
 
 					p {
                         margin-top:0;
                         margin-bottom: 13px;
-                        font-size: rem(13px);
-                        line-height: rem(22px);
-                        font-weight: $font-reg;
+                        
                     }
 
 
@@ -227,8 +229,8 @@
                     font-weight: $font-semibold;
                     color: $darkgrey;
 
-                    a:hover, a:focus {
-                    text-decoration: underline;
+                    a:hover {
+                        text-decoration: underline;
                     }
 
                 }

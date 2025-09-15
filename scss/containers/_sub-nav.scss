@@ -14,7 +14,6 @@
         flex-wrap: wrap;
         align-items: center;
         margin-top: -15px;
-        list-style: none;
         text-align: left;
         padding:0;
         margin-bottom: 0;
@@ -47,14 +46,15 @@
                 .link-text {
                     margin-left: 10px;
                 }
+                
 
             }
-            .sub-nav-item:hover {
-                .link-text {
-                    text-decoration: underline;
-                }
+            a:hover {
+                text-decoration: underline;
             }
+            
         }
-        
+            
     }
-}
+        
+ }

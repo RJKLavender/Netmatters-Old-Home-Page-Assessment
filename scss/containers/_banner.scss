@@ -4,13 +4,11 @@
     justify-content: center;
     width: 100%;
     min-height: 550px;
-    background-image: linear-gradient(270deg,transparent 25%,#000), url("../images/home-YLei.png");
+    background-image: linear-gradient(270deg,transparent 25%, $black), url("../images/home-YLei.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
 
-    @media (max-width: $medium) {
-        background-position: center;
-    }
-
-   
     .content {
     color:$white;
     padding: 60px 0;
@@ -22,7 +20,7 @@
            h1{
             font-size: rem(40px);
             line-height: rem(48px);
-            font-weight: $font-semibold;
+            
             margin:0 0 20px;
 
              @media (min-width: $medium) {
@@ -49,11 +47,10 @@
             padding: 5px 20px;
             font-size: rem(20px);
             line-height: rem(50px);
-            color: $white;
-            background-color: $violet;
             border-radius: 3px;
-            border-color: $violet;
             text-transform: uppercase;
+
+            @include buttoncolor($violet, $white);
             
 
             span {
@@ -63,9 +60,8 @@
         }
 
         .button-banner:hover {
-            background-color: $hover-purple;
-            border-color: $hover-banner2;
-
+            @include buttoncolor($hover-purple, $white);
+            
         }
 
 

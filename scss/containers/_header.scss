@@ -182,9 +182,14 @@ width: 100%;
                 height: 56px;
                 border-radius: 0 3px 3px 0;
                 border: none;
-                background-color: $lightgrey;
+                @include buttoncolor($lightgrey, $white);
                 text-align: center;
-                color:$white;
+                
+
+                @media (min-width: $medium) and (max-width: $large)
+                {
+                  border-radius: 3px;
+                }
                 
                 
                   span {
@@ -212,7 +217,7 @@ width: 100%;
             }
 
              .button-hamburger:hover {
-              background-color: $hover-hamburger1;
+              @include buttoncolor($hover-hamburger, $white);
             }
 
           }

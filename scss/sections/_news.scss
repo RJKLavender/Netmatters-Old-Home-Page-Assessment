@@ -69,7 +69,13 @@
                             display: flex;
                             flex-direction: column;
 
+
 							.article-img {
+                                
+                                @media (min-width: $small) {
+                                max-height:213px;
+                                }
+                                
 								.insights {
                                     background-color: $sky;
                                     position: absolute;
@@ -114,12 +120,29 @@
                                     border: 1px solid $offwhite;
                                     box-shadow: 0 3px 35px rgba(0,0,0,.1);
 
+                                    @media (min-width: $small) {
+                                        min-height:400px;
+                                    }
+
+                                    @media (min-width: $medium) {
+                                        min-height:373px;
+                                    }
+
+                                    @media (min-width: $large) {
+                                        min-height:400px;
+                                    }
+
 								h3 {
+                                    padding-top:5px;
                                     font-size: rem(16px);
                                     line-height: rem(24px);
                                     font-weight: $font-semibold;
                                     margin-bottom: 15px;
                                     color: $sky;
+                                    
+                                    @media (min-width: $small) {
+                                        min-height:48px;
+                                    }
                                 }
 
 								p {

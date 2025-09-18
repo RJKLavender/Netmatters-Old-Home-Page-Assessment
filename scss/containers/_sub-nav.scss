@@ -1,4 +1,5 @@
-
+//Sub Nav drop-down/hover-over Styling
+//Doesnt appear until a button is hovered over
 .sub-nav {
     display:none;
     margin: 0;
@@ -7,7 +8,6 @@
     min-width: 100%;
     z-index: 10;
     padding: 50px 0;
-
 
 	.sub-nav-list {
         display: flex;
@@ -21,17 +21,16 @@
 
           .sub-nav-title {
             display: block;
-            font-size: (32px);
-            line-height: 1.1;
+            font-size: rem(32px);
+            line-height: rem(17px);
             width: 100%;
             margin-bottom: 10px;
             margin-top: 15px;
             font-weight: $font-med;
             text-align: left;
-           
         }
-
 	    
+        //styling for both the icon and the link itself
 	    .sub-nav-link {
             width: 33%;
             margin-top: 15px;
@@ -46,15 +45,11 @@
                 .link-text {
                     margin-left: 10px;
                 }
-                
-
             }
+
             a:hover {
                 text-decoration: underline;
             }
-            
         }
-            
-    }
-        
+    }     
  }

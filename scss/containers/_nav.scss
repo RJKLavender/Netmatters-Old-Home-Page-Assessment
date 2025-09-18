@@ -1,12 +1,12 @@
+//Navigation Bar Styling
 nav {
     background-color: $darkgrey;
-    display:block;
+    display:none;
 
-    @media (max-width: $medium) {
-            display:none;
-          }
-        } 
- 
+    //The Navigation bar only appears on larger screens
+    @media (min-width: $medium) {
+        display:block;
+    }
 
     .main-nav {
         display: flex;
@@ -15,7 +15,6 @@ nav {
         padding:0;
         
         .main-nav-item {
-            text-decoration: none;
             text-align: center;
             flex: 1;
 
@@ -23,26 +22,31 @@ nav {
                 color: $white;
                 display:block;
                 font-size: rem(18px);
+                line-height: rem(16px);
                 font-weight: $font-light;
-                line-height: 1;
                 padding: 19px 0 18px;
                 position:relative;
-                text-decoration:none;
                 text-transform:uppercase;
                  
                 .nav-icon {
-                    display:block;
-                    font-size: rem(23px);
-                    padding-bottom: 10px;
-                 }
-
-                  small {
-                    display:block;
-                        font-size: rem(10px);
-                    }
+                  display:block;
+                  font-size: rem(23px);
+                  padding-bottom: 10px;
                 }
+
+                small {
+                  display:block;
+                  font-size: rem(10px);
+                }
+            }
         }
 
+        //Icon colour changes to match text when hovered
+        li:hover .nav-item .nav-icon {
+            color: $white;
+        }
+
+        //Absolute postioning used to place the arrow shape under the nav buttons when hovered
         li:hover .nav-item::before {
             content: "";
             position: absolute;
@@ -54,68 +58,69 @@ nav {
             height: 0;
             border-style: solid;
             border-width: 35px 83.5px 0;
-            
         }
-
-        
     }
     
-    //nav icon colors
+    //nav icon colors Used seperate classes for each button
     .CD {
 
         span {
-                color: $sky;
-            }
+            color: $sky;
+        }
     }
-    
     
     .ITS {
 
         span {
-                color: $blue;
+            color: $blue;
         }
     }
     .DM {
 
         span {
-                color: $lime;
+            color: $lime;
         }
     }
     
     .TS {
 
         span {
-                color: $red;
+            color: $red;
         }
     }
+
     .WD {
 
         span {
-                color: $violet;
+            color: $violet;
         }
     }
+
     .CS {
 
         span {
-                color: $rose;
+            color: $rose;
         }
     }
+
     .DC {
 
         span {
-                color: $bloodorange;
+            color: $bloodorange;
         }
     }
 
-    //nav hover over nav buttons which also make sub nav appear
+    //Nav Hover styling
+    //Made it so that the background colour changes when hovered, it also displays the sub nav and arrow shape aswell.
+    //Used mixins to help present the colours as well keep it all uniform with the same colour.
       .consultancy:hover {
         @include navcolor($sky);
-        .CD {span{color: $white;}}
 
         .sub-nav-CD {
             @include navcolor($subnav-sky);
             display:block;
         }
+
         a::before {
             border-color: $sky transparent transparent;
         }
@@ -124,67 +129,64 @@ nav {
 
     .itsupport:hover {
         @include navcolor($blue);
-         .ITS {span{color: $white;}}
+
         .sub-nav-ITS {
             @include navcolor($subnav-blue);
             display:block;
         }
+        
         a::before {
             border-color: $blue transparent transparent;
-        }
-
-        
+        }     
     }
 
     .digital:hover {
         @include navcolor($lime);
-         .DM {span{color: $white;}}
+
         .sub-nav-DM {
             @include navcolor($subnav-lime);
             display:block;
         }
+
         a::before {
             border-color: $lime transparent transparent;
-        }
-
-        
+        }        
     }
 
     .telecoms:hover {
         @include navcolor($red);
-         .TS {span{color: $white;}}
+
         .sub-nav-TS {
             @include navcolor($subnav-red);
             display:block;
         }
+
         a::before {
             border-color: $red transparent transparent;
         }
-
-
     }
 
     .webdesign:hover {
         @include navcolor($subnav-violet);
-         .WD {span{color: $white;}}
+  
         .sub-nav-WD {
             @include navcolor($subnav-violet);
             display:block;
         }
+
         a::before {
             border-color: $violet transparent transparent;
-        }
-
-        
+        }        
     }
 
     .cyber:hover {
         @include navcolor($rose);
-         .CS {span{color: $white;}}
+
         .sub-nav-CS {
             @include navcolor($subnav-rose);
             display:block;
         }
+
         a::before {
             border-color: $rose transparent transparent;
         }
@@ -192,12 +194,14 @@ nav {
 
     .developer:hover{
         @include navcolor($bloodorange);
-         .DC {span{color: $white;}}
+   
         .sub-nav-DC {
             @include navcolor($subnav-bloodorange);
             display:block;
         }
+
         a::before {
             border-color: $bloodorange transparent transparent;
         }
     }
+}

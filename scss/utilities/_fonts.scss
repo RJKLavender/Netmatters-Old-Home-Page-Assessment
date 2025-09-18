@@ -1,4 +1,7 @@
-//Poppins font
+//Fonts and Icon set up
+//I use fontface mixins for the poppins fonts
+
+//Poppins fonts
 @include font-face('Poppins',Poppins-Black,900);
 @include font-face('Poppins',Poppins-Bold,700);
 @include font-face('Poppins',Poppins-ExtraBold, 800);
@@ -9,7 +12,7 @@
 @include font-face('Poppins',Poppins-SemiBold, 600);
 @include font-face('Poppins',Poppins-Thin,100);
 
-//italic fonts
+//italic Poppins fonts
 @include font-face-italic('Poppins',Poppins-BlackItalic,900, italic);
 @include font-face-italic('Poppins',Poppins-BoldItalic,700, italic );
 @include font-face-italic('Poppins',Poppins-ExtraBoldItalic, 800, italic);
@@ -20,7 +23,7 @@
 @include font-face-italic('Poppins',Poppins-SemiBoldItalic, 600, italic);
 @include font-face-italic('Poppins',Poppins-ThinItalic,100, italic);
 
-//icomoon font
+//icomoon font-face function
 @font-face {
   font-family: 'icomoon';
   src:  url('#{$font-path}/icomoon.eot') format('embedded-opentype'),
@@ -32,17 +35,16 @@
   font-display: block;
 }
 
-
+//icomoon font styling
 [class^="icon-"], [class*=" icon-"] {
   font-family: 'icomoon' !important;
-  font-style: normal;
-  font-weight: 400;
+  font-weight: $font-reg;
   font-variant: normal;
   text-transform: none;
   line-height: 1;
 }
 
-//icon fonts
+//icon fonts classes and codes
 .icon-edit-pencil::before {
   content: "\e908";
 }

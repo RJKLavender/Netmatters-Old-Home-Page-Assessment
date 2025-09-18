@@ -60,7 +60,6 @@ flex-wrap:wrap;
           text-transform: uppercase;
           margin-bottom: 26px;
           margin-top: 24px;
-
         }
 
         //Made the social media buttons within its own flex container that resixes and adjusts wrapping based on screen size
@@ -84,7 +83,6 @@ flex-wrap:wrap;
           @media (min-width: $large) {
             width: auto;
             margin-bottom: 0;
-
           }
           
           //social media buttons styling
@@ -132,50 +130,48 @@ flex-wrap:wrap;
       margin: 0 -15px;
 
     .footer-menu {
-        flex: 100%;
-        padding: 0 15px;
-        margin-bottom: 30px;
+      flex: 100%;
+      padding: 0 15px;
+      margin-bottom: 30px;
         
-        //flex widths to adjust the size of the footer link men colomns by screen sizes
-        @media (min-width: $small) {
-          flex: 50%;
+      //flex widths to adjust the size of the footer link men colomns by screen sizes
+      @media (min-width: $small) {
+        flex: 50%;
+      }
+
+      @media (min-width: $medium) {
+        flex: 25%;
+      }
+
+      @media (min-width: $large) {
+        flex: 25%;
+        margin-bottom: 40px;
+      }
+
+      h4 {
+        text-transform: uppercase;
+        font-size: rem(15px);
+        margin-bottom: 26px;
+        margin-top: 0;
+      }
+
+      ul {
+        display:block;
+        padding:0;
+        margin:0;
+
+        li {
+          font-size: rem(13px);
+          line-height: rem(22px);
         }
 
-         @media (min-width: $medium) {
-          flex: 25%;
+        li a:hover {
+          text-decoration:underline;
+        }           
+
+        li a:focus {
+          color: $link;
         }
-
-        @media (min-width: $large) {
-          flex: 25%;
-          margin-bottom: 40px;
-        }
-
-        h4 {
-          text-transform: uppercase;
-          font-size: rem(15px);
-          margin-bottom: 26px;
-          margin-top: 0;
-        }
-
-        ul {
-          display:block;
-          padding:0;
-          margin:0;
-
-          li {
-            font-size: rem(13px);
-            line-height: rem(22px);
-          }
-
-          li a:hover {
-            text-decoration:underline;
-
-          }           
-
-          li a:focus {
-            color: $link;
-          }
-
       }
     }
   }

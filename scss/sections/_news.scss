@@ -1,38 +1,30 @@
+// News section styling
 .news {
     background-color: $white;
 
+        //news header
 		.news-header {
             padding-top: 50px;
             display: flex;
             flex-direction: row;
             justify-content: space-between;
+            color: $darkgrey;
 
 			h2 {
-                
                 margin-bottom: 28px;
-                color: $darkgrey;
-                strong {
-                    font-weight: $font-semibold;
-
-                }
             }
-
 			
+            //this header is only displayed on larger screen sizes
+            //it is replaced by the one below the articles on mobile
 			h3 {
                 font-size: rem(26px);
                 margin-bottom: 15px;
-                color: $darkgrey;
-                
+                font-weight: $font-semibold;
+                display:none;               
 
-                a {
-                    font-weight: $font-semibold;
-                    
-                }
-                
-
-                @media (max-width: $small) {
-                    display:none;
-                 }   
+                @media (min-width: $small) {
+                    display:block;
+                }   
             }
 
         }
@@ -43,21 +35,21 @@
                padding-top: 15px;
                padding-bottom: 50px;
 
+                //news article styling    
 				.news-article {
                     max-width:100%;
                     width:100%;
                     padding: 0 15px;
 
-                    @media (min-width: $small)
-                    {
+                    //these media queries adjust the article's width based on screen size
+                    @media (min-width: $small) {
                         width: 50%
                     }
 
-                    @media (min-width: $large)
-                    {
+                    @media (min-width: $large) {
                         width: calc(100% / 3);
                     }
-
+                        
 						a {
                             font-size: rem(13px);
                             margin-top:30px;
@@ -69,13 +61,14 @@
                             display: flex;
                             flex-direction: column;
 
-
 							.article-img {
                                 
+                                //This adjusts image size for the larger sceen sizes so that more articles can fit in a line
                                 @media (min-width: $small) {
-                                max-height:213px;
+                                    max-height:213px;
                                 }
                                 
+                                //This is the styling for the tiny link in the top right hand corner of them image
 								.insights {
                                     background-color: $sky;
                                     position: absolute;
@@ -83,43 +76,44 @@
                                     right: 0;
                                     color: $white;
                                     font-size: rem(12px);
-                                    font-weight: font-semi-bold;
+                                    font-weight: $font-semibold;
                                     padding: 0 10px;
                                     line-height: rem(23px);
                                     text-transform: uppercase;
                                     z-index: 1;
-                                    
                                 }
 
                                 .insights:hover {
                                     text-decoration: underline;
                                 }
 
-                                .A-img {
+                                //image container
+                                .article-img-box {
                                     position: relative;
                                     border-radius: 3px 3px 0 0;
                                     border: 0;
                                     text-decoration:none;
                                     max-width:100%;
-
+                                    
+                                    //this will adjust the image to the size of the news article pannel
 								    img {
                                         display:block;
                                         height: auto;
                                         width:100%;
-
                                     }
                                 }
-
                             }
-                                
+                                //styling of the news descriptions
+                                //the border is done here as it conflits with the image instead of the parent container
                                 .article-description {
                                     border-top:0;
                                     border-radius:0 0 3px 3px;
                                     display:block;
                                     padding: 30px;
                                     border: 1px solid $offwhite;
-                                    box-shadow: 0 3px 35px rgba(0,0,0,.1);
-
+                                    box-shadow: 0 3px 35px $border-black;
+                                    
+                                    //these different media queries make sure the articles line up at the bottom on all various screen sizes 
                                     @media (min-width: $small) {
                                         min-height:400px;
                                     }
@@ -140,6 +134,8 @@
                                     margin-bottom: 15px;
                                     color: $sky;
                                     
+                                    //This adjusts the height of the title because the titles have different lengths of text,
+                                    //which this min height adjustment keeps everything inline with each pannel.
                                     @media (min-width: $small) {
                                         min-height:48px;
                                     }
@@ -148,12 +144,10 @@
 								p {
                                     margin-bottom: 25px;
                                 }
-
-								.news-button-t1 {
+                                
+                                //news button styling
+                                .news-btn {
                                     display:inline-flex;
-                                    color: $white;
-                                    background-color: $orange;
-                                    border-color: $orange;
                                     font-size: rem(17px);
                                     line-height: rem(35px);
                                     font-weight: font-reg;
@@ -164,24 +158,15 @@
                                     margin-bottom: 0;
                                     align-items: center;
                                     justify-content: center;
-
+                                }
+                                
+                                //mixins again used to style the colour of the buttons
+								.news-btn-orange {
+                                    @include buttoncolor($orange, $white);
                                 }
 
-                                .news-button-t2 {
-                                    display:inline-flex;
-                                    color: $white;
-                                    background-color: $blue;
-                                    border-color: $blue;
-                                    padding: 5px 15px;
-                                    text-transform: uppercase;
-                                    font-size: rem(17px);
-                                    line-height: rem(35px);
-                                    font-weight: font-reg;
-                                    border-radius: 3px;
-                                    margin-bottom: 0;
-                                    align-items: center;
-                                    justify-content: center;
-
+                                .news-btn-blue {
+                                    @include buttoncolor($blue, $white);
                                 }
 	
 								.article-author {
@@ -191,7 +176,6 @@
                                     display: flex;
                                     flex-direction: row;
                                     font-size: rem(14px);
-                                    
 
 									.article-author-img { 
                                         border-radius: 50%;                                    
@@ -200,25 +184,20 @@
                                             display:block;
                                             max-width:47px;
                                             height:auto;
-
                                         }
                                     }
+
 									.article-author-name {
                                         padding-left: 20px;
                                         line-height: rem(22px);
-										strong {
-                                            font-weight: $font-semibold;
-
-                                        }
-
                                     }
+                                }
                             }
                         }
-                    }
 
                     a:hover {
-                    top: -10px;
-                    transition: .5s ease;
+                        top: -10px;
+                        transition: .5s ease;
                     }
 
                     .article-technician {
@@ -226,20 +205,18 @@
                             display:none;
                         }
                     }
-
-
                 }
             }
 
             .hidden-view-all {
-                 text-align: center;
-                 margin-bottom: 20px;
+                text-align: center;
+                margin-bottom: 20px;
                  
-
-                 @media (min-width: $small)
-                 {
+                @media (min-width: $small)
+                {
                     display:none;
-                 }
+                }
+
                 h3 {
                     font-size: rem(26px);
                     color: $darkgrey;
@@ -248,5 +225,7 @@
                 }
             }
 }
+
+
         
 		

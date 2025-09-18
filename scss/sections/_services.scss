@@ -31,20 +31,15 @@
                     margin-top:-13px;
                     margin-left: 20px;
                     margin-bottom: 28px;
-                    
-
-                 @media (max-width: $small) {
                     display:none;
+                    
+                 @media (min-width: $small) {
+                    display:block;
                  }   
-
-                 a {
-                    text-decoration: none;
-                 }
 
                  a:hover {
                     text-decoration: underline;
                  }
-                 
                 }
 
             }

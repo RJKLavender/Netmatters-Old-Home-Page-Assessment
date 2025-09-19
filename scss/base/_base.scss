@@ -25,11 +25,11 @@ box-sizing: border-box;
         width: 750px;
     }
 
-     @media (min-width: $medium) {
+    @media (min-width: $medium) {
         width: 970px;
     }
 
-     @media (min-width: $large) {
+    @media (min-width: $large) {
         width: 1200px;
     }
 
@@ -52,11 +52,11 @@ box-sizing: border-box;
        
     }
 
-     @media (min-width: $medium) {
+    @media (min-width: $medium) {
         width: 970px;
     }
 
-     @media (min-width: $large) {
+    @media (min-width: $large) {
         width: 1200px;
     }
 }

@@ -16,7 +16,7 @@ width: 100%;
 @media (min-width: $small) {
     margin: 0 -15px;
   }
-
+      //compnay logo
       .header-logo {
           max-width: 100%;
           margin:0;
@@ -62,7 +62,7 @@ width: 100%;
             color: $link;
           }
         }
-    
+          //buttons are placed in a seperate flex box to make the layout easier
           .contact{
             display:flex;
             justify-content: flex-start;
@@ -83,6 +83,7 @@ width: 100%;
               width: 67%;            
             }
 
+            //header button styling
             .header-btn{
               font-size: rem(18px);
               font-weight: $font-reg;
@@ -94,6 +95,10 @@ width: 100%;
           
               text-transform: uppercase;
               text-align: center;
+
+              span{
+                margin-right: 5px;
+              }
             }
 
             //The buttons only appear on 992px or larger screen sizes
@@ -104,10 +109,6 @@ width: 100%;
               @media (min-width: $medium){
                 display:block;
               }
-                          
-              span{
-                margin-right: 5px;
-              }
             }
 
             .button-support:hover {
@@ -115,20 +116,16 @@ width: 100%;
             }
             
               .button-contact {
-              @include buttoncolor($grey, $white);
-              display: none;    
+                @include buttoncolor($grey, $white);
+                display: none;    
               
               @media (min-width: $medium){
                 display: block;
               }
-
-              span{
-                margin-right: 5px;
-              }
             }
 
              .button-contact:hover {
-              @include buttoncolor($hover-grey, $white);
+                @include buttoncolor($hover-grey, $white);
              }
 
              //in smaller screen sizes this search bar is replaced with a different one
@@ -145,6 +142,7 @@ width: 100%;
                 display: none;
               }
 
+              //search box styling
               .form-search {
                 display: inline-flex;
                 color: $medgrey;
@@ -224,7 +222,7 @@ width: 100%;
         }
         
         //Search box styling for mobile screens only
-        .mobile-contact{
+        .mobile-contact {
             margin-top: 11px;
 
             @media (min-width: $small) {

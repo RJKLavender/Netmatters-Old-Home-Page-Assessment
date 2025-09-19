@@ -8,7 +8,7 @@ position: relative;
 .footer-row { 
 display:flex;
 flex-wrap:wrap;
-
+    
     // I have it so the logo and socail media buttons adjust with width seperately to the link lists to avoid wrapping issues
     .footer-company-info
     {
@@ -35,7 +35,8 @@ flex-wrap:wrap;
       @media (min-width: $large) {
           width: 400px;
       }
-      
+    
+      //company logo
     .footer-company-box {
       width:auto;
 
@@ -54,6 +55,7 @@ flex-wrap:wrap;
         }
       }
 
+      //social media section
       .social-media {
 
         h4 {

@@ -53,11 +53,13 @@
 						a {
                             font-size: rem(13px);
                             margin-top:30px;
+                            color: $darkgrey;
                             position: relative;
+
+                            // this is used here to allow when hovered for it to shift up
                             top: 0;
                             transition: .5s ease;
-                            color: $darkgrey;
-                            
+                      
                             display: flex;
                             flex-direction: column;
 
@@ -146,6 +148,7 @@
                                 }
                                 
                                 //news button styling
+                                //Did as a span rather than a as a within a breaks the code
                                 .news-btn {
                                     display:inline-flex;
                                     font-size: rem(17px);
@@ -168,7 +171,9 @@
                                 .news-btn-blue {
                                     @include buttoncolor($blue, $white);
                                 }
-	
+                                
+                                // article athuor wraper 
+                                //border at top creates seperator line in the panel
 								.article-author {
                                     margin-top: 30px;
                                     padding-top: 30px;
@@ -194,12 +199,14 @@
                                 }
                             }
                         }
-
+                    
+                    // when any news arctile is hovered over it will shift up    
                     a:hover {
                         top: -10px;
                         transition: .5s ease;
                     }
 
+                    //this news article isn't displayed on medium screen sizes to save space
                     .article-technician {
                         @media (min-width: $small) and (max-width: $large) {
                             display:none;
@@ -207,7 +214,8 @@
                     }
                 }
             }
-
+            
+            //this link only displays on mobile screens
             .hidden-view-all {
                 text-align: center;
                 margin-bottom: 20px;

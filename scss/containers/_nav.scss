@@ -2,6 +2,7 @@
 nav {
     background-color: $darkgrey;
     display:none;
+    position: relative;
 
     //The Navigation bar only appears on larger screens
     @media (min-width: $medium) {
@@ -14,9 +15,11 @@ nav {
         margin:0;
         padding:0;
         
+        
         .main-nav-item {
             text-align: center;
             flex: 1;
+            
 
             .nav-item {
                 color: $white;
@@ -66,3 +69,5 @@ nav {
         }
     }
 }
+
+//colour mixing sass code for this section is in the navcolours.scss file

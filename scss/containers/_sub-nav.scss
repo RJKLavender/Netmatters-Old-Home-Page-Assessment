@@ -4,6 +4,7 @@
     display:none;
     margin: 0;
     position: absolute;
+    top:100%;
     left: 0;
     min-width: 100%;
     z-index: 10;
@@ -53,4 +54,6 @@
             }
         }
     }     
- }
+}
+
+//colour mixing sass code for this section is in the navcolours.scss file

@@ -5,11 +5,18 @@
     justify-content: center;
     width: 100%;
     min-height: 550px;
-    background-image: linear-gradient(270deg,transparent 25%, $black), url("#{$img-path}/home-YLei.png"); //overlay graidient over the img
+    //overlay graidient over the img twice to produce a flat color
+    background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("#{$img-path}/home-YLei.png"); 
+
     //makes image resize and stay centered on different screen sizes
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
+    
+    //overlay graidient removed to allow before element to overtake before at bootoom of file
+    @media (min-width: $medium) {
+        background-image: url("#{$img-path}/home-YLei.png"); 
+    }
 
     .content {
     color:$white;
@@ -60,14 +67,25 @@
             span {
                 margin-left: 12px;
             }
-
         }
 
         .button-banner:hover {
             @include buttoncolor($hover-purple, $white);
-            
         }
-
     }
 }
 
+//before element to control the gradients on larger screen sizes
+.banner::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        z-index: 3;
+  
+        @media (min-width: medium) {
+            background: linear-gradient(270deg,transparent 25%, $black);
+        }
+}

@@ -66,7 +66,16 @@
 							.article-img {
                                 
                                 //This adjusts image size for the larger sceen sizes so that more articles can fit in a line
+                                //this was causing the padding issues with the rest of the box fixed now.
                                 @media (min-width: $small) {
+                                    max-height:200px;
+                                }
+                                
+                                @media (min-width: $medium) {
+                                    max-height:263px;
+                                }
+                                
+                                @media (min-width: $large) {
                                     max-height:213px;
                                 }
                                 
@@ -127,12 +136,14 @@
                                     @media (min-width: $large) {
                                         min-height:400px;
                                     }
-
+                                
+                                //fixed margin and padding
 								h3 {
-                                    padding-top:5px;
+                                    padding-top:0;
                                     font-size: rem(16px);
                                     line-height: rem(24px);
                                     font-weight: $font-semibold;
+                                    margin-top:0;
                                     margin-bottom: 15px;
                                     color: $sky;
                                     
@@ -168,6 +179,7 @@
                                     @include buttoncolor($orange, $white);
                                 }
 
+                                //Fixed not sure what was causing it to be a rgb instead of a hex colour
                                 .news-btn-blue {
                                     @include buttoncolor($blue, $white);
                                 }
@@ -182,10 +194,10 @@
                                     flex-direction: row;
                                     font-size: rem(14px);
 
-									.article-author-img { 
-                                        border-radius: 50%;                                    
-
+                                    //fixed bord radius was in wrong place
+									.article-author-img {       
 										img {
+                                            border-radius: 50%;    
                                             display:block;
                                             max-width:47px;
                                             height:auto;

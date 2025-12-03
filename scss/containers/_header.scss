@@ -33,11 +33,11 @@ height:70px;
           }
 
           @media (min-width: $medium) {
-            width: 41.67%;
+            width: 41.66666667%;
           }
 
           @media (min-width: $large) {
-            width: 33.33%;
+            width: 33.33333333%;
           }
 
           a {
@@ -84,26 +84,27 @@ height:70px;
 
             @media (min-width: $medium) {
               padding:0 15px;
-              width: 58.33%;
+              width: 58.33333333%;
             }
 
             @media (min-width: $large) {
-              width: 66.67%;            
+              width: 66.66666667%;            
             }
 
           .contact{
             display:flex;
-            justify-content: left;
+            justify-content: right;
             flex-direction: row;
             max-width: 100%;
             align-items: center;
             padding:0;
             margin:0;
+            padding: 7px 0;
+            
            
             //shifts buttons to the right side of screen
             @media (min-width: $medium) {
               justify-content: right;
-              padding: 7px 0;
             }
 
             //header button styling
@@ -189,7 +190,6 @@ height:70px;
                 {
                   display: none;
                 }
-
               }
 
               //This focus styling to the search box adds a shadow and border to the box when focused or typing inside it
@@ -231,11 +231,13 @@ height:70px;
             .button-hamburger {
               font-size: rem(18px);
               line-height: rem(46px);
-              font-weight: $font-light;
+              font-weight: $font-reg;
               height:56px;
-              width: 63px;
-              padding: 5px 15px;
+              max-width: 63px;
+              padding: 5px 14px;
               border-radius: 3px;
+              margin-left: 20px;
+              white-space: normal;
               
               @include buttoncolor($darkgrey, $white);
               text-align:center;
@@ -246,13 +248,15 @@ height:70px;
                 width: 33px;
                 height: 19px;
                 position: relative;
+                text-align:center;
+                float: left;
 
                 //middle line
                 .hamburger-inner {
                   background-color: $white;
                   color: $white;
                   border-radius: 0;
-                  font-size: rem(23px);
+                  font-size: 1.438rem;
                   line-height: rem(45px);
                   width: 33px;
                   height: 4px;
@@ -260,6 +264,7 @@ height:70px;
                   display: block;
                   top: 50%;
                   margin-top: -1.5px;
+                  margin-right: 0;
                 }
 
                 // hamburger buttopn set up

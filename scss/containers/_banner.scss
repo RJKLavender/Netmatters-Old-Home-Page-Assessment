@@ -13,9 +13,9 @@
     background-repeat: no-repeat;
     background-position: center;
     
-    //overlay graidient removed to allow before element to overtake before at bootoom of file
+    //overlay graidient changed on bigger screen sizes
     @media (min-width: $medium) {
-        background-image: url("#{$img-path}/home-YLei.png"); 
+        background-image: linear-gradient(270deg,transparent 25%, $black), url("#{$img-path}/home-YLei.png"); 
     }
 
     .content {
@@ -73,19 +73,4 @@
             @include buttoncolor($hover-purple, $white);
         }
     }
-}
-
-//before element to control the gradients on larger screen sizes
-.banner::before {
-        content: "";
-        position: absolute;
-        left: 0;
-        right: 0;
-        top: 0;
-        bottom: 0;
-        z-index: 3;
-  
-        @media (min-width: medium) {
-            background: linear-gradient(270deg,transparent 25%, $black);
-        }
 }

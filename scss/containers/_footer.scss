@@ -1,8 +1,9 @@
 //footer styling
+//fixed padding
 footer { 
 background-color: $dark;
 color: $white;
-padding: 27px 0 0;
+padding: 47px 0 0;
 position: relative;
 
 .footer-row { 
@@ -92,11 +93,23 @@ flex-wrap:wrap;
              border-color: $darkgrey;
              background-color: $offblack;
             
+             //fixed the margins and width to make it go 2 by 2 on phones
              font-size: rem(26px);
              line-height: rem(26px);
              text-align: center;
              padding: 12px 22px 16px;
-             margin-right: 7px;
+             margin-right: 10px;
+             margin-bottom: 10px;
+             width:35%;
+
+            @media (min-width: $phone) {
+              width:auto;
+            }
+
+            @media (min-width: $large) {
+              margin-right: 7px;
+              margin-bottom: 0;
+            }
           }
           
             //different coloured hovers 
@@ -130,6 +143,11 @@ flex-wrap:wrap;
       display: flex;
       flex-wrap: wrap;
       margin: 0 -15px;
+
+      //fixed row to fill the space with a flex grow
+      @media (min-width: $small) {
+        flex-grow: 1;
+      }
 
     .footer-menu {
       flex: 100%;

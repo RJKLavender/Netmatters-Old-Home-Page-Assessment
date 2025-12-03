@@ -237,7 +237,9 @@
                     display:none;
                 }
 
+                //fixed margin and padding
                 h3 {
+                    margin-top: 0px;
                     font-size: rem(26px);
                     color: $darkgrey;
                     font-weight: $font-semibold;

@@ -13,6 +13,50 @@ font-weight: $font-reg;
 box-sizing: border-box;
 }
 
+.website {
+    overflow: hidden;
+    position: relative;
+    z-index: 10;
+    transition: all .5s;
+    left: 0;
+}
+
+.website::after {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 0;
+    height: 0;
+    background: rgba(0,0,0,.4);
+    z-index: 10;
+    content: "";
+    opacity: 0;
+    transition: opacity .5s,width .1s .5s,height .1s .5s;
+}
+
+.menu-is-active {
+    left: -275px;
+    cursor: pointer;
+
+    @media (min-width: $medium) {
+        left: -350px;
+    }
+}
+
+.menu-is-active .website::after {
+    width: 100%;
+    height: 100%;
+    opacity: 1;
+    transition: opacity .5s;
+}
+
+.menu-is-active {
+
+}
+
+.sticky-head {
+    
+}
 
 //Universal Containers
 .container {
@@ -32,8 +76,6 @@ box-sizing: border-box;
     @media (min-width: $large) {
         width: 1200px;
     }
-
-
 }
 
 //container is styled slightly differently for the sitemap/copyright at the bottom of the website
@@ -85,6 +127,7 @@ a:link, a:any-link, a:active, a:focus, a:visited {
 
 button {
     cursor: pointer;
+    font-family: inherit;
 }
 
 p {
@@ -131,4 +174,8 @@ ul {
 
 strong {
     font-weight: $font-semibold
+}
+
+input, textarea, select {
+    font-family: inherit;
 }

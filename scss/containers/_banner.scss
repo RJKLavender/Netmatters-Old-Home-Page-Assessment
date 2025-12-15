@@ -1,22 +1,16 @@
 //banner styling using a flex container
-.banner { 
+.banner {
+.banner-slide { 
     display:flex;
     flex-direction: column;
     justify-content: center;
     width: 100%;
     min-height: 550px;
-    //overlay graidient over the img twice to produce a flat color
-    background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("#{$img-path}/home-YLei.png"); 
 
     //makes image resize and stay centered on different screen sizes
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-    
-    //overlay graidient changed on bigger screen sizes
-    @media (min-width: $medium) {
-        background-image: linear-gradient(270deg,transparent 25%, $black), url("#{$img-path}/home-YLei.png"); 
-    }
 
     .content {
     color:$white;
@@ -61,8 +55,6 @@
             line-height: rem(50px);
             border-radius: 3px;
             text-transform: uppercase;
-
-            @include buttoncolor($violet, $white);
             
             span {
                 margin-left: 12px;
@@ -74,3 +66,117 @@
         }
     }
 }
+}
+
+//banner images and button colours
+.banner1 {
+
+    //overlay graidient over the img twice to produce a flat color for smaller screen sizes
+    background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("#{$img-path}/home-YLei.png"); 
+
+    //overlay graidient changed on bigger screen sizes
+    @media (min-width: $medium) {
+        background-image: linear-gradient(270deg,transparent 25%, $black), url("#{$img-path}/home-YLei.png"); 
+    }
+
+    .company-button {
+        @include buttoncolor($violet, $white);
+    }
+}
+
+.banner2 {
+
+    //overlay graidient over the img twice to produce a flat color for smaller screen sizes
+    background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("#{$img-path}/home-O67Y.jpg"); 
+
+    //overlay graidient changed on bigger screen sizes
+    @media (min-width: $medium) {
+        background-image: linear-gradient(270deg,transparent 25%, $black), url("#{$img-path}/home-O67Y.jpg"); 
+    }
+
+    .bespoke-button {
+        @include buttoncolor($orange, $white);
+    }
+
+}
+
+.banner3 {
+
+    //overlay graidient over the img twice to produce a flat color for smaller screen sizes
+    background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("#{$img-path}/home-gay8.png"); 
+
+    //overlay graidient changed on bigger screen sizes
+    @media (min-width: $medium) {
+        background-image: linear-gradient(270deg,transparent 25%, $black), url("#{$img-path}/home-gay8.png"); 
+    }
+
+    .itsupport-button {
+        @include buttoncolor($blue, $white);
+    }
+
+}
+
+.banner4 {
+
+    //overlay graidient over the img twice to produce a flat color for smaller screen sizes
+    background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("#{$img-path}/home-6yTp.png"); 
+
+    //overlay graidient changed on bigger screen sizes
+    @media (min-width: $medium) {
+        background-image: linear-gradient(270deg,transparent 25%, $black), url("#{$img-path}/home-6yTp.png"); 
+    }
+
+    .digitalmarketing-button {
+        @include buttoncolor($lime, $white);
+    }
+
+}
+
+.banner5 {
+
+    //overlay graidient over the img twice to produce a flat color for smaller screen sizes
+    background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("#{$img-path}/home-J8Xx.png"); 
+
+    //overlay graidient changed on bigger screen sizes
+    @media (min-width: $medium) {
+        background-image: linear-gradient(270deg,transparent 25%, $black), url("#{$img-path}/home-J8Xx.png"); 
+    }
+
+    .telecomservices-button {
+        @include buttoncolor($red, $white);
+    }
+
+}
+
+.banner6 {
+
+    //overlay graidient over the img twice to produce a flat color for smaller screen sizes
+    background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("#{$img-path}/home-K0pn.jpg"); 
+
+    //overlay graidient changed on bigger screen sizes
+    @media (min-width: $medium) {
+        background-image: linear-gradient(270deg,transparent 25%, $black), url("#{$img-path}/home-K0pn.jpg"); 
+    }
+
+    .webdesign-button {
+        @include buttoncolor($violet, $white);
+    }
+
+}
+
+.banner7 {
+
+    //overlay graidient over the img twice to produce a flat color for smaller screen sizes
+    background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("#{$img-path}/home-MSxH.png"); 
+
+    //overlay graidient changed on bigger screen sizes
+    @media (min-width: $medium) {
+        background-image: linear-gradient(270deg,transparent 25%, $black), url("#{$img-path}/home-MSxH.png"); 
+    }
+
+    .cybersecurity-button {
+        @include buttoncolor($rose, $white);
+    }
+
+}
+

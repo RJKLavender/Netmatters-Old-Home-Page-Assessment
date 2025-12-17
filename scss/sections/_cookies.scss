@@ -114,6 +114,14 @@
                                 .cookies-button-accept {
                                     @include buttoncolor($violet, $white);
                                 }
+
+                                .cookies-button-settings:hover {
+                                    @include buttoncolor($hover-grey, $white);
+                                }
+
+                                .cookies-button-accept:hover {
+                                    @include buttoncolor($hover-purple, $white);
+                                }
                             }
                         }
                     }

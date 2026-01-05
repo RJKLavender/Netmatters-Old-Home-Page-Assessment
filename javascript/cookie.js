@@ -17,11 +17,12 @@ if (!localStorage.getItem("cookiesConsent")) {
     if (cookieApp.classList.contains('hidden')) {
     cookieApp.classList.remove('hidden');
     }
-    
+
     cookieConsent.addEventListener('click', () => {
         setcookies();
     });
 } else {
+    cookieApp.classList.add('hidden');
     return cookies;
 }
 

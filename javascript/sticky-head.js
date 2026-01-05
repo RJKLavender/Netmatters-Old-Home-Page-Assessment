@@ -4,7 +4,7 @@ let lastScroll = window.scrollY;
 
 window.addEventListener("scroll", () => { 
     const currentScroll = window.scrollY;
-    
+     cont
     if (currentScroll < lastScroll) { 
       stickyhead.classList.add("fixed");
     } else {

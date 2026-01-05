@@ -1,5 +1,5 @@
 const sidebar = document.querySelector('.sidebar');
-const menu = document.querySelector('#hamburger');
+const menu = document.getElementById('hamburger');
 const website = document.querySelector('.website');
 const hamburger = document.querySelector('.hamburger-inner');
 

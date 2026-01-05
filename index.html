@@ -9,20 +9,19 @@
 	<title>Full Service Digital Agency | Cambridgeshire & Norfolk | Netmatters</title>
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 	<script src="javascript/jquery-3.7.1.min.js"></script>
-	<script src="javascript/carousels.js"></script>
+	<script defer src="javascript/carousels.js"></script>
 	<script src="javascript/cookie.js"></script>
-	<script src="javascript/side-menu.js"></script>
-	<script src="javascript/sticky-head.js"></script>
+	<script defer src="javascript/side-menu.js"></script>
+	<!--<script src="javascript/sticky-head.js"></script>-->
 	<script src="javascript/slick-1.8.1/slick-1.8.1/slick/slick.js"></script>
 	<script src="javascript/slick-1.8.1/slick-1.8.1/slick/slick.min.js"></script>
 	<link rel="stylesheet" type="text/css" href="javascript/slick-1.8.1/slick-1.8.1/slick/slick.css">
 	<link rel="stylesheet" type="text/css" href="javascript/slick-1.8.1/slick-1.8.1/slick/slick-theme.css">
-	<script src="javascript/sticky-master/sticky-master/jquery.sticky.js"></script>
 </head>
 <body>
 
 <!-- Cookie Consent Box -->
-<div class="cookies">
+<div id="cookiesConsent" class="cookies">
      <div class="cookies-container">
         <button type="button" class="cookies-button-manage">Manage Consent</button>
         <div id="cookie-consent" class="cookie-consent">
@@ -63,7 +62,7 @@
 <div class="sidebar">
     <ul class="sidebar-list">
 		<li class="mobile-menu">
-			<a href="#" id="side-contact-button "class="side-menu-title">Contact Us</a>
+			<a href="#" id="side-contact-button" class="side-menu-title">Contact Us</a>
 		</li>
 		<li class="mobile-menu">
 			<a href="#" class="Mobile-CD mobile-list-title"><span class="icon-laptop sidenav-icon"></span><small>Consultancy</small> & Development</a>
@@ -240,7 +239,7 @@
 <div class="website">
 <!-- header-->
  <div class="sticky-head">
-<header>
+<header id="mainHeader">
 	<div class="header-inner">
 		<div class="container">
 			<div class="header-row">

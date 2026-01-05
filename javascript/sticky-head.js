@@ -1,5 +1,15 @@
-  $(document).ready(function(){
-    $(".sticky-head").sticky({topSpacing:0});
-  });
+// javascript for sticky head function need more research
+const stickyhead = document.querySelector(".sticky-head");
+let lastScroll = window.scrollY;
 
- $(".sticky-head").sticky();
+window.addEventListener("scroll", () => { 
+    const currentScroll = window.scrollY;
+    
+    if (currentScroll < lastScroll) { 
+      stickyhead.classList.add("fixed");
+    } else {
+      stickyhead.classList.remove("fixed");
+    }
+    
+    lastScroll = currentScroll;
+});

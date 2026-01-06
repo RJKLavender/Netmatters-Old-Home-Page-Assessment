@@ -8,13 +8,14 @@
 	background-color: $darkgrey;
 	width: 275px;
 	display:none;
+	overflow: scroll;
 
 	@media (min-width: $medium) {
     	width: 350px;
 	}
   
 	.sidebar-list {
-		padding: 1 20px 20px 20px;
+		padding: 20px 20px 20px;
 		margin:0;
 		display: flex;
 		flex-direction: column;
@@ -26,13 +27,17 @@
 			border-bottom: 1px solid hsla(0,0%,100%,.1);
     	}
 
+		.side-menu-item {
+			padding: 20px 0 0;
+			outline: 1px solid rgba(0,0,0,.25);
+			border: 1px solid hsla(0,0%,100%,.1);
+			justify-self: left;
+		}
+		
 		li .side-menu-title {
-			margin:20px 0 0;
 			font-size: rem(16px);
 			padding: 20px;
 			line-height: 1;
-			outline: 1px solid rgba(0,0,0,.25);
-			border: 1px solid hsla(0,0%,100%,.1);
 			text-align: left;
 			text-transform: uppercase;
 		}
@@ -45,6 +50,7 @@
 			background-color: rgba(0,0,0,.25);
 
 			.sub-menu-list {
+
 				li {
 					border-top: 1px solid rgba(0,0,0,.45);
 				}
@@ -63,7 +69,7 @@
 			}
 		}
 
-		li .mobile-list-title {
+		.mobile-list-title {
 			margin:20px 0 0;
 			font-size: 1.125rem;
 			font-size: rem(18px);
@@ -73,6 +79,11 @@
 			border: 1px solid hsla(0,0%,100%,.1);
 			text-align: center;
 			text-transform: uppercase;
+
+			.mobile-list-header { 
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
   
 			span {
 				padding-bottom: 10px;
@@ -82,6 +93,7 @@
 			small {
 				font-size: rem(10px);
 				padding-bottom: 1px;
+			}
 			}
 		}
 
@@ -113,7 +125,7 @@
 }
 
 .mobile-menu {
-	@media (min-width: $small) {
+	@media (min-width: Ssmall) {
 		display:none;
 	}
 }

@@ -4,11 +4,12 @@ let lastScroll = window.scrollY;
 
 window.addEventListener("scroll", () => { 
     const currentScroll = window.scrollY;
-     cont
+     console.log('scrolled down');
     if (currentScroll < lastScroll) { 
-      stickyhead.classList.add("fixed");
+      stickyhead.classList.add("sticky");
+
     } else {
-      stickyhead.classList.remove("fixed");
+      stickyhead.classList.remove("sticky");
     }
     
     lastScroll = currentScroll;

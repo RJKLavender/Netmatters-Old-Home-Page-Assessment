@@ -4,43 +4,20 @@ const website = document.querySelector('.website');
 const hamburger = document.querySelector('.hamburger-inner');
 //const classCheck = website.classList.contains('menu-is-active');
 
-let sidebarActive = false;
+let menuActive = false;
 
-// menu.addEventListener('click', () => {
-//    // const classCheck = website.classList.contains('menu-is-active');
-//    console.log('menu clicked');
-//     if(!sidebarActive) {
-//         console.log('menu has appeared');
-//         sidebar.style.display = "block";
-//         website.classList.add('menu-is-active');
-//         hamburger.classList.add('close-menu');
-//         sidebarActive = true;
-//         const menuActive = document.querySelector('.menu-is-active');
-//     }
- 
-// });
-
-// menuActive.addEventListener('click', () => {
-//     console.log('website clicked');
-//     if(sidebarActive) {
-//         console.log('menu has been closed');
-//         sidebar.style.display = "none";
-//         website.classList.remove('menu-is-active');
-//         hamburger.classList.remove('close-menu');
-//        sidebarActive = false;
-//     }
-
-// }); 
-const menuHandler = (e) => {
-
-    if (e.target === menu) {
-        sidebar.style.display = "block";
-      website.classList.add('menu-is-active');
-      hamburger.classList.add('close-menu');
-       sidebarActive = true;
+website.addEventListener('click', (event) => { // declare event listner for website not including sidebar
+    if (!menuActive) { // Check if Menu is not active
+        if (event.target == menu || menu.contains(event.target)) { // Check if click target is the hamburger menu or if event target is a child of hamberger menu
+            sidebar.style.display = "block";
+            website.classList.add('menu-is-active');
+            hamburger.classList.add('close-menu');
+            menuActive = true;
+        }
+    } else {
+        sidebar.style.display = "none";
+        website.classList.remove('menu-is-active');
+        hamburger.classList.remove('close-menu');
+        menuActive = false;
     }
-
-}
-
-
-website.addEventListener('click', menuHandler);
+});

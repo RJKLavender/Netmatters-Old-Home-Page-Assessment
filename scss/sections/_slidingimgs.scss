@@ -10,6 +10,7 @@
         position: relative;
         align-items: center;
         justify-content: center;
+        min-width: 0;
 
         //I used clip rather than hidden as hidden was causing issues with displaying the tooltips
         overflow-x: clip;

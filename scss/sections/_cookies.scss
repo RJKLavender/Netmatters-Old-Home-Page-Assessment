@@ -91,12 +91,20 @@
 
                     .cookies-row {
                         display: flex;
-                        flex-direction: row;
+                        flex-direction: column;
                         margin: 0 -15px;
 
+                        @media (min-width: $small) {
+                            flex-direction: row;
+                        }
+
                             .cookies-button-box {
-                                width: 50%;
+                                width: 100%;
                                 padding:0 15px;
+
+                                @media (min-width: $small) {
+                                    width: 50%;
+                                }
 
                                 a {
                                     font-size: rem(16px);
@@ -111,6 +119,11 @@
 
                                 .cookies-button-settings {
                                     @include buttoncolor($lightgrey, $white);
+                                    margin-bottom:30px;
+
+                                    @media (min-width: $small) {
+                                        margin-bottom:0;
+                                    }
                                 }
 
                                 .cookies-button-accept {

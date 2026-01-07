@@ -181,7 +181,7 @@
 
                                 //Fixed not sure what was causing it to be a rgb instead of a hex colour
                                 .news-btn-blue {
-                                    @include buttoncolor($blue, $white);
+                                    background-color: #4183d7;
                                 }
                                 
                                 // article athuor wraper 

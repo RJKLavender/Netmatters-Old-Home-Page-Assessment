@@ -1,5 +1,6 @@
 //services section styling
 .services-list {
+    margin-top:20px;
      //removed the negative margins it seems to fix the margin problems.
 		.services-row {
             max-width: 100%;
@@ -26,10 +27,14 @@
 
                 //just like in news section this header is only on larger screens and is replaced with one below the grid on mobiles 
                 h1 {
-                    margin-top:-13px;
+                    margin-top:-5px;
                     margin-left: 20px;
                     margin-bottom: 28px;
                     display:none;
+
+                    em {
+                        font-style: normal;
+                    }
                     
                  @media (min-width: $small) {
                     display:block;

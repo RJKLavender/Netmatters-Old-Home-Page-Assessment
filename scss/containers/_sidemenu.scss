@@ -15,7 +15,7 @@
 	}
   
 	.sidebar-list {
-		padding: 20px 20px 20px;
+		padding: 20px 0 0;
 		margin:0;
 		display: flex;
 		flex-direction: column;
@@ -40,6 +40,10 @@
 			line-height: 1;
 			text-align: left;
 			text-transform: uppercase;
+		}
+
+		.contact-side-menu-title:hover {
+			background-color: hsla(0,0%,100%,.05);
 		}
 
 	  	li .sub-menu {
@@ -71,10 +75,10 @@
 		}
 
 		.mobile-list-title {
-			margin:20px 0 0;
+			margin:0;
 			font-size: 1.125rem;
 			font-size: rem(18px);
-			padding: 19px 0 18px;
+			padding: 19px 20px 0;
 			border-radius: 3px;
 			text-align: center;
 			text-transform: uppercase;
@@ -82,8 +86,8 @@
 			.mobile-list-header {
 			outline: 1px solid rgba(0,0,0,.25);
 			border: 1px solid hsla(0,0%,100%,.1);
-			padding: 20px 0;
-			margin-bottom:20px;
+			padding: 19px 0 18px;
+			margin-bottom:0;
 			display: flex;
 			flex-direction: column;
 			justify-content: center;
@@ -98,11 +102,16 @@
 				padding-bottom: 1px;
 			}
 			}
+
+			.mobile-list-header:hover {
+				background-color: hsla(0,0%,100%,.05);
+			}
 		}
 
 		.mobile-sub-menu {
 			margin-top: 20px;
 			border-radius: 3px;
+			
 
 			.mobile-menu-list {
 				width: auto;
@@ -129,7 +138,7 @@
 }
 
 .mobile-menu {
-	@media (min-width: $small) {
+	@media (min-width: $medium) {
 		display:none;
 	}
 }
@@ -137,7 +146,7 @@
 .non-mobile-menu {
 	display:none;
 
-	@media (min-width: $small) {
+	@media (min-width: $medium) {
 		display:block;
 	}
 }
@@ -194,10 +203,23 @@
 #side-contact-button {
 	text-align: center;
 	padding: 19px 0 18px;
+	margin: 0 20px;
 	border-radius: 3px;
 
 		.side-menu-title {
 			font-size: rem(18px);
-			padding:0;
+			padding:19px 49px 18px;
 		}
+}
+
+#side-ourwork-button {
+	margin-top:20px;
+
+	@media (min-width: $small) {
+		margin-top:0;
+	}
+}
+
+#side-support-button {
+	padding-bottom: 20px;
 }

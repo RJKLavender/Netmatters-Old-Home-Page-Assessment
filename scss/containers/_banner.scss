@@ -1,11 +1,12 @@
 //banner styling using a flex container
 .banner {
+    
 .banner-slide { 
     display:flex;
     flex-direction: column;
     justify-content: center;
     width: 100%;
-    min-height: 550px;
+    min-height: 641px;
 
     //makes image resize and stay centered on different screen sizes
     background-size: cover;
@@ -15,10 +16,11 @@
     .content {
     color:$white;
     text-align: center;
-    padding: 60px 0;
+    padding: 150px 0 60px;
 
     //non centered text for larger screens
     @media (min-width: $medium) {
+        padding: 60px 0;
         text-align: left;
     }
         
@@ -60,10 +62,6 @@
                 margin-left: 12px;
             }
         }
-
-        .button-banner:hover {
-            @include buttoncolor($hover-purple, $white);
-        }
     }
 }
 }
@@ -82,6 +80,10 @@
     .company-button {
         @include buttoncolor($violet, $white);
     }
+
+    .company-button:hover {
+        @include buttoncolor($hover-purple, $white);
+    }
 }
 
 .banner2 {
@@ -96,6 +98,10 @@
 
     .bespoke-button {
         @include buttoncolor($orange, $white);
+    }
+
+    .bespoke-button:hover {
+        @include buttoncolor($hover-orange, $white);
     }
 
 }
@@ -114,6 +120,10 @@
         @include buttoncolor($blue, $white);
     }
 
+    .itsupport-button:hover {
+        @include buttoncolor($hover-blue, $white);
+    }
+
 }
 
 .banner4 {
@@ -128,6 +138,10 @@
 
     .digitalmarketing-button {
         @include buttoncolor($lime, $white);
+    }
+
+    .digitalmarketing-button:hover {
+        @include buttoncolor($hover-green, $white);
     }
 
 }
@@ -146,6 +160,10 @@
         @include buttoncolor($red, $white);
     }
 
+    .telecomservices-button:hover {
+        @include buttoncolor($hover-red, $white);
+    }
+
 }
 
 .banner6 {
@@ -162,6 +180,10 @@
         @include buttoncolor($violet, $white);
     }
 
+    .webdesign-button:hover {
+        @include buttoncolor($hover-purple, $white);
+    }
+
 }
 
 .banner7 {
@@ -176,6 +198,10 @@
 
     .cybersecurity-button {
         @include buttoncolor($rose, $white);
+    }
+
+    .cybersecurity-button:hover {
+        @include buttoncolor($hover-rose, $white);
     }
 
 }

@@ -11,17 +11,16 @@ $(document).ready(function(){
   });
 });
 
-//javascript for partners/clients sliding carousel using slick jquwey plugin
+// //javascript for partners/clients sliding carousel using slick jquwey plugin
 $(document).ready(function(){
   $('.sliding-list').slick({
     autoplay:true,
-    slidesToScroll: 1,
     autoplaySpeed:3500,
     arrows:false,
     dots:false,
     infinite:true,
     speed:300,
-    variableWidth: true,
+   variableWidth: true,
     draggable: false,
     centerMode: false,
     responsive: [

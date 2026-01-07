@@ -30,6 +30,15 @@ box-sizing: border-box;
     }
 }
 
+.stickyhead-menu-is-active {
+        left: -275px;
+    cursor: pointer;
+
+    @media (min-width: $medium) {
+        left: -350px;
+    }
+}
+
 .menu-is-active::after {
     position: absolute;
     top: 0;
@@ -59,8 +68,7 @@ box-sizing: border-box;
 .sticky {
     position: fixed;
     top: 0;
-    left: 0;
-    right: 0;
+    width:100%;
     box-shadow: 0 5px 35px rgba(0, 0, 0, .1);
 }
 

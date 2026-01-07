@@ -17,15 +17,39 @@
 		.sliding-img-box {
             width: auto;
             margin-right: 50px;
-            position: relative;
+            
             padding: 0 20px;
             height:70px;
             max-height:70px;
+            
+            //Grayscale is used to chnage the saturation of the logo images when hovered
+            //They are set to greyscale by default and then become coloured when hovered
+			img {
+                max-width:200px;
+                filter: grayscale(1)
+            }
 
-            //tool tip styling 
+            img:hover {
+                filter: grayscale(0);
+            }
+        }
+
+        //The tooltip only appears when hovered over
+        
+    }
+}
+
+.sliding-imgs .sliding-list .slick-list .slick-track .sliding-img-box:hover {
+            .logo-tooltip {
+                display:block;
+                
+            }
+        }
+
+        //tool tip styling 
             //this postioning set up places it just above the logo.
             //Had to use wrapper in order for you to be able to stay hovering on the tooltip otherwise it vanish as you move up
-            .logo-tooltip {
+           .sliding-imgs .sliding-list .slick-list .slick-track .sliding-img-box .logo-tooltip {
                 display:none;
                 position: absolute;
                 bottom: 100%;
@@ -114,26 +138,3 @@
                     }
                 }
             }
-            
-            //Grayscale is used to chnage the saturation of the logo images when hovered
-            //They are set to greyscale by default and then become coloured when hovered
-			img {
-                max-width:200px;
-                filter: grayscale(1)
-            }
-
-            img:hover {
-                filter: grayscale(0);
-            }
-        }
-
-        //The tooltip only appears when hovered over
-        .sliding-img-box:hover {
-            .logo-tooltip {
-                display:block;
-                
-            }
-        }
-    }
-}
-

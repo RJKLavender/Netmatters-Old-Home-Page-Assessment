@@ -22,12 +22,14 @@
             padding: 0 20px;
             height:70px;
             max-height:70px;
+            display:flex;
             
             //Grayscale is used to chnage the saturation of the logo images when hovered
             //They are set to greyscale by default and then become coloured when hovered
 			img {
                 max-width:200px;
-                filter: grayscale(1)
+                filter: grayscale(1);
+                align-self: center;
             }
 
             img:hover {
@@ -40,7 +42,7 @@
     }
 }
 
-.sliding-imgs .sliding-list .slick-list .slick-track .sliding-img-box:hover {
+        .sliding-imgs .sliding-list .slick-list .slick-track .sliding-img-box:hover {
             .logo-tooltip {
                 display:block;
                 
@@ -72,7 +74,7 @@
                     }
                     
                     //tooltip button styling
-                    a {
+                    .tooltip-button {
                         margin-top: 11px;
                         font-size: rem(15px);
                         line-height: rem(35px);

@@ -241,6 +241,7 @@ height:70px;
               transition-property: opacity,filter;
               transition-duration: .15s;
               transition-timing-function: linear;
+              border: none;
               
               @include buttoncolor($darkgrey, $white);
               text-align:center;
@@ -321,7 +322,6 @@ height:70px;
 
             .button-hamburger:hover {
               @include buttoncolor($hover-hamburger, $white);
-
             }
           }
         }
@@ -329,19 +329,16 @@ height:70px;
         
         //Search box styling for mobile screens only
         .mobile-contact {
-            margin-top: 11px;
-
+            
             @media (min-width: $small) {
               display: none;
             }
            
             //border is applied to enitre container so that both the submit button and the search box fit within it
             .mobile-search {
-              display:flex;
               height: 47px;
-              background-color: $border-black;
-              border: 2px solid $border-black;
-              border-radius: 2px;
+              margin-top: 11px;
+              position:relative;
 
               .hidden-label {
                 display: none;
@@ -350,8 +347,6 @@ height:70px;
               .mobile-form-search {
                 display:inline-block;
                 outline: 1px solid hsla(0,0%,100%,.2);
-                border-radius: 2px;
-                border-color: $offwhite;
                 font-size: rem(14px);
                 line-height: rem(21px);
                 color: $medgrey;
@@ -362,6 +357,7 @@ height:70px;
                 background-color: rgba(0,0,0,.1);
                 border: 2px solid rgba(0,0,0,.1);
                 border-radius: 2px;
+                box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
               }
 
               .mobile-form-search::placeholder {
@@ -369,14 +365,16 @@ height:70px;
               }
               
               .mobile-submit {
-                display:flex;
+                display:inline-flex;
                 align-items:center;
                 justify-content: center;
-                padding: 0 10px;
+                padding: 0 3px;
                 height: 47px;
                 font-size: rem(20px);
                 line-height: rem(47px);
                 color: $darkgrey;
+                position: absolute;
+                right: 7px;
 
                 //This allows the icon to appear inside the box
                 background: none;

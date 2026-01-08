@@ -203,7 +203,7 @@
 .slick-dots li.slick-active button:before
 {
     color: #fff;
-    top: 0;
+    top: -1px;
     left: 0;
 
     width: 20px;

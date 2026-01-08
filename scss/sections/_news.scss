@@ -94,7 +94,21 @@
                                     z-index: 1;
                                 }
 
-                                .insights:hover {
+                                .insights-it-tech {
+                                    background-color: #4183d7;
+                                    position: absolute;
+                                    top: 10px;
+                                    right: 0;
+                                    color: $white;
+                                    font-size: rem(12px);
+                                    font-weight: $font-semibold;
+                                    padding: 0 10px;
+                                    line-height: rem(23px);
+                                    text-transform: uppercase;
+                                    z-index: 1;
+                                }
+
+                                .insights:hover, .insights-it-tech:hover {
                                     text-decoration: underline;
                                 }
 
@@ -146,6 +160,10 @@
                                     margin-top:0;
                                     margin-bottom: 15px;
                                     color: $sky;
+
+                                    .firstline {
+                                        color: #4183d7;
+                                    }
                                     
                                     //This adjusts the height of the title because the titles have different lengths of text,
                                     //which this min height adjustment keeps everything inline with each pannel.
@@ -182,6 +200,7 @@
                                 //Fixed not sure what was causing it to be a rgb instead of a hex colour
                                 .news-btn-blue {
                                     background-color: #4183d7;
+                                    color: $white;
                                 }
                                 
                                 // article athuor wraper 

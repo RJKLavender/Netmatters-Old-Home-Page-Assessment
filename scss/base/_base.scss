@@ -13,6 +13,7 @@ font-weight: $font-reg;
 box-sizing: border-box;
 }
 
+// this div is used to set up the website and then be altered when the side menu is active
 .website {
     overflow: hidden;
     position: relative;
@@ -21,6 +22,7 @@ box-sizing: border-box;
     left: 0;
 }
 
+//adjusts the postioning of the website when the side menu is open
 .menu-is-active {
     left: -275px;
     cursor: pointer;
@@ -30,6 +32,7 @@ box-sizing: border-box;
     }
 }
 
+//makes sure the sticky header doesnt overlap into the side menu
 .stickyhead-menu-is-active {
         left: -275px;
     cursor: pointer;
@@ -39,6 +42,7 @@ box-sizing: border-box;
     }
 }
 
+//this changes how the website looks while the sidebar is open
 .menu-is-active::after {
     position: absolute;
     top: 0;
@@ -54,6 +58,7 @@ box-sizing: border-box;
     opacity: 1;
 }
 
+// sticky header settings without being sticky
 .sticky-head {
     transition: top 0.3s ease;
     top: -168px;
@@ -61,10 +66,12 @@ box-sizing: border-box;
     z-index: 2500;
 }
 
+//used to remove certain containers with javascript
 .hidden {
     display:none;
 }
 
+//this css makes the header sticky
 .sticky {
     position: fixed;
     top: 0;

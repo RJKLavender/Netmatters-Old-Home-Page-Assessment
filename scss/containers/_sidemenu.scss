@@ -27,6 +27,7 @@
 			border-bottom: 1px solid hsla(0,0%,100%,.1);
     	}
 
+		//this applies to any non mobile item
 		.side-menu-item {
 			padding: 20px 0 0;
 			outline: 1px solid rgba(0,0,0,.25);
@@ -46,6 +47,7 @@
 			background-color: hsla(0,0%,100%,.05);
 		}
 
+		//sets the bullet pointed sub items of the menu
 	  	li .sub-menu {
 			padding: 0;
 			margin: 20px 0 0;
@@ -74,6 +76,7 @@
 			}
 		}
 
+		//sets the mobile only menu options that have icons
 		.mobile-list-title {
 			margin:0;
 			font-size: 1.125rem;
@@ -92,15 +95,15 @@
 			flex-direction: column;
 			justify-content: center;
   
-			span {
-				padding-bottom: 10px;
-				font-size: rem(23px);
-			}
+				span {
+					padding-bottom: 10px;
+					font-size: rem(23px);
+				}
 
-			small {
-				font-size: rem(10px);
-				padding-bottom: 1px;
-			}
+				small {
+					font-size: rem(10px);
+					padding-bottom: 1px;
+				}
 			}
 
 			.mobile-list-header:hover {
@@ -108,6 +111,7 @@
 			}
 		}
 
+		//handles the submenu for the items 
 		.mobile-sub-menu {
 			margin-top: 20px;
 			border-radius: 3px;
@@ -130,13 +134,13 @@
 					font-size: rem(16px);
 					text-align: center;
 					text-transform: uppercase;
-					
 				}
 			}
 		}
 	}
 }
 
+//mobile menu and non mobile menu control what parts of the sidebar can be seen on mobile or desktop
 .mobile-menu {
 	@media (min-width: $medium) {
 		display:none;
@@ -151,6 +155,7 @@
 	}
 }
 
+//color seetings for the icons 
 .Mobile-CD {
 	.sidenav-icon {
 		 color: $sky;
@@ -193,6 +198,7 @@
 	}
 }
 
+
 .mobile-menu-item {
 	@media (max-width: $medium) {
 		border-top: 1px solid rgba(0,0,0,.25);
@@ -200,6 +206,7 @@
 	}
 }
 
+//since contact works differently to other tabs on the navigation bar i coded it seperately
 #side-contact-button {
 	text-align: center;
 	padding: 19px 0 18px;
@@ -212,6 +219,7 @@
 		}
 }
 
+//these two are to make sure there isnt conflicts with ourwork and support since they work differently on different screen sizes
 #side-ourwork-button {
 	margin-top:20px;
 

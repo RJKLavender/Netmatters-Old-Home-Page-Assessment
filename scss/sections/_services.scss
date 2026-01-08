@@ -134,9 +134,9 @@
             //services Panel styling    
 			.services-panel {
                 cursor: pointer;
-                padding-left:15px;
 
                 @media (min-width: $small) {
+                    padding-left:15px;
                     padding-right:15px;
                 }
                     //panel dimensions and flex box defining for easier adjusting with grid

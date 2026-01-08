@@ -20,7 +20,7 @@ height:70px;
       //fixed logo size and alignment
       .header-logo {
           display: flex;
-          max-width: 100%;
+          
           margin:0;
           padding:0;
           width:100%;
@@ -41,7 +41,7 @@ height:70px;
           }
 
           a {
-            align-self: center;
+            
           }
 
           a img {
@@ -72,7 +72,7 @@ height:70px;
           //buttons are placed in a seperate flex box to make the layout easier
           //fixes alignment issues 
           .header-buttons {
-            max-width: 100%;
+            
             padding:0;
             margin:0;
 
@@ -95,7 +95,7 @@ height:70px;
             display:flex;
             justify-content: right;
             flex-direction: row;
-            max-width: 100%;
+            
             align-items: center;
             padding:0;
             margin:0;
@@ -292,6 +292,7 @@ height:70px;
                   transition: top .1s ease-in .25s,opacity .1s ease-in;
                 }
 
+                //below styling is to alter the hamburger button for when the menu is open so it looks like an x rather than 3
                   .close-menu {
                     transform: rotate(225deg);
                     transition-delay: .12s;
@@ -354,7 +355,7 @@ height:70px;
                 font-size: rem(14px);
                 line-height: rem(21px);
                 color: $medgrey;
-                height:47px;
+                height:46px;
                 padding: 5px 40px 5px 15px;
                 cursor: text;
                 width: 100%;

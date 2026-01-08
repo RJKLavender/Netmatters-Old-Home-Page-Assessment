@@ -1,6 +1,7 @@
 //cookies Styling
 .cookies {
     .cookies-container {
+        //sets the styling for the manage cookies button at the bottom of the page
       .cookies-button-manage {
         position: fixed;
         z-index: 99;
@@ -22,6 +23,7 @@
         line-height: rem(22px);
       }
 
+      //sets the styling for the cookie box popup in the center of the screen
       .cookie-consent {
         position: fixed;
         top: 0;
@@ -83,12 +85,14 @@
                         }
                     }
                 }
-
+                
+                //sets the styling for the buttons
                 .cookies-footer {
                     margin:0;
                     padding: 20px;
                     border-top: 1px solid $border-offwhite;
 
+                    // the layout for the buttons are different on different screen sizes
                     .cookies-row {
                         display: flex;
                         flex-direction: column;
@@ -117,6 +121,7 @@
                                     display:block;
                                 }
 
+                                //margin and mixins for colors of the buttons
                                 .cookies-button-settings {
                                     @include buttoncolor($lightgrey, $white);
                                     margin-bottom:30px;

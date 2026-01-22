@@ -1,6 +1,7 @@
 //javascript for cookie consent functionality
 const cookieApp = document.getElementById('cookiesConsent');
 const cookieConsent = document.querySelector('.cookies-button-accept');
+const overflow = document.querySelector('body');
 
 //this is used to determine where the details of cookies is being stored
 let cookies = localStorage.getItem('cookiesConsent');
@@ -9,6 +10,7 @@ let cookies = localStorage.getItem('cookiesConsent');
 function setcookies() {
     localStorage.setItem('cookiesConsent', 'accepted');
     cookieApp.classList.add('hidden');
+    overflow.style.overflow = '';
     return cookies;
 }
 
@@ -22,7 +24,7 @@ if (!localStorage.getItem("cookiesConsent")) {
     if (cookieApp.classList.contains('hidden')) {
     cookieApp.classList.remove('hidden');
     }
-
+overflow.style.overflow = 'hidden';
     //once accept is clicked it runs the setcookies function
     cookieConsent.addEventListener('click', () => {
         setcookies();
@@ -31,6 +33,7 @@ if (!localStorage.getItem("cookiesConsent")) {
     //if there is a value in local storage run below code
 } else {
     cookieApp.classList.add('hidden');
+    overflow.style.overflow = '';
     return cookies;
 }
 

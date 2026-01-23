@@ -14,13 +14,11 @@ window.addEventListener("scroll", () => {
       stickyheader.style.top = '0';
       stickyheader.style.visibility = 'visible';
     } else {
-      stickyheader.style.top = '-230px';
       stickyheader.style.visibility = 'hidden';
     }
 
     //once finished scrolling back upto the top of the page remove stickyheader
     if (currentScroll == 0) {
-      stickyheader.style.top = '-230px';
       stickyheader.style.visibility = 'hidden';
     }
 

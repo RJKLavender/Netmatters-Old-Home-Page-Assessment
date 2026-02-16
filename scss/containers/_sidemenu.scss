@@ -8,7 +8,7 @@
 	background-color: $darkgrey;
 	width: 275px;
 	display:block;
-	overflow: scroll;
+	overflow: scrollY;
 
 	@media (min-width: $medium) {
     	width: 350px;

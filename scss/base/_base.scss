@@ -68,19 +68,51 @@ box-sizing: border-box;
 .sticky-header {
     position: fixed;
     width:100%;
-    visibility: hidden;
     display:block;
     top:-230px;
     background-color: #fff;
     z-index: 2500;
     box-shadow: 0 5px 35px rgba(0, 0, 0, .1);
-    
-    transition: all .5s;
+
 }
 
 //used to remove certain containers with javascript
 .hidden {
     display:none;
+}
+
+.hidden-header {
+    transition: visability 0.5s ease-in-out;
+    animation: slideInUp 0.3s ease-in forwards;
+    animation-fill-mode: both;
+    animation-name: slideInUp;
+    visibility: hidden;
+}
+
+.visible-header {
+    animation-fill-mode: both;
+    animation-name: slideInDown;
+    animation: slideInDown 0.3s ease-out forwards;
+    transition: all 0.5s ease;
+    visibility: visible;
+}
+
+@keyframes slideInDown {
+  from {
+    visibility: hidden;
+  }
+  to {
+    visibility: visible;
+  }
+}
+
+@keyframes slideInUp {
+  from {
+    visibility: visible;
+  }
+  to {
+    visibility: hidden;
+  }
 }
 
 //Universal Containers

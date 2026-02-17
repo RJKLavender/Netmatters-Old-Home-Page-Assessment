@@ -19,7 +19,7 @@ box-sizing: border-box;
     position: relative;
     z-index: 10;
     background-color: $white;
-    transition: all .5s;
+    transition: all .5s ease;
     left: 0;
 }
 
@@ -32,7 +32,7 @@ box-sizing: border-box;
         left: -350px !important;
     }
 
-    transition: all .5s;
+    transition: all .5s ease;
 }
 
 //makes sure the sticky header doesnt overlap into the side menu
@@ -44,7 +44,7 @@ box-sizing: border-box;
         left: -350px !important;
     }
 
-    transition: all .5s;
+    transition: all .5s ease;
 }
 
 //this changes how the website looks while the sidebar is open
@@ -61,7 +61,7 @@ box-sizing: border-box;
     height: 100%;
     opacity: 1;
 
-    transition: all .5s;
+    transition: all .5s ease
 }
 
 // sticky header settings without being sticky
@@ -74,18 +74,18 @@ box-sizing: border-box;
     box-shadow: 0 5px 35px rgba(0, 0, 0, .1);
     left: 0;
 
-    transition: all .5s;
+    transition: all .5s ease;
 }
 
 //used for sticky header
 .hidden-header {
-    transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease;
     top:-230px;
     pointer-events: none !important ;
 }
 
 .visible-header {
-    transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease;
     top:0;
     pointer-events: auto;
 }

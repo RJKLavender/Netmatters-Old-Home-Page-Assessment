@@ -5,7 +5,7 @@ const menu2 = document.getElementById('hamburger2');
 const website = document.querySelector('.website');
 const hamburger = document.getElementById('hamburger-inner');
 const hamburger2 = document.getElementById('hamburger-inner2');
-const stickyheader2 = document.querySelector('.sticky-header');
+const stickyheader2 = document.querySelector(".sticky-header");
 
 //menu active is used to determine wether the menu is active or not
 let menuActive = false;
@@ -18,7 +18,7 @@ stickyheader2.addEventListener('click', (event) => {
             //opens side bar and applies styling for the website and sticky header
             
             website.classList.add('menu-is-active');
-            stickyheader2.classList.add('stickyhead-menu-is-active');
+            stickyheader.classList.add('stickyhead-menu-is-active');
             hamburger2.classList.add('close-menu'); //alters the styling of the hamburger buttons
             hamburger.classList.add('close-menu');
             menuActive = true;
@@ -27,7 +27,7 @@ stickyheader2.addEventListener('click', (event) => {
     } else {
         
         website.classList.remove('menu-is-active');
-        stickyheader2.classList.remove('stickyhead-menu-is-active');
+        stickyheader.classList.remove('stickyhead-menu-is-active');
         hamburger2.classList.remove('close-menu');
         hamburger.classList.remove('close-menu');
         menuActive = false;
@@ -42,6 +42,7 @@ website.addEventListener('click', (event) => {
             //opens side bar and applies styling for the website and sticky header
             
             website.classList.add('menu-is-active');
+            stickyheader.classList.add('stickyhead-menu-is-active');
             hamburger.classList.add('close-menu'); //alters the styling of the hamburger buttons
             hamburger2.classList.add('close-menu');
             menuActive = true;
@@ -50,6 +51,7 @@ website.addEventListener('click', (event) => {
     } else {
         
         website.classList.remove('menu-is-active');
+        stickyheader.classList.remove('stickyhead-menu-is-active');
         hamburger.classList.remove('close-menu');
         hamburger2.classList.remove('close-menu');
         menuActive = false;

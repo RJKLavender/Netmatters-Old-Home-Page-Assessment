@@ -37,7 +37,7 @@ box-sizing: border-box;
 
 //makes sure the sticky header doesnt overlap into the side menu
 .stickyhead-menu-is-active {
-        left: -275px !important;
+    left: -275px !important;
     cursor: pointer;
 
     @media (min-width: $medium) {
@@ -75,17 +75,19 @@ box-sizing: border-box;
     left: 0;
 
     transition: all .5s;
-
 }
 
+//used for sticky header
 .hidden-header {
     transition: all 0.5s ease;
-    top:-230px;
+    top:-650px;
+    pointer-events: none !important ;
 }
 
 .visible-header {
     transition: all 0.5s ease;
     top:0;
+    pointer-events: auto;
 }
 
 //used to remove certain containers with javascript
@@ -95,6 +97,7 @@ box-sizing: border-box;
 
 .is-hidden {
     visibility:hidden;
+    pointer-events: none !important ;
 }
 
 //Universal Containers

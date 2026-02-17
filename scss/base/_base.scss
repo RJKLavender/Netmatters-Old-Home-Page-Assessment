@@ -79,13 +79,13 @@ box-sizing: border-box;
 
 //used for sticky header
 .hidden-header {
-    transition: all 0.5s ease;
-    top:-650px;
+    transition: all 0.5s ease-in-out;
+    top:-230px;
     pointer-events: none !important ;
 }
 
 .visible-header {
-    transition: all 0.5s ease;
+    transition: all 0.5s ease-in-out;
     top:0;
     pointer-events: auto;
 }

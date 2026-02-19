@@ -1,0 +1,60 @@
+//Sub Nav drop-down/hover-over Styling
+//Doesnt appear until a button is hovered over
+//fixed position error
+.sub-nav {
+    display:none;
+    margin: 0;
+    position: absolute;
+    top:100%;
+    left: 0;
+    min-width: 100%;
+    z-index: 10;
+    padding: 50px 0;
+
+	.sub-nav-list {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        margin-top: -15px;
+        text-align: left;
+        padding:0;
+        margin-bottom: 0;
+        color: $white;
+
+            //sub nav title        
+          .sub-nav-title {
+            display: block;
+            font-size: rem(32px);
+            line-height: rem(17px);
+            width: 100%;
+            margin-bottom: 10px;
+            margin-top: 15px;
+            font-weight: $font-med;
+            text-align: left;
+        }
+	    
+        //styling for both the icon and the link itself
+	    .sub-nav-link {
+            width: 33%;
+            margin-top: 15px;
+            font-size: rem(17px);
+            line-height: rem(21px);
+        
+            a {
+                padding: 10px 15px 10px 0;
+                display: flex;
+                align-items: center;
+
+                .link-text {
+                    margin-left: 10px;
+                }
+            }
+
+            a:hover {
+                text-decoration: underline;
+            }
+        }
+    }     
+}
+
+//colour mixing sass code for this section is in the navcolours.scss file

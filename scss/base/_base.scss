@@ -1,0 +1,223 @@
+// Main Base Styles
+// body and universal styles
+body {
+margin: 0;
+font-family: $Poppins,sans-serif;
+letter-spacing: 0.4px;
+font-size: $base-font-size;
+line-height: ($base-line-height/$base-font-size); //line height calcuation for the base font outputs 1.5
+font-weight: $font-reg;
+}
+
+* {
+box-sizing: border-box;
+}
+
+// this div is used to set up the website and then be altered when the side menu is active
+.website {
+    overflow: hidden;
+    position: relative;
+    z-index: 10;
+    background-color: $white;
+    transition: all .5s ease;
+    left: 0;
+}
+
+//adjusts the postioning of the website when the side menu is open
+.menu-is-active {
+    left: -275px !important;
+    cursor: pointer;
+
+    @media (min-width: $medium) {
+        left: -350px !important;
+    }
+
+    transition: all .5s ease;
+}
+
+//makes sure the sticky header doesnt overlap into the side menu
+.stickyhead-menu-is-active {
+    left: -275px !important;
+    cursor: pointer;
+
+    @media (min-width: $medium) {
+        left: -350px !important;
+    }
+
+    transition: all .5s ease;
+}
+
+//this changes how the website looks while the sidebar is open
+.menu-is-active::after, .stickyhead-menu-is-active::after {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 0;
+    height: 0;
+    background: rgba(0,0,0,.4);
+    z-index: 3000;
+    content: "";
+    width: 100%;
+    height: 100%;
+    opacity: 1;
+
+    transition: all .5s ease
+}
+
+// sticky header settings without being sticky
+.sticky-header {
+    position: fixed;
+    width:100%;
+    display:block;
+    background-color: #fff;
+    z-index: 2500;
+    box-shadow: 0 5px 35px rgba(0, 0, 0, .1);
+    left: 0;
+
+    transition: all .5s ease;
+}
+
+//used for sticky header
+.hidden-header {
+    transition: all 0.5s ease;
+    top:-230px;
+    pointer-events: none !important ;
+}
+
+.visible-header {
+    transition: all 0.5s ease;
+    top:0;
+    pointer-events: auto;
+}
+
+//used to remove certain containers with javascript
+.hidden {
+    display:none;
+}
+
+.is-hidden {
+    visibility:hidden;
+    pointer-events: none !important ;
+}
+
+//Universal Containers
+.container {
+    margin-right: auto;
+    margin-left: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+
+    @media (min-width: $small) {
+        width: 750px;
+    }
+
+    @media (min-width: $medium) {
+        width: 970px;
+    }
+
+    @media (min-width: $large) {
+        width: 1200px;
+    }
+}
+
+//container is styled slightly differently for the sitemap/copyright at the bottom of the website
+.container-bottom {
+    padding-left: 15px;
+    padding-right: 15px;
+    display:flex;
+    margin-left:0;
+    margin-right:0; 
+    flex-direction: column;
+
+    @media (min-width: $small) {
+        width: 750px;
+        margin-right: auto;
+        margin-left: auto;
+       
+    }
+
+    @media (min-width: $medium) {
+        width: 970px;
+    }
+
+    @media (min-width: $large) {
+        width: 1200px;
+    }
+}
+
+//margins for the middle sections of the website
+.section
+{ 
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+// standard html Elements
+a {
+    cursor: pointer;
+    text-decoration:none;
+}
+
+a:focus { 
+    outline: thin dotted;
+}
+
+//prevents useragent styling from overriding colour of links
+a:link, a:any-link, a:active, a:focus, a:visited {
+    color: inherit;
+}
+
+button {
+    cursor: pointer;
+    font-family: inherit;
+}
+
+p {
+    font-size: rem(13px);
+    line-height: rem(22px);
+    font-weight: $font-reg;   
+}
+
+p a:hover {
+    text-decoration: underline;
+}
+
+h2, h3, h4 {
+    line-height: 1.1;
+    font-weight: $font-reg;
+}
+
+h1 {
+    font-size: rem(36px);
+    font-weight: $font-semibold;
+}
+
+h2 {
+    font-size: rem(36px);
+}
+
+h3 {
+    font-size: rem(18px);
+}
+
+h4 {
+    font-size: rem(16px);
+    line-height: rem(18px);
+}
+
+h1 a:hover, h2 a:hover, h3 a:hover, h4 a:hover {
+    text-decoration: underline;
+}
+
+ul {
+    list-style: none;
+    text-decoration: none;
+}
+
+strong {
+    font-weight: $font-semibold
+}
+
+input, textarea, select {
+    font-family: inherit;
+}

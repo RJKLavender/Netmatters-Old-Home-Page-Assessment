@@ -1,0 +1,149 @@
+//About Us/Weclome to Netmatters section styling
+.about-us {
+background-color: $darkgrey;
+color: $white;
+font-weight: $font-light;
+text-align: left;
+
+	.about-row {
+        display: flex;
+        flex-wrap: wrap;
+        margin-left: -15px;
+        margin-right: -15px;
+        
+
+               //made each column into na flex box so it can be adjusted with media queries easier
+			.about-info {
+                padding: 0 15px;
+                display: flex;
+                height: 100%;
+                width: 100%;
+                flex-direction: column;
+                font-weight: $font-reg;
+                margin-bottom: 50px;
+       
+                @media (min-width: $medium) {
+                    width: 50%;
+                    margin-bottom: 0;
+                }
+
+                h2 {
+                    margin-bottom: 40px;
+                    margin-top: -6px;
+                }
+
+                p {
+                    font-size: rem(16px);
+                    line-height: rem(30px);
+                    margin-bottom: 25px;
+                    margin-top: 0;
+                }
+                 
+                //button containers were seperate classes to stop conflicts
+				.about-buttons {
+                    display:flex;
+                    flex-wrap: wrap;
+                    gap: 10px;
+                    flex-direction: row;
+                }
+				
+                //used a seperate container to keep all stars in a row on a line
+                .star-rating {
+                    display: flex;
+                    font-size: rem(50px);
+                    gap: 5px;
+                    margin-bottom: 25px;
+                    color: $gold;
+                }
+
+                //Quote paragraphs have different font sizes and presented in italtic 
+				.quote {
+                    font-size: rem(21px);
+                    font-style: $font-italic;
+                    font-weight: $font-semibold;
+                }
+                
+                //Author of quote done in different colour
+                .quote-author {
+                    font-size: rem(17px);
+                    font-weight: $font-semibold;
+                    color:  $verylightgrey;
+                }
+                 
+                //stops user agent conflict and color is different from inhert option
+                 .quote-author a:link, .quote-author a:any-link {
+                    color:  $verylightgrey;
+                 }
+								
+				.review-buttons {
+                    display:flex;
+                    flex-wrap:wrap;
+                    gap: 10px;
+                    flex-direction: row;
+
+                    //provides spacing when they are stacked on top of each other on medium size screens
+                    @media (min-width: $medium) and (max-width: $large) {
+                        gap:20px;
+                    }
+                }
+            }
+        }
+    }
+
+    //About us button styling
+    .aboutus-btn {
+        font-size: rem(20px);
+        font-weight: $font-reg;
+        line-height: rem(35px);
+        text-transform: uppercase;
+
+        display:inline-flex;
+        justify-content: center;
+        align-items: center;
+        
+        border-radius: 6px;
+        padding: 10px 30px;
+
+        em{
+            padding-left: 12px;
+        }
+    }
+
+    //button colour and margin/padding styling
+    .button-about {
+        @include buttoncolor($obsidian, $white);
+    }
+
+    .button-about:hover { 
+        @include buttoncolor($hover-about, $white);
+    }
+
+    //Media Queries are added to remove margins on medium size screens due to it causing presentation issues
+    //due to container size issues I had to make the buttons slightly smaller to fit (adjust the padding)
+    .button-about-google {
+        @include buttoncolor($cobalt, $white); 
+        padding: 10px 18px;              
+        margin-top: 25px;
+
+        @media (min-width: $medium) and (max-width: $large) {
+            margin-top:0;
+        }
+    }
+
+    .button-about-google:hover {
+        @include buttoncolor($hover-google, $white);  
+    }
+
+    .button-about-trustpilot {
+        @include buttoncolor($emerald, $white);  
+        padding: 10px 18px;              
+        margin-top: 25px;
+
+        @media (min-width: $medium) and (max-width: $large) {
+            margin-top:0;
+        }
+    }
+
+    .button-about-trustpilot:hover {
+       @include buttoncolor($hover-trustpilot, $white);  
+    }

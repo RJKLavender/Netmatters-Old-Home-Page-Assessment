@@ -1,0 +1,395 @@
+// Header Styling
+header { 
+background-color: $white;
+color: $white;
+
+.header-inner {
+padding: 20px 0;
+
+.header-row { 
+display:flex;
+margin: 0;
+align-items: center;
+height:70px;
+
+//adjusts margin for bigger screens
+@media (min-width: $small) {
+    margin: 0 -15px;
+  }
+      //compnay logo
+      //fixed logo size and alignment
+      .header-logo {
+          display: flex;
+          
+          margin:0;
+          padding:0;
+          width:100%;
+          height:70px;
+          
+          //adjusts size of logo to different screen sizes
+          @media (min-width: $small) {
+            Width: 50%;
+            padding: 0 15px;
+          }
+
+          @media (min-width: $medium) {
+            width: 41.66666667%;
+          }
+
+          @media (min-width: $large) {
+            width: 33.33333333%;
+          }
+
+          a {
+            
+          }
+
+          a img {
+            max-width: 100%;
+          }
+        }
+
+        // in mobile there is a phone button which is normalyy hidden
+        .hidden-mobile{
+          padding:0;
+          max-width:100%;
+          font-size: rem(32px);
+          margin-left: 15px;
+
+          // not visible on bigger screens, replaced by full size buttons
+          @media (min-width: $small) {
+          display:none;
+          }
+
+          a {
+            color: $darkgrey;
+          }
+
+          a:hover, a:focus {
+            color: $link;
+          }
+        }
+          //buttons are placed in a seperate flex box to make the layout easier
+          //fixes alignment issues 
+          .header-buttons {
+            
+            padding:0;
+            margin:0;
+
+            //shifts buttons to the right side of screen
+            @media (min-width: $small) {
+              Width: 50%;
+              padding: 0 15px;
+            }
+
+            @media (min-width: $medium) {
+              padding:0 15px;
+              width: 58.33333333%;
+            }
+
+            @media (min-width: $large) {
+              width: 66.66666667%;            
+            }
+
+          .contact{
+            display:flex;
+            justify-content: right;
+            flex-direction: row;
+            
+            align-items: center;
+            padding:0;
+            margin:0;
+            padding: 7px 0;
+            
+           
+            //shifts buttons to the right side of screen
+            @media (min-width: $medium) {
+              justify-content: right;
+            }
+
+            //header button styling
+            .header-btn{
+              font-size: rem(18px);
+              font-weight: $font-reg;
+              line-height: rem(46px);
+              height: 56px;
+              padding: 5px 15px;
+              margin-left: 20px;
+              border-radius: 3px; 
+          
+              text-transform: uppercase;
+              text-align: center;
+
+              span{
+                align-self: center;
+                font-size: 1.438rem;
+                margin-right: 5px;
+              }
+            }
+
+            //The buttons only appear on 992px or larger screen sizes
+            .button-support {
+              @include buttoncolor($blue, $white);
+              display: none;       
+
+              @media (min-width: $medium){
+                display: flex;
+                margin-left: 0;
+              }
+            }
+
+            .button-support:hover {
+              @include buttoncolor($hover-blue, $white);
+            }
+            
+              .button-contact {
+                @include buttoncolor($lightgrey, $white);
+                display: none;    
+              
+              @media (min-width: $medium){
+                display: flex;
+              }
+            }
+
+             .button-contact:hover {
+                @include buttoncolor($hover-grey, $white);
+             }
+
+             //in smaller screen sizes this search bar is replaced with a different one
+            .search {
+              display:none;
+              height: 56px;
+              margin-left:20px;
+
+              @media (min-width: $small) {
+                  display:flex
+                }
+
+              label {
+                display: none;
+              }
+
+              //search box styling
+              .form-search {
+                display: inline-flex;
+                color: $medgrey;
+                font-size: rem(14px);
+                line-height: rem(24px);
+                padding: 5px 15px;
+                width:174px;
+                cursor: text;
+                background-color: $white;
+                border: 1px solid $offwhite;
+
+                @media (min-width: $medium) {
+                  width: 240px;
+                }
+
+                //between 992px and 1260px the search button appears on its own to save space
+                @media (min-width: $medium) and (max-width: $large)
+                {
+                  display: none;
+                }
+              }
+
+              //This focus styling to the search box adds a shadow and border to the box when focused or typing inside it
+              .form-search:focus {
+                border-color: $focus-search;
+                outline: 0;
+                box-shadow: inset 0 1px 1px $shadow-black,0 0 8px $shadow-blue;
+              }
+
+              .form-search::placeholder {
+                color: $grey;
+              }
+
+              .search-submit {
+                padding: 7px 20px 3px;
+                height: 56px;
+                border-radius: 0 3px 3px 0;
+                border: none;
+                @include buttoncolor($lightgrey, $white);
+                text-align: center;
+                
+                //since in medium size screens the search button will be on its own i adapted the border radius all the way around
+                @media (min-width: $medium) and (max-width: $large)
+                {
+                  border-radius: 3px;
+                }
+                
+                  span {
+                    font-size: rem(23px);
+                  }
+                }
+
+                .search-submit:hover {
+                  background-color: $hover-search;
+                }
+            }
+
+            //Styled the hamburger like any other button
+            .button-hamburger {
+              font-size: rem(18px);
+              line-height: rem(46px);
+              font-weight: $font-reg;
+              height:56px;
+              max-width: 63px;
+              padding: 5px 14px;
+              border-radius: 3px;
+              margin-left: 20px;
+              white-space: normal;
+              transition-property: opacity,filter;
+              transition-duration: .15s;
+              transition-timing-function: linear;
+              border: none;
+              
+              @include buttoncolor($darkgrey, $white);
+              text-align:center;
+              
+              //this box makes it styled for lines now
+              .hamburger-box {
+                display: block;
+                width: 33px;
+                height: 19px;
+                position: relative;
+                text-align:center;
+                float: left;
+
+                //middle line
+                .hamburger-inner {
+                  background-color: $white;
+                  color: $white;
+                  border-radius: 0;
+                  font-size: 1.438rem;
+                  line-height: rem(45px);
+                  width: 33px;
+                  height: 4px;
+                  position: absolute;
+                  display: block;
+                  top: 50%;
+                  margin-top: -1.5px;
+                  margin-right: 0;
+                }
+
+                // hamburger buttopn set up
+                //bottom line
+                .hamburger-inner::after {
+                  bottom: -10px;
+                  transition: bottom .1s ease-in .25s,transform .22s cubic-bezier(.55,.055,.675,.19);
+                }
+
+                .hamburger-inner::after, .hamburger-inner::before {
+                  content: "";
+                  display: block;
+                  position: absolute;
+                  background-color: $white;
+                  width: 33px;
+                  height: 4px;
+                }
+
+                // top line
+                .hamburger-inner::before {
+                  top: -10px;
+                  transition: top .1s ease-in .25s,opacity .1s ease-in;
+                }
+
+                //below styling is to alter the hamburger button for when the menu is open so it looks like an x rather than 3
+                  .close-menu {
+                    transform: rotate(225deg);
+                    transition-delay: .12s;
+                    transition-duration: .22s;
+                    transition-timing-function: cubic-bezier(.215,.61,.355,1);
+                  }
+
+                  .close-menu::before {
+                    top: 0;
+                    opacity: 0;
+                    transition: top .1s ease-out,opacity .1s ease-out .12s;
+                  }
+
+                  .close-menu::after, .close-menu::before {
+                    content: "";
+                    display: block;
+                  }
+
+                  .close-menu::after {
+                    bottom: 0;
+                    transform: rotate(-90deg);
+                    transition: bottom .1s ease-out,transform .22s cubic-bezier(.215,.61,.355,1) .12s;
+                  }
+              }
+            }
+
+            .button-hamburger:hover {
+              @include buttoncolor($hover-hamburger, $white);
+            }
+          }
+        }
+      }
+        
+        //Search box styling for mobile screens only
+        .mobile-contact {
+            
+            @media (min-width: $small) {
+              display: none;
+            }
+           
+            //border is applied to enitre container so that both the submit button and the search box fit within it
+            .mobile-search {
+              height: 47px;
+              margin-top: 11px;
+              position:relative;
+
+              .hidden-label {
+                display: none;
+              }
+
+              .mobile-form-search {
+                display:inline-block;
+                outline: 1px solid hsla(0,0%,100%,.2);
+                font-size: rem(14px);
+                line-height: rem(21px);
+                color: $medgrey;
+                height:46px;
+                padding: 5px 40px 5px 15px;
+                cursor: text;
+                width: 100%;
+                background-color: rgba(0,0,0,.1);
+                border: 2px solid rgba(0,0,0,.1);
+                border-radius: 2px;
+                box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+              }
+
+              .mobile-form-search::placeholder {
+                color: $grey;
+              }
+              
+              .mobile-submit {
+                display:inline-flex;
+                align-items:center;
+                justify-content: center;
+                padding: 0 3px;
+                height: 47px;
+                font-size: rem(20px);
+                line-height: rem(47px);
+                color: $darkgrey;
+                position: absolute;
+                right: 7px;
+
+                //This allows the icon to appear inside the box
+                background: none;
+                border: none;
+                }
+            } 
+          }  
+  } 
+}
+
+
+        
+    
+
+    
+
+  
+

@@ -1,0 +1,71 @@
+//Site Map and Copyright styling
+
+ .bottom {
+  background-color: $verydarkgrey;
+  display:flex;
+  justify-content: space-between;
+  width: 100%;
+  padding-top: 10px;
+  font-size: rem(13px);
+  color: $white;
+
+  //styled the license and copyright in seperate classes
+  .license {
+    display:flex;
+     width: 100%;
+     padding-bottom: 10px;
+     padding-top: 5px;
+     
+     //adjusts the direction of the qay the text reads as a row for larger screens and as a column for phones
+     @media (min-width: $small) {
+      flex-direction: row;
+      padding: 5px 0 10px;
+    }
+
+    @media (max-width: $small) {
+      flex-direction: column;
+    }
+
+    // seperates the two lines on phones
+    .license-br {
+        display:block;
+
+        @media (min-width: $small) {
+            display:none;
+        }
+    }
+
+    ul {
+        display:block;
+        padding: 0;
+        margin: 0;
+        
+        // sets the sitemap to be  after the copy right on larger screens
+        @media (min-width: $small) {
+            order: 2;
+        }
+
+        li {
+            font-size: rem(13px);
+            line-height: rem(22px);
+        }
+
+         // used css :before to style add the seperator dash
+         li::before {
+            content: "-";
+            display:inline-block;
+            margin-left:10px;
+            margin-right:5px;
+            
+            @media (max-width:$small) {
+                display:none;
+                margin:0;
+            }
+        }
+            li a:hover {
+            text-decoration:underline;
+            }
+        }
+    }
+    
+}

@@ -1,0 +1,233 @@
+//side bar styling
+.sidebar {
+	position: fixed;
+	top: 0;
+	right: 0;
+	z-index: 9;
+	height: 100%;
+	background-color: $darkgrey;
+	width: 275px;
+	display:block;
+	overflow: scroll;
+
+	@media (min-width: $medium) {
+    	width: 350px;
+	}
+  
+	.sidebar-list {
+		padding: 20px 0 0;
+		margin:0;
+		display: flex;
+		flex-direction: column;
+		color: $white;
+
+		@media (min-width: $medium) {
+			padding: 0;
+			border-top: 1px solid rgba(0,0,0,.25);
+			border-bottom: 1px solid hsla(0,0%,100%,.1);
+    	}
+
+		//this applies to any non mobile item
+		.side-menu-item {
+			padding: 20px 0 0;
+			outline: 1px solid rgba(0,0,0,.25);
+			border: 1px solid hsla(0,0%,100%,.1);
+			justify-self: left;
+		}
+		
+		li .side-menu-title {
+			font-size: rem(16px);
+			padding-left: 20px;
+			line-height: 1;
+			text-align: left;
+			text-transform: uppercase;
+		}
+
+		.contact-side-menu-title:hover {
+			background-color: hsla(0,0%,100%,.05);
+		}
+
+		//sets the bullet pointed sub items of the menu
+	  	li .sub-menu {
+			padding: 0;
+			margin: 20px 0 0;
+			width: auto;
+			color: $white;
+			background-color: rgba(0,0,0,.25);
+			border-top: 1px solid rgba(0,0,0,.45);
+
+			.sub-menu-list {
+				padding:0;
+
+				li {
+					border-top: 1px solid hsla(0,0%,100%,.05);
+					padding: 15px 20px;
+				}
+
+				li a {
+					text-transform: uppercase;
+					font-size: rem(14px);
+				}
+
+				li a::before {
+					content: "\BB";
+					padding-right: 15px;
+				}
+			}
+		}
+
+		//sets the mobile only menu options that have icons
+		.mobile-list-title {
+			margin:0;
+			font-size: 1.125rem;
+			font-size: rem(18px);
+			padding: 19px 20px 0;
+			border-radius: 3px;
+			text-align: center;
+			text-transform: uppercase;
+
+			.mobile-list-header {
+			outline: 1px solid rgba(0,0,0,.25);
+			border: 1px solid hsla(0,0%,100%,.1);
+			padding: 19px 0 18px;
+			margin-bottom:0;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+  
+				span {
+					padding-bottom: 10px;
+					font-size: rem(23px);
+				}
+
+				small {
+					font-size: rem(10px);
+					padding-bottom: 1px;
+				}
+			}
+
+			.mobile-list-header:hover {
+				background-color: hsla(0,0%,100%,.05);
+			}
+		}
+
+		//handles the submenu for the items 
+		.mobile-sub-menu {
+			margin-top: 20px;
+			border-radius: 3px;
+			
+
+			.mobile-menu-list {
+				width: auto;
+				margin:0;
+				padding:0;
+				background-color: rgba(0,0,0,.25);
+				border-top: 1px solid rgba(0,0,0,.45);
+				color: $white;
+
+				li {
+					padding: 10px;
+					border-top: 1px solid hsla(0,0%,100%,.05);
+				}
+
+        		li a span {
+					font-size: rem(16px);
+					text-align: center;
+					text-transform: uppercase;
+				}
+			}
+		}
+	}
+}
+
+//mobile menu and non mobile menu control what parts of the sidebar can be seen on mobile or desktop
+.mobile-menu {
+	@media (min-width: $medium) {
+		display:none;
+	}
+}
+
+.non-mobile-menu {
+	display:none;
+
+	@media (min-width: $medium) {
+		display:block;
+	}
+}
+
+//color seetings for the icons 
+.Mobile-CD {
+	.sidenav-icon {
+		 color: $sky;
+	}
+}
+
+.Mobile-IT {
+	.sidenav-icon {
+		color: $blue;
+	}
+}
+
+.Mobile-DM {
+	.sidenav-icon {
+		 color: $lime;
+	}
+}
+
+.Mobile-TS {
+	.sidenav-icon {
+		 color: $red;
+	}
+}
+
+.Mobile-WD {
+	.sidenav-icon {
+		color: $violet;
+	}
+}
+
+.Mobile-CS {
+	.sidenav-icon {
+		 color: $rose;
+	}
+}
+
+.Mobile-DC {
+	.sidenav-icon {
+		 color: $bloodorange;
+	}
+}
+
+
+.mobile-menu-item {
+	@media (max-width: $medium) {
+		border-top: 1px solid rgba(0,0,0,.25);
+		border-bottom: 1px solid hsla(0,0%,100%,.1);
+	}
+}
+
+//since contact works differently to other tabs on the navigation bar i coded it seperately
+#side-contact-button {
+	text-align: center;
+	padding: 19px 0 18px;
+	margin: 0 20px;
+	border-radius: 3px;
+
+		.side-menu-title {
+			font-size: rem(18px);
+			padding:19px 49px 18px;
+		}
+}
+
+//these two are to make sure there isnt conflicts with ourwork and support since they work differently on different screen sizes
+#side-ourwork-button {
+	margin-top:20px;
+
+	@media (min-width: $small) {
+		margin-top:0;
+	}
+}
+
+#side-support-button {
+	padding-bottom: 20px;
+}

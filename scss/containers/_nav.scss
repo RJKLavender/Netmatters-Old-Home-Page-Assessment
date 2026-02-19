@@ -1,0 +1,73 @@
+//Navigation Bar Styling
+nav {
+    background-color: $darkgrey;
+    display:none;
+    position: relative;
+
+    //The Navigation bar only appears on larger screens
+    @media (min-width: $medium) {
+        display:block;
+    }
+
+    .main-nav {
+        display: flex;
+        flex-direction: row;
+        margin:0;
+        padding:0;
+        
+        
+        .main-nav-item {
+            text-align: center;
+            flex: 1;
+            
+
+            .nav-item {
+                color: $white;
+                display:block;
+                font-size: rem(18px);
+                line-height: 1;
+                font-weight: $font-light;
+                padding: 19px 0 18px;
+                position:relative;
+                text-transform:uppercase;
+                 
+                .nav-icon {
+                  display:block;
+                  font-size: rem(23px);
+                  padding-bottom: 10px;
+                }
+
+                small {
+                  display:block;
+                  font-size: rem(10px);
+                }
+            }
+        }
+
+        //Icon colour changes to match text when hovered
+        li:hover .nav-item .nav-icon {
+            color: $white;
+        }
+
+        //Absolute postioning used to place the arrow shape under the nav buttons when hovered
+        li:hover .nav-item::before {
+            content: "";
+            position: absolute;
+            left: 50%;
+            bottom: -35px;
+            transform: translateX(-50%);
+            z-index: 90;
+            width: 0;
+            height: 0;
+            border-style: solid;
+            border-width: 35px 68px 0;
+
+            //width of arrow shape adjusts to match the width of each nav item according to the screen size
+            @media (min-width: $large) {   
+              border-width: 35px 83.5px 0;
+            }
+        }
+    }
+}
+
+//colour mixing sass code for this section is in the navcolours.scss file

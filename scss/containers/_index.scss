@@ -1,0 +1,16 @@
+//Header and Footer
+@import 'header';
+@import 'footer';
+
+//Main Nav and Banner
+@import 'nav';
+@import 'sub-nav';
+@import 'banner';
+
+//seperate partial for nav coloring
+@import 'navcolors';
+
+//sitemap/copy right section
+@import 'bottom';
+
+@import 'sidemenu';

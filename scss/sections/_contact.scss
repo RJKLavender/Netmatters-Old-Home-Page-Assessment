@@ -1,0 +1,185 @@
+.contact-box {
+		.section3 {
+			padding-top: 0;
+			padding-bottom: 50px;
+
+				.contact-row {
+					display: flex;
+					flex-wrap: wrap;
+					flex-direction: column;
+					margin-left: -15px;
+					margin-right: -15px;
+					position:relative;
+
+					@media (min-width: $large) {
+						flex-direction: row;
+					}
+
+					.contact-details-box {
+						max-width: 100%;
+						position: relative;
+
+						@media (min-width: $large) {
+							left: 66.67%;
+							width: 33.33%;
+						}
+
+
+						.CDetails {
+							p {
+								line-height: rem(30px);
+								margin-bottom: 25px;
+								font-size: rem(16px);
+								strong {
+									font-weight: $font-semibold;
+  									color: $darkgrey;
+
+								}
+
+								a {
+									font-weight: 600;
+									color: $violet;
+									font-size: rem(26px);
+									margin: 0 0 15px;
+									line-height: 1.1;
+									text-decoration: none;
+								}
+
+								a:hover {
+									text-decoration: underline;
+								}
+							}
+						}
+						
+						.out-of-hours {
+							h4 {
+								font-weight: $font-semibold;
+								color: $darkgrey;
+								font-size: rem(16px);
+
+								a {
+									text-decoration: none;
+									line-height: rem(30px);
+									margin-bottom: 25px;
+									font-weight: $font-semibold;
+									color: $darkgrey;
+									font-size: rem(16px);
+
+									em {
+										font-style: normal;
+									}
+								}
+
+								a:hover {
+									text-decoration: underline;
+								}
+							}
+
+							.OOH-Details {
+								display: block !important;
+								color:$detialstext;
+								max-height: 0;
+								transition: max-height 0.5s ease-in-out;
+								padding: 0 !important; 
+								margin: 0 !important;
+								overflow: hidden;
+								position: relative;
+
+								p {
+									line-height: rem(30px);
+									margin-bottom: 25px;
+									font-size: rem(16px);
+
+									strong {
+										font-weight: $font-semibold;
+										color: $darkgrey;
+
+									} 
+								}
+							}
+						}
+					}
+								
+					.contact-form-box {
+						#contact-form {
+							.form-wrapper {
+								.field-wrapper {
+									label {
+
+									} 
+
+									input {
+
+									}
+								}
+							}
+
+							.form-wrapper-box {
+								label {
+
+								}
+
+								textarea {
+
+								}
+							}
+							.marketing-approval-box {
+								.checkbox {
+									.approval-box {
+										.checkbox-container {
+											.tickbox-button {
+												.ticked {
+
+												}
+
+												input {
+
+												}
+											}
+										}
+
+										.approval-message {
+											a {
+
+											}
+
+											a:hover {
+
+											}
+										}	 
+									}
+								}
+							}
+
+							.form-button-box {
+								.form-submit-button {
+
+								}
+
+								small {
+									.required-key {
+
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}	
+
+.required {
+
+}
+
+.checkbox-active {
+
+}
+
+.active {
+	margin-top: 0;
+	margin-bottom: 0;
+	padding-top: 0;
+	padding-bottom: 0;
+	max-height: 500px !important;
+}

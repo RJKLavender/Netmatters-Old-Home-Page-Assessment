@@ -24,7 +24,7 @@ $rules = [
     ], 
     'email' => [
         'min_length' => ['value' => 6, 'error_message' => 'Email is too short must be at least 6 characters long'],
-        'pattern'    => ['value' => '/^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/', 'error_message' => 'This is Not a valid email.']
+        'pattern'    => ['value' => '/^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9-]+[.][a-zA-Z]{2,}$/', 'error_message' => 'This is Not a valid email.']
     ],
     'telephone' => [
         'min_length' => ['value' => 4, 'error_message' => 'Telephone is too short must be at least 4 characters long.'],

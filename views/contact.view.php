@@ -169,7 +169,7 @@ require('partials/nav.php');
 								</div>
 								<div class="field-wrapper field-form">
 									<label class="required" for="email">Your Email</label>
-									<input id="email" class="form-feild" name="email" type="email" value="<?= htmlspecialchars($_SESSION['old_input']['email'] ?? '') ?>" data-v-required data-v-pattern="^[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}(?:\s\w+)?$" customminlength="6">
+									<input id="email" class="form-feild" name="email" type="email" value="<?= htmlspecialchars($_SESSION['old_input']['email'] ?? '') ?>" data-v-pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9-]+[.][a-zA-Z]{2,}$" customminlength="6">
 										 <?php if (!empty($errors['email'])): ?>
         							<span class="errormsg"><?= implode('<br>', $errors['email']) ?></span>
     								<?php endif; ?>

@@ -31,8 +31,14 @@ const validationOptions = [
         //checks email and phone number agaisnt pattern provided for valid email and phone number
         attribute: 'data-v-pattern',
         isValid: input => {
-            const patternRegEx = new RegExp(input.pattern);
-            return patternRegEx.test(input.value);
+    // Get the raw string from the attribute
+    const patternString = input.getAttribute('data-v-pattern');
+    
+    // Create the RegEx with the case-insensitive 'i' flag
+    const patternRegEx = new RegExp(patternString, 'i');
+    
+    // Test the TRIMMED value
+    return patternRegEx.test(input.value.trim());
         },
         errorMessage: (input, label) => `Is Not a Valid ${label.textContent}`
     },

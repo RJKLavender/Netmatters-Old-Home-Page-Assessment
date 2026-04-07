@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="en-GB">
 <head>
-	<!--fixed validation issues here-->
 	<meta charset="utf-8"> 
     <meta http-equiv="X-UA-Compatible" content="IE=edge"> 
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
@@ -9,12 +8,12 @@
 	<title>Full Service Digital Agency | Cambridgeshire & Norfolk | Netmatters</title>
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 
-	<!-- below files are used for the carosels using jquery and slick plugin-->
 	<script src="javascript/jquery-3.7.1.min.js"></script>
 </head>
 <body>
+	<!-- all header and footer and navigation and cookies are seperated into partials and required -->
+<?php
 
-<?php 
 require('partials/cookie.php');
 require('partials/sidenav.php'); 
 
@@ -134,7 +133,7 @@ require('partials/nav.php');
 							<p><strong>Monday - Friday 07:00 - 18:00</strong></p>
 						</div>
 						<div class="out-of-hours">
-							<h4><a href="#">Out of Hours IT Support<em></em></a></h4>
+							<h4><a href="#">Out of Hours IT Support <em class="icon-chevron-down"></em></a></h4>
 							<div class="OOH-Details">
 								<p>Netmatters IT are offering an Out of Hours service for Emergency and Critical tasks.</p>
 								<p><strong>Monday - Friday 18:00 - 22:00</strong><strong>Saturday 08:00 - 16:00</strong>
@@ -147,37 +146,56 @@ require('partials/nav.php');
 							</div>
 						</div>
 					</div>
+					<!--  i use impode to join the parts of the error being echoed into an array,-->
+					  <!-- each error is on a new line from the filed. -->
+					   <!-- the value being set to old input is for if there is an error so the value of the field can be fixed-->
+						<!-- special chars are used to stop malicious inputs into the fields -->
 					<div class="contact-form-box">
 						<form id="contact-form" method="POST" accept-charset="UTF-8" novalidate="novalidate">
 							<div class="form-wrapper">
-								<div class="field-wrapper">
+								<div class="field-wrapper field-form">
 									<label class="required" for="name">Your Name</label>
-									<input id="name" class="form-field" name="name" type="text" value required>
+									<input id="name" class="form-field" name="name" type="text" value="<?= htmlspecialchars($_SESSION['old_input']['name'] ?? '') ?>" customminlength="1" data-v-required>
+									 <?php if (!empty($errors['name'])): ?>
+        							<span class="errormsg"><?= implode('<br>', $errors['name']) ?></span>
+    								<?php endif; ?>
 								</div>
-								<div class="field-wrapper">
+								<div class="field-wrapper field-form">
 									<label class for="company">Company Name</label>
-									<input id="company" class="form-field" name="company" type="text" value>
+									<input id="company" class="form-field" name="company" type="text" value="<?= htmlspecialchars($_SESSION['old_input']['company'] ?? '') ?>">
+									 <?php if (!empty($errors['company'])): ?>
+        							<span class="errormsg"><?= implode('<br>', $errors['company']) ?></span>
+    								<?php endif; ?>
 								</div>
-								<div class="field-wrapper">
+								<div class="field-wrapper field-form">
 									<label class="required" for="email">Your Email</label>
-									<input id="email" class="form-feild" name="email" type="email" value required>
+									<input id="email" class="form-feild" name="email" type="email" value="<?= htmlspecialchars($_SESSION['old_input']['email'] ?? '') ?>" data-v-required data-v-pattern="^[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}(?:\s\w+)?$" customminlength="6">
+										 <?php if (!empty($errors['email'])): ?>
+        							<span class="errormsg"><?= implode('<br>', $errors['email']) ?></span>
+    								<?php endif; ?>
 								</div>
-								<div class="field-wrapper">
+								<div class="field-wrapper field-form">
 									<label class="required" for="telephone">Your Telephone Number</label>
-									<input id="telephone" class="formfield" name="telephone" type="telephone" value required>
+									<input id="telephone" class="formfield" name="telephone" type="telephone" value="<?= htmlspecialchars($_SESSION['old_input']['telephone'] ?? '') ?>" data-v-required data-v-pattern="^[\d\s\(\)\+\-\.]{4,25}$" customminlength="4">
+									 <?php if (!empty($errors['telephone'])): ?>
+        							<span class="errormsg"><?= implode('<br>', $errors['telephone']) ?></span>
+    								<?php endif; ?>
 								</div>
 							</div>
-							<div class="form-wrapper-box">
+							<div class="form-wrapper-box field-form">
 								<label class="required" for="message">Message</label>
-								<textarea id="massge" class="form-textarea" name="message"  cols="50" rows="10" required></textarea>
+								<textarea id="massage" class="form-textarea" name="message"  cols="50" rows="10" data-v-required customminlength="15"><?= htmlspecialchars($_SESSION['old_input']['message'] ?? '') ?></textarea>
+										 <?php if (!empty($errors['message'])): ?>
+        							<span class="errormsg"><?= implode('<br>', $errors['message']) ?></span>
+    								<?php endif; ?>
 							</div>
 							<div class="marketing-approval-box">
 								<label class="checkbox">
 									<span class="approval-box">
 										<span class="checkbox-container">
 											<span class="tickbox-button">
-												<span class="ticked"></span>
-												<input name="marketing_preference" type="checkbox" value="1">
+												<span class="ticked icon-check_box is-hidden2"></span>
+												<input id="marketing_preference" class="marketing_preference" name="marketing_preference" type="checkbox" value="1">
 											</span>
 										</span>
 										<span class="approval-message">
@@ -192,6 +210,12 @@ require('partials/nav.php');
 									<span class="required-key">*</span>Feilds Required
 								</small>
 							</div>
+							<!-- success messeage will be displayed below -->
+							<?php if (isset($_SESSION['success_status'])): ?>
+        						<div class="successmsgbox">
+            						<p class="successmsg"> <?php echo $_SESSION['success_status']; ?></p>
+        						</div>
+        						<?php unset($_SESSION['success_status']); endif; ?>
 						</form>
 					</div>
 				</div>
@@ -207,9 +231,51 @@ require('partials/nav.php');
 
 </div>
 
+<!-- sticky header is also its own partial and is required -->
 <?php require('partials/stickyheader.php');
 
 ?>
+
+
+<!-- this below script handles retriving session data on failed submit so that the client side validation stays after the redirect -->
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+    // this pulls the errors from the session data so that the javascript can do its client side validation on refresh
+    const phpErrors = <?php 
+        // Get the errors
+        $errors = $_SESSION['form_errors'] ?? [];
+        // Output them as JSON
+        echo json_encode($errors);
+        // IMMEDIATELY unset them so they are gone on the next refresh
+        unset($_SESSION['form_errors']); 
+		unset($_SESSION['old_input']);
+		unset($_SESSION['success_status']);
+    ?>;
+
+    // loop through the fields and add the border if that field had an error 
+	//errors are set on a time of 30 seconds
+    Object.keys(phpErrors).forEach(fieldName => {
+        const input = document.querySelector(`[name="${fieldName}"]`);
+        if (input) {
+            input.classList.add('field-error');
+            setTimeout(() => {
+                input.classList.remove('field-error');
+            }, 30000);
+        }
+    });
+});</script>
+
+<!-- this script handles a timer for the form error and success messages  -->
+<script>
+    //messages are set on a time of 30 seconds
+    setTimeout(function() {
+        var messages = document.querySelectorAll('.errormsg, .successmsg');
+        messages.forEach(function(msg) {
+            msg.innerHTML = "";
+        });
+    }, 30000);
+
+</script>
 
 <!--javascript files thaqt load after the page has loaded-->
 <script defer src="javascript/cookie.js"></script>
@@ -217,5 +283,6 @@ require('partials/nav.php');
 <script defer src="javascript/sticky-head.js"></script>
 <script defer src="javascript/form.js"></script>
 <script defer src="javascript/ooh.js"></script>
+
 </body>
 </html>

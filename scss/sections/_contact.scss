@@ -1,8 +1,10 @@
+// contact details and contact form styling 
 .contact-box {
 		.section3 {
 			padding-top: 0;
 			padding-bottom: 50px;
 
+				// presents the box either in column or row depending on screen size
 				.contact-row {
 					display: flex;
 					flex-wrap: wrap;
@@ -15,15 +17,18 @@
 						flex-direction: row;
 					}
 
+					//contact details styling
 					.contact-details-box {
 						max-width: 100%;
 						position: relative;
+						min-height: 1px;
+						padding-left: 15px;
+						padding-right: 15px;
 
 						@media (min-width: $large) {
 							left: 66.67%;
 							width: 33.33%;
 						}
-
 
 						.CDetails {
 							p {
@@ -75,6 +80,7 @@
 								}
 							}
 
+							// Out of hours details container that is controller via javascript
 							.OOH-Details {
 								display: block !important;
 								color:$detialstext;
@@ -99,66 +105,219 @@
 							}
 						}
 					}
-								
+								//contact form styling
 					.contact-form-box {
+						max-width: 100%;
+						position: relative;
+						min-height: 1px;
+						padding-left: 15px;
+						padding-right: 15px;
+
+						@media (min-width: $large) {
+							right: 33.33%;
+							width: 66.67%;
+						}
+
+						// Form styling
 						#contact-form {
+							background-color: $formgrey;
+							border-radius: 10px;
+							padding: 30px;
+
 							.form-wrapper {
+								display: flex;
+								flex-wrap: wrap;
+								margin-left: -15px;
+								margin-right: -15px;
+
 								.field-wrapper {
+									max-width: 100%;
+									width: 100%;
+									position: relative;
+									min-height: 1px;
+									padding-left: 15px;
+									padding-right: 15px;
+									margin-bottom: 15px;
+
+									@media (min-width: $medium) {
+										width:50%;
+									}
+
 									label {
+										font-weight: $font-semibold;
+										color: $darkgrey;
+										display: inline-block;
+										margin-bottom: 5px;
 
 									} 
 
 									input {
+										height: 47px;
+										padding: 5px 15px;
+										border: 1px solid $offwhite;
+										width: 100%;
+										background-color: $white;
+										border-radius: 2px;
+										box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+										transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+										display: block;
+										font-size: rem(14px);
+										line-height: 1.4;
+										color: $formtext;
+										margin: 0;
+										margin-bottom: 5px;
+									}
 
+									input::placeholder {
+										color: $grey;
+										opacity: 1;
+									}
+
+									input:focus {
+										  border-color: $focus-search;
+										  outline: 0;
+										  box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 8px rgba(91,192,222,.6);
 									}
 								}
 							}
 
+							// seperate styling for textarea box
 							.form-wrapper-box {
+								margin-bottom: 15px;
+
 								label {
+									font-weight: $font-semibold;
+									color: $darkgrey;
+									display: inline-block;
+									margin-bottom: 5px;
 
 								}
 
 								textarea {
+									min-height: 100px;
+									height: 100px;
+									padding: 5px 15px;
+									border: 1px solid $offwhite;
+									width: 100%;
+									background-color: $white;
+									border-radius: 2px;
+									box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+									transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+									display: block;
+									font-size: rem(14px);
+									line-height: 1.4;
+									color: $formtext;
+									margin: 0;
+									margin-bottom: 5px;
+								}
 
+								textarea:focus {
+									border-color: $focus-search;
+									outline: 0;
+									box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 8px rgba(91,192,222,.6);
 								}
 							}
+							// styling for the marketing approval section and check box
 							.marketing-approval-box {
+								margin-bottom: 15px;
+
 								.checkbox {
+									line-height: rem(32px);
+									cursor: pointer;
+									font-weight: $font-semibold;
+									color: $darkgrey;
+									display: inline-block;
+									margin-bottom: 5px;
+									font-size: rem(16px);
+									//styling for approval tick box 
 									.approval-box {
 										.checkbox-container {
-											.tickbox-button {
-												.ticked {
+											padding-right: 0;
+											display: table-cell;
+											vertical-align: top;
 
+											.tickbox-button {
+												border-radius: 3px;
+												border: 3px solid #333645;
+												height: 32px;
+												width: 32px;
+												position: relative;
+												float: left;
+												margin-right: 20px;
+
+												.ticked {
+													display: block;
+													line-height: 1.654rem;
+													text-align: center;
+													font-size: 2.1625rem;
+													border-radius: 50%;
+													font-style: normal;
+													font-weight: $font-reg;
+													font-variant: normal;
+													text-transform: none;
+													margin-left: -3.5px;
+													
 												}
 
+												ticked::before {
+													content: '\e90b';
+												}
 												input {
+													display: none;
+													margin: 4px 0 0;
+													line-height: normal;
+													padding: 0;
 
 												}
 											}
 										}
 
 										.approval-message {
-											a {
+											display: table-cell;
+											vertical-align: top;
+											width: 10000px;
+											overflow: hidden;
+											color: #333645;
 
+											a {
+												text-decoration: underline;
 											}
 
 											a:hover {
-
+												color: $link;
+												text-decoration: underline;
 											}
 										}	 
 									}
 								}
 							}
 
+							//form submit styling
 							.form-button-box {
-								.form-submit-button {
+								display: flex;
+								align-items: center;
+								justify-content: space-between;
+								color: $darkgrey;
 
+								.form-submit-button {
+									height: auto;
+									line-height: rem(35px);
+									padding: 5px 15px;
+									text-transform: uppercase;
+									font-size: rem(16px);
+									border-radius: 3px;
+									color: $white;
+									background-color: $darkgrey;
+									display: inline-block;
+									margin: 0;
+									font-weight: $font-reg;
+									text-align: center;
 								}
 
 								small {
+									font-size: 85%;
 									.required-key {
-
+										color: $red;
 									}
 								}
 							}
@@ -168,18 +327,52 @@
 			}
 		}	
 
-.required {
+// required for form labels 
+.required::after {
+  content: " *";
+  color: $required;
 
 }
 
-.checkbox-active {
-
+//check box is active so tick appears
+.is-hidden2 {
+    display: none !important; 
 }
 
+
+// this is used to scroll the out of hours box down when clicked
 .active {
 	margin-top: 0;
 	margin-bottom: 0;
 	padding-top: 0;
 	padding-bottom: 0;
 	max-height: 500px !important;
+}
+
+// field error color 
+.field-error {
+	border: 2px solid $red !important;
+}
+//error message styling 
+.errormsg {
+	padding-left:5px;
+	color: $red;
+	font-size: rem(16px);
+	font-weight: $font-semibold;
+
+}
+// success message styling
+.successmsg {
+	display: flex;
+	align-items: center;
+	margin-top: 10px;
+	justify-content: center;
+	margin-top:5px;
+	
+	p {
+		color: $green;
+		font-size: rem(16px);
+		text-align: center;
+		font-weight: $font-semibold;
+	}
 }

@@ -1,8 +1,8 @@
-
+<!-- View for Home Page-->
 <!DOCTYPE html>
 <html lang="en-GB">
 <head>
-	<!--fixed validation issues here-->
+
 	<meta charset="utf-8"> 
     <meta http-equiv="X-UA-Compatible" content="IE=edge"> 
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
@@ -19,6 +19,7 @@
 </head>
 <body>
 
+<!-- all header and footer and navigation and cookies are seperated into partials and required -->
 <?php require('partials/cookie.php');
 require('partials/sidenav.php'); 
 
@@ -369,97 +370,41 @@ require('partials/nav.php');
 			<h3><a href="#">View All <strong><em class="icon-arrow-right"></em></strong></a></h3>
 		</div>
 			<div class="news-row">
+					<!-- Here I use a foreach loop to pull the data from the array as each row and echo each value to the corrisponding section of the below container and since it is a foreach loop the container will be repeated for each row in database -->
+					<!-- Article Class value is used for media queries with css and Button_color will determine the buttons color class for the css to work with these containers-->
+				<?php foreach ($allNews as $row): ?>
 				<div class="news-article">
-						<a href="#" class="article-bespoke">
+						<a href="#" class="<?= htmlspecialchars($row['Article_Class']) ?>">
 							<div class="article-img">
-								<span class="insights">Insights</span>
+								<span class="insights"><?= htmlspecialchars($row['Tag']) ?></span>
 								<span class="article-img-box">
-									<img src="images/how-much-could-vKZG.png" alt="Increase Exit Value With Bespoke Software">
+									<img src="<?= htmlspecialchars($row['Image']) ?>" alt="<?= htmlspecialchars($row['Alt']) ?>">
 								</span>
 							</div>
 							<div class="article-description">
 								<h3>
-									How Much Could Bespoke Software Add To Your E...
+									<?= htmlspecialchars($row['Title']) ?>
 								</h3>
 								<p>
-									If you're a Managing Director or Senior Manager preparing your business for exit, you know that incr...
+								<?= htmlspecialchars($row['Description']) ?>	
 								</p>
-								<span class="news-btn news-btn-orange">
+								<span class="news-btn <?= htmlspecialchars($row['Button_Color']) ?>">
 									Read More
 								</span>
 								<div class="article-author">
 									<div class="article-author-img">
-										<img src="images/netmatters-ltd-VXAv.png" alt="Netmatters">
+										<img src="<?= htmlspecialchars($row['Author_Image']) ?>" alt="<?= htmlspecialchars($row['Author_Alt']) ?>">
 									</div>
 									<div class="article-author-name">
-										<strong>Posted by Netmatters</strong>
+										<strong><?= htmlspecialchars($row['Author_Name']) ?></strong>
 										<br>
-										27th June 2025	
+										<?= htmlspecialchars($row['Date']) ?>	
 									</div>
 								</div>
 							</div>
 							</a>
 					</div>
-				<div class="news-article">					
-						<a class="article-ai" href="#">
-							<div class="article-img">
-								<span class="insights">Insights</span>
-								<span class="article-img-box">
-									<img src="images/how-can-ai-L9M0.png" alt="Article: AI Integration For Businesses">
-								</span>
-							</div>
-							<div class="article-description">
-								<h3>How can AI Benefit My Business?</h3>
-								<p>
-									The idea of integrating AI into your business operations may seem daunting, but there are undeniable...
-								</p>
-								<span class="news-btn news-btn-orange">
-									Read More
-								</span>
-								<div class="article-author">
-									<div class="article-author-img">
-										<img src="images/netmatters-ltd-VXAv.png" alt="Netmatters">
-									</div>
-									<div class="article-author-name">
-										<strong>Posted by Netmatters</strong>
-										<br>
-										26th June 2025										
-									</div>
-								</div>
-							</div>
-						</a>
-					</div>				
-				<div class="news-article">
-						<a class="article-technician" href="#">
-							<div class="article-img">
-								<span class="insights-it-tech">careers</span>
-								<span class="article-img-box">
-									<img src="images/1st-line-technician-1QNr.png" alt="We Are Hiring: 1st Line Technician">
-								</span>
-							</div>
-							<div class="article-description">
-								<h3 class="firstline">1st Line Technician
-								</h3>
-								<p>
-									Salary Range £25,000 -£29,000 + Pension Hours 40 hours per week, Monday - Friday Location Wymondham,...
-								</p>
-								<span class="news-btn news-btn-blue">
-									Read More
-								</span>
-								<div class="article-author">
-									<div class="article-author-img">
-										<img src="images/bethany-shakespeare-F6Iu.jpg" alt="Bethany Shakespeare">
-									</div>
-									<div class="article-author-name">
-										<strong>Posted by Bethany Shakespeare</strong>
-										<br>
-										20th June 2025										
-									</div>
-								</div>
-							</div>
-						</a>
-					</div>
-			</div>		
+				<?php endforeach; ?>
 		<div class="hidden-view-all">
 			<h3><a href="#">View All <strong><em class="icon-arrow-right"></em></strong></a></h3>
 		</div>

@@ -163,7 +163,7 @@
 			</div>
 		</li>
 		<li class="side-menu-item">
-			<a href="#" class="side-menu-title">Contact Us</a>
+			<a href="/contact" class="side-menu-title">Contact Us</a>
 			<div class="sub-menu">
 				<ul class="sub-menu-list">
 					<li><a href="#">Cambridge Office</a></li>

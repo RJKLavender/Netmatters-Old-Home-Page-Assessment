@@ -34,7 +34,7 @@ require('partials/nav.php');
 		<div class="breadcrumb-title">
 				<div class="container">
 					<ul class="breadcrumb">
-						<li><a href="index.php">Home</a></li>
+						<li><a href="/">Home</a></li>
 						<li><span class="page-title">Our Offices</span></li>
 					</ul>
 				</div>
@@ -55,7 +55,7 @@ require('partials/nav.php');
 							<a href="#"><img src="images/cambridge.jpg" alt="Cambridge Office"></a>
 						</div>
 						<div class=office-content>
-							<h2><a href="#">Cmabridge Office</a></h2>
+							<h2><a href="#">Cambridge Office</a></h2>
 							<p>
 								Unit 1.31,<br>
 								St John's Innovation Centre,<br>
@@ -136,7 +136,7 @@ require('partials/nav.php');
 							<h4><a href="#">Out of Hours IT Support <em class="icon-chevron-down"></em></a></h4>
 							<div class="OOH-Details">
 								<p>Netmatters IT are offering an Out of Hours service for Emergency and Critical tasks.</p>
-								<p><strong>Monday - Friday 18:00 - 22:00</strong><strong>Saturday 08:00 - 16:00</strong>
+								<p><strong>Monday - Friday 18:00 - 22:00</strong><br><strong>Saturday 08:00 - 16:00</strong>
 								<br>
 								<strong>Sunday 10:00 - 18:00</strong></p>
 								<p>
@@ -207,7 +207,7 @@ require('partials/nav.php');
 							<div class="form-button-box">
 								<button class="form-submit-button" type="submit">Send Enquiry</button>
 								<small>
-									<span class="required-key">*</span>Feilds Required
+									<span class="required-key">*</span>Fields Required
 								</small>
 							</div>
 							<!-- success messeage will be displayed below -->

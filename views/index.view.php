@@ -610,6 +610,7 @@ require('partials/nav.php');
 
 ?>
 </div>
+</div>
 
 <?php require('partials/stickyheader.php');
 

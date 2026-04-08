@@ -229,7 +229,7 @@ require('partials/nav.php');
 ?>
 </div>
 
-</div>
+
 
 <!-- sticky header is also its own partial and is required -->
 <?php require('partials/stickyheader.php');

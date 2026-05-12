@@ -8,6 +8,7 @@ Note: If you are doing this locally I reccomend just using the default values of
 Fill out the fields listed as follows DB_Host is your database's Host IP, DB_PORT is the port of your database, DB_NAME is the name of your database, DB_USER is the username of the user accessing the database and DB_PASS is the password assicated with the user.
 
 Example Fill out for the env file below:
+
 DB_HOST=127.0.0.1 
 
 DB_PORT=8000

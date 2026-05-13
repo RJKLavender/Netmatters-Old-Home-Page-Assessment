@@ -92,7 +92,7 @@ if (empty($errors))
 
     //Get the newly created ID
     $newId = $pdo->lastInsertId(); 
-    $success = `Success! New database record has been submitted for record ID: $newId`;
+    $success = "Success! New database record has been submitted for record ID: $newId";
    // echo "Success! New database record has been submitted for record ID: " . $newId; //only used for testing purpose
 
     // save session value for success message and unset old input data so a new form can be filled out

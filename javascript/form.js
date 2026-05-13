@@ -5,10 +5,6 @@ const form = document.getElementById('contact-form');
 //validate form function
 const validateForm = () => {
 
-
-
-form.setAttribute('novalidate', '');
-
 //validation options objects array
 const validationOptions = [
     //checks if someone has entered text into field and that it doesnt exceed maxiumum set length and is above the minimum set length 
@@ -91,27 +87,32 @@ const validateformField = formField => {
 const validateFormFields = formToValidate => {
     const formFields = Array.from(formToValidate.querySelectorAll('.field-form'));
 
-    formFields.forEach(formField => {
-        validateformField(formField);
-       
-    });
 
     //gathers the results of the form and checks if all fields are correct before submitting the form
     const results = formFields.map(formField => validateformField(formField));
+
+    const allValid = results.every(result => result === false);
+
+     if (allValid) {
+            //logs if they are correct then submits the form
+        console.log('All fields are valid! Proceed with submit.');
+        
+        form.submit(); 
+    } else {
+        // if errors found will log and not submit and will wait until errors are fixed and form is resubmitted to test again
+        console.log('Some fields have errors.');
+    }
+
+    return allValid;
+
 
 };
 
 //when submitted check if errors found by validation function then stop submit.
     form.addEventListener('submit', (e) => {
-       // e.preventDefault();
-        const isAllValid = validateFormFields(form);
+        e.preventDefault();
+        validateFormFields(form);
     
-    // if (isAllValid) {
-    //     console.log('Form is valid, submitting to PHP...');
-    //     form.submit(); // This sends it to your PHP script
-    // } else {
-    //     console.log('Form has errors, stopping submit.');
-    // }
         
     });
 

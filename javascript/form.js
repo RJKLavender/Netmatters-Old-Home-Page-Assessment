@@ -41,7 +41,7 @@ const validationOptions = [
     {
         attribute: 'customminlength',
         isValid: input => input.value.length >= parseInt(input.getAttribute('customminlength')),
-        errorMessage: (input, label) => `${label.textContent} Has Too Many Characters`
+        errorMessage: (input, label) => `${label.textContent} Has Too Few Characters`
 
     }
 ]
